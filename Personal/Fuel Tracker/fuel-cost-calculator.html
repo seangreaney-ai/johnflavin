@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vehicle Cost Comparison Calculator</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --petrol: #e67e22;
+    --diesel: #2980b9;
+    --electric: #27ae60;
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #22263a;
+    --border: #2e3350;
+    --text: #e8eaf6;
+    --muted: #7986cb;
+    --accent: #5c6bc0;
+    --danger: #ef5350;
+    --success: #66bb6a;
+    --radius: 12px;
+    --shadow: 0 4px 24px rgba(0,0,0,0.4);
+  }
+
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 24px 16px 48px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  header h1 {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #7986cb, #64b5f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  header p {
+    color: var(--muted);
+    margin-top: 6px;
+    font-size: 0.9rem;
+  }
+
+  .shared-distance {
+    max-width: 400px;
+    margin: 0 auto 32px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    box-shadow: var(--shadow);
+  }
+
+  .shared-distance label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .shared-distance .input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .shared-distance input {
+    flex: 1;
+  }
+
+  .shared-distance .unit-badge {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .cars-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto 32px;
+  }
+
+  @media (max-width: 700px) {
+    .cars-grid { grid-template-columns: 1fr; }
+  }
+
+  .car-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    transition: border-color 0.3s;
+  }
+
+  .car-card.type-petrol  { border-top: 3px solid var(--petrol); }
+  .car-card.type-diesel  { border-top: 3px solid var(--diesel); }
+  .car-card.type-electric { border-top: 3px solid var(--electric); }
+
+  .car-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .car-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .car-header h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .field-group {
+    margin-bottom: 16px;
+  }
+
+  .field-group label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+  }
+
+  input:focus, select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(92,107,192,0.2);
+  }
+
+  input::placeholder { color: #4a5080; }
+
+  .type-selector {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .type-btn {
+    flex: 1;
+    padding: 9px 6px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface2);
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+
+  .type-btn:hover { border-color: var(--accent); color: var(--text); }
+
+  .type-btn.active-petrol  { background: rgba(230,126,34,0.15); border-color: var(--petrol);  color: var(--petrol); }
+  .type-btn.active-diesel  { background: rgba(41,128,185,0.15); border-color: var(--diesel);  color: var(--diesel); }
+  .type-btn.active-electric { background: rgba(39,174,96,0.15); border-color: var(--electric); color: var(--electric); }
+
+  .inline-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+  }
+
+  .optional-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+  }
+
+  .optional-toggle svg {
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+
+  .optional-toggle.open svg { transform: rotate(90deg); }
+
+  .optional-fields { display: none; }
+  .optional-fields.open { display: block; }
+
+  .currency-input {
+    display: flex;
+    align-items: center;
+  }
+
+  .currency-input .prefix {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-right: none;
+    padding: 10px 10px;
+    border-radius: 8px 0 0 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .currency-input input {
+    border-radius: 0 8px 8px 0;
+    flex: 1;
+  }
+
+  /* ── Results ── */
+  .results-section {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .results-section h2 {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  @media (max-width: 700px) {
+    .results-grid { grid-template-columns: 1fr; }
+    .vs-divider { display: none; }
+  }
+
+  .result-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    box-shadow: var(--shadow);
+  }
+
+  .result-card.winner {
+    border-color: var(--success);
+    box-shadow: 0 0 0 1px var(--success), var(--shadow);
+  }
+
+  .result-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .winner-badge {
+    font-size: 0.7rem;
+    background: var(--success);
+    color: #fff;
+    padding: 2px 7px;
+    border-radius: 20px;
+    font-weight: 700;
+    display: none;
+  }
+
+  .result-card.winner .winner-badge { display: inline; }
+
+  .result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+    font-size: 0.88rem;
+    border-bottom: 1px solid rgba(46,51,80,0.5);
+  }
+
+  .result-row:last-child { border-bottom: none; }
+
+  .result-row .label { color: var(--muted); }
+
+  .result-row .value {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+  }
+
+  .result-total {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 2px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .result-total .label { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+
+  .result-total .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .vs-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .vs-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--surface2);
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .diff-card {
+    max-width: 500px;
+    margin: 20px auto 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+
+  .diff-card h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 10px;
+  }
+
+  .diff-amount {
+    font-size: 2rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .diff-amount.saving { color: var(--success); }
+  .diff-amount.extra  { color: var(--danger); }
+
+  .diff-label {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .empty-state {
+    text-align: center;
+    color: var(--muted);
+    padding: 40px;
+    font-size: 0.9rem;
+  }
+
+  .period-selector {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .period-btn {
+    padding: 7px 16px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface2);
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .period-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+
+  select option { background: var(--surface2); }
+
+  .fuel-icon { font-size: 1.1rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Vehicle Cost Comparison</h1>
+  <p>Compare the true cost of running any two vehicles side by side</p>
+</header>
+
+<!-- Distance & Period -->
+<div class="shared-distance">
+  <label>Annual Distance</label>
+  <div class="input-row">
+    <input type="number" id="distance" placeholder="e.g. 15000" min="0" step="100">
+    <span class="unit-badge">km / yr</span>
+  </div>
+</div>
+
+<div class="period-selector">
+  <button class="period-btn active" data-period="year1">Per Year</button>
+  <button class="period-btn" data-period="year5">5 Years</button>
+  <button class="period-btn" data-period="year10">10 Years</button>
+</div>
+
+<!-- Car Cards -->
+<div class="cars-grid">
+  <!-- Car 1 -->
+  <div class="car-card" id="card1">
+    <div class="car-header">
+      <div class="car-number">1</div>
+      <h2>First Vehicle</h2>
+    </div>
+
+    <div class="field-group">
+      <label>Vehicle Name</label>
+      <input type="text" id="name1" placeholder="e.g. Toyota Corolla">
+    </div>
+
+    <div class="type-selector" id="type1">
+      <button class="type-btn active-petrol" data-type="petrol" onclick="setType(1,'petrol')">⛽ Petrol</button>
+      <button class="type-btn" data-type="diesel" onclick="setType(1,'diesel')">🛢 Diesel</button>
+      <button class="type-btn" data-type="electric" onclick="setType(1,'electric')">⚡ Electric</button>
+    </div>
+
+    <div class="inline-pair">
+      <div class="field-group">
+        <label id="consLabel1">Litres / 100km</label>
+        <input type="number" id="consumption1" placeholder="e.g. 7.5" min="0" step="0.1">
+      </div>
+      <div class="field-group">
+        <label id="priceLabel1">Price per Litre (€)</label>
+        <input type="number" id="fuelPrice1" placeholder="e.g. 1.75" min="0" step="0.01">
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="optional-toggle" onclick="toggleOptional(1)" id="optToggle1">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M5 2l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Optional costs
+    </div>
+
+    <div class="optional-fields" id="optFields1">
+      <div class="inline-pair">
+        <div class="field-group">
+          <label>Tax / Road Tax (€/yr)</label>
+          <input type="number" id="tax1" placeholder="0.00" min="0" step="1">
+        </div>
+        <div class="field-group">
+          <label>Insurance (€/yr)</label>
+          <input type="number" id="insurance1" placeholder="0.00" min="0" step="1">
+        </div>
+      </div>
+      <div class="inline-pair">
+        <div class="field-group">
+          <label>Loan Payment (€/mo)</label>
+          <input type="number" id="loan1" placeholder="0.00" min="0" step="1">
+        </div>
+        <div class="field-group">
+          <label>Maintenance (€/yr)</label>
+          <input type="number" id="maintenance1" placeholder="0.00" min="0" step="1">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Car 2 -->
+  <div class="car-card" id="card2">
+    <div class="car-header">
+      <div class="car-number" style="background:#7e57c2;">2</div>
+      <h2>Second Vehicle</h2>
+    </div>
+
+    <div class="field-group">
+      <label>Vehicle Name</label>
+      <input type="text" id="name2" placeholder="e.g. Tesla Model 3">
+    </div>
+
+    <div class="type-selector" id="type2">
+      <button class="type-btn" data-type="petrol" onclick="setType(2,'petrol')">⛽ Petrol</button>
+      <button class="type-btn" data-type="diesel" onclick="setType(2,'diesel')">🛢 Diesel</button>
+      <button class="type-btn active-electric" data-type="electric" onclick="setType(2,'electric')">⚡ Electric</button>
+    </div>
+
+    <div class="inline-pair">
+      <div class="field-group">
+        <label id="consLabel2">kWh / 100km</label>
+        <input type="number" id="consumption2" placeholder="e.g. 15" min="0" step="0.1">
+      </div>
+      <div class="field-group">
+        <label id="priceLabel2">Price per kWh (€)</label>
+        <input type="number" id="fuelPrice2" placeholder="e.g. 0.24" min="0" step="0.01">
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="optional-toggle" onclick="toggleOptional(2)" id="optToggle2">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M5 2l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Optional costs
+    </div>
+
+    <div class="optional-fields" id="optFields2">
+      <div class="inline-pair">
+        <div class="field-group">
+          <label>Tax / Road Tax (€/yr)</label>
+          <input type="number" id="tax2" placeholder="0.00" min="0" step="1">
+        </div>
+        <div class="field-group">
+          <label>Insurance (€/yr)</label>
+          <input type="number" id="insurance2" placeholder="0.00" min="0" step="1">
+        </div>
+      </div>
+      <div class="inline-pair">
+        <div class="field-group">
+          <label>Loan Payment (€/mo)</label>
+          <input type="number" id="loan2" placeholder="0.00" min="0" step="1">
+        </div>
+        <div class="field-group">
+          <label>Maintenance (€/yr)</label>
+          <input type="number" id="maintenance2" placeholder="0.00" min="0" step="1">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Results -->
+<div class="results-section" id="resultsSection">
+  <div class="empty-state" id="emptyState">
+    Enter vehicle details and distance above to see the cost comparison.
+  </div>
+
+  <div id="resultsContent" style="display:none;">
+    <h2>Cost Breakdown</h2>
+    <div class="results-grid">
+      <div class="result-card" id="result1">
+        <h3>
+          <span id="resName1">Vehicle 1</span>
+          <span class="winner-badge">Cheaper</span>
+        </h3>
+        <div class="result-row"><span class="label">Fuel / Energy cost</span><span class="value" id="resFuel1">—</span></div>
+        <div class="result-row"><span class="label">Tax</span><span class="value" id="resTax1">—</span></div>
+        <div class="result-row"><span class="label">Insurance</span><span class="value" id="resIns1">—</span></div>
+        <div class="result-row"><span class="label">Loan</span><span class="value" id="resLoan1">—</span></div>
+        <div class="result-row"><span class="label">Maintenance</span><span class="value" id="resMaint1">—</span></div>
+        <div class="result-total">
+          <span class="label">Total Cost</span>
+          <span class="value" id="resTotal1">—</span>
+        </div>
+      </div>
+
+      <div class="vs-divider">
+        <div class="vs-circle">VS</div>
+      </div>
+
+      <div class="result-card" id="result2">
+        <h3>
+          <span id="resName2">Vehicle 2</span>
+          <span class="winner-badge">Cheaper</span>
+        </h3>
+        <div class="result-row"><span class="label">Fuel / Energy cost</span><span class="value" id="resFuel2">—</span></div>
+        <div class="result-row"><span class="label">Tax</span><span class="value" id="resTax2">—</span></div>
+        <div class="result-row"><span class="label">Insurance</span><span class="value" id="resIns2">—</span></div>
+        <div class="result-row"><span class="label">Loan</span><span class="value" id="resLoan2">—</span></div>
+        <div class="result-row"><span class="label">Maintenance</span><span class="value" id="resMaint2">—</span></div>
+        <div class="result-total">
+          <span class="label">Total Cost</span>
+          <span class="value" id="resTotal2">—</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="diff-card">
+      <h3>Difference</h3>
+      <div class="diff-amount" id="diffAmount">—</div>
+      <div class="diff-label" id="diffLabel">—</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Each period defines how many years and months are in the window.
+  // Tax, insurance, maintenance are entered per year → multiply by years.
+  // Loan is entered per month → multiply by months.
+  // Fuel is entered as annual km → multiply by years.
+  const PERIODS = {
+    year1:  { years: 1,  months: 12,  label: 'per year' },
+    year5:  { years: 5,  months: 60,  label: 'over 5 years' },
+    year10: { years: 10, months: 120, label: 'over 10 years' },
+  };
+
+  const state = {
+    type1: 'petrol',
+    type2: 'electric',
+    period: 'year1',
+  };
+
+  document.querySelectorAll('.period-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.period = btn.dataset.period;
+      calculate();
+    });
+  });
+
+  function setType(car, type) {
+    state[`type${car}`] = type;
+    const selector = document.getElementById(`type${car}`);
+    selector.querySelectorAll('.type-btn').forEach(btn => {
+      btn.className = 'type-btn';
+      if (btn.dataset.type === type) btn.classList.add(`active-${type}`);
+    });
+    const isElectric = type === 'electric';
+    document.getElementById(`consLabel${car}`).textContent = isElectric ? 'kWh / 100km' : 'Litres / 100km';
+    document.getElementById(`priceLabel${car}`).textContent = isElectric ? 'Price per kWh (€)' : 'Price per Litre (€)';
+    document.getElementById(`card${car}`).className = 'car-card type-' + type;
+    calculate();
+  }
+
+  function toggleOptional(car) {
+    const fields = document.getElementById(`optFields${car}`);
+    const toggle = document.getElementById(`optToggle${car}`);
+    toggle.classList.toggle('open', fields.classList.toggle('open'));
+  }
+
+  function val(id) {
+    const v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? 0 : v;
+  }
+
+  function fmt(n) {
+    return '€' + n.toLocaleString('en-IE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function calcFuelCost(consumption, price, annualKm, years) {
+    return (consumption / 100) * annualKm * price * years;
+  }
+
+  function calculate() {
+    const annualKm = val('distance');
+    if (annualKm <= 0) {
+      document.getElementById('emptyState').style.display = 'block';
+      document.getElementById('resultsContent').style.display = 'none';
+      return;
+    }
+
+    const { years, months, label } = PERIODS[state.period];
+
+    // Vehicle 1
+    const fuel1 = calcFuelCost(val('consumption1'), val('fuelPrice1'), annualKm, years);
+    const tax1  = val('tax1')         * years;   // per year
+    const ins1  = val('insurance1')   * years;   // per year
+    const loan1 = val('loan1')        * months;  // per month
+    const mnt1  = val('maintenance1') * years;   // per year
+    const total1 = fuel1 + tax1 + ins1 + loan1 + mnt1;
+
+    // Vehicle 2
+    const fuel2 = calcFuelCost(val('consumption2'), val('fuelPrice2'), annualKm, years);
+    const tax2  = val('tax2')         * years;
+    const ins2  = val('insurance2')   * years;
+    const loan2 = val('loan2')        * months;
+    const mnt2  = val('maintenance2') * years;
+    const total2 = fuel2 + tax2 + ins2 + loan2 + mnt2;
+
+    document.getElementById('emptyState').style.display = 'none';
+    document.getElementById('resultsContent').style.display = 'block';
+
+    const name1 = document.getElementById('name1').value || 'Vehicle 1';
+    const name2 = document.getElementById('name2').value || 'Vehicle 2';
+
+    document.getElementById('resName1').textContent = name1;
+    document.getElementById('resName2').textContent = name2;
+
+    document.getElementById('resFuel1').textContent  = fmt(fuel1);
+    document.getElementById('resTax1').textContent   = tax1  ? fmt(tax1)  : '—';
+    document.getElementById('resIns1').textContent   = ins1  ? fmt(ins1)  : '—';
+    document.getElementById('resLoan1').textContent  = loan1 ? fmt(loan1) : '—';
+    document.getElementById('resMaint1').textContent = mnt1  ? fmt(mnt1)  : '—';
+    document.getElementById('resTotal1').textContent = fmt(total1);
+
+    document.getElementById('resFuel2').textContent  = fmt(fuel2);
+    document.getElementById('resTax2').textContent   = tax2  ? fmt(tax2)  : '—';
+    document.getElementById('resIns2').textContent   = ins2  ? fmt(ins2)  : '—';
+    document.getElementById('resLoan2').textContent  = loan2 ? fmt(loan2) : '—';
+    document.getElementById('resMaint2').textContent = mnt2  ? fmt(mnt2)  : '—';
+    document.getElementById('resTotal2').textContent = fmt(total2);
+
+    document.getElementById('result1').classList.toggle('winner', total1 < total2 && total1 > 0);
+    document.getElementById('result2').classList.toggle('winner', total2 < total1 && total2 > 0);
+
+    const diff = Math.abs(total1 - total2);
+    const cheaperName = total1 <= total2 ? name1 : name2;
+    const diffEl  = document.getElementById('diffAmount');
+    const labelEl = document.getElementById('diffLabel');
+
+    if (total1 === 0 && total2 === 0) {
+      diffEl.textContent  = '—';
+      labelEl.textContent = 'No costs entered yet';
+      diffEl.className    = 'diff-amount';
+    } else if (total1 === total2) {
+      diffEl.textContent  = fmt(0);
+      labelEl.textContent = 'Both vehicles cost the same';
+      diffEl.className    = 'diff-amount';
+    } else {
+      diffEl.textContent  = fmt(diff);
+      labelEl.textContent = `${cheaperName} is cheaper ${label}`;
+      diffEl.className    = 'diff-amount saving';
+    }
+  }
+
+  document.querySelectorAll('input').forEach(el => el.addEventListener('input', calculate));
+
+  setType(1, 'petrol');
+  setType(2, 'electric');
+</script>
+</body>
+</html>
