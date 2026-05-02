@@ -1,0 +1,677 @@
+{
+  "_readme": "This is the master content file for johnflavin.ie. Add new projects to 'projects', new options to 'options', and update page text in 'pages'. Images are relative to the 'John Flavin' content folder.",
+  "brand": {
+    "name": "Wood Interiors by John Flavin",
+    "tagline": "Custom Fitted Furniture, Crafted for Your Home",
+    "location": "Duagh, Co. Kerry, Ireland",
+    "phone": "[ADD PHONE NUMBER]",
+    "email": "[ADD EMAIL ADDRESS]",
+    "domain": "johnflavin.ie",
+    "colors": {
+      "primary": "#702f18",
+      "secondary": "#335b72",
+      "light": "#f8f5f0",
+      "dark": "#1a1a1a"
+    },
+    "logo": {
+      "svg": "Logo/WIbJF_Logo.svg",
+      "long_png": "Logo/WIbJF_Long_Logo.png",
+      "long_white": "Logo/WIbJF_Long_Logo_AllWhite.png",
+      "icon_png": "Logo/WIbJF_Logo_v3.png",
+      "icon_white": "Logo/WIbJF_Logo_v3_White.png"
+    }
+  },
+
+  "pages": {
+    "home": {
+      "hero_headline": "Custom Fitted Furniture, Made to Last",
+      "hero_subheadline": "Handcrafted kitchens, wardrobes, living room units and more — designed around your home, built to your exact specifications.",
+      "hero_cta": "See Our Work",
+      "intro_heading": "Built for Kerry Homes",
+      "intro_text": "At Wood Interiors by John Flavin, we design and build custom fitted furniture for homes across Kerry and Munster. Every piece is made to measure — from kitchens and wardrobes to utility rooms and living room units. We work closely with each customer to get the details right, from door style and colour to handles and worktops.",
+      "services_heading": "What We Make",
+      "work_heading": "Recent Projects",
+      "work_subheading": "A selection of recently completed kitchens, bedrooms, sitting rooms and more.",
+      "options_cta_heading": "Explore the Options",
+      "options_cta_text": "Browse door styles, colours, finishes, handles and worktop materials — and see how many ways there are to make your furniture uniquely yours.",
+      "contact_cta_heading": "Ready to Get Started?",
+      "contact_cta_text": "Get in touch to discuss your project. We'll arrange a free consultation and measure-up at your home."
+    },
+    "about": {
+      "heading": "About John Flavin",
+      "subheading": "A craftsman with over [X] years of experience in fitted furniture",
+      "body": "John Flavin has been designing and installing custom fitted furniture across Kerry and Munster for over [X] years. Based in Duagh, Co. Kerry, John works with homeowners to create furniture that fits their home perfectly — in every sense of the word.\n\nEvery project starts with a conversation. John visits your home, listens to what you need, and designs a solution that works for your space and your lifestyle. Whether it's a full kitchen fit-out, a run of bedroom wardrobes, or a bespoke TV and display unit for your sitting room, the same care and attention goes into every job.\n\nJohn works with trusted suppliers to source the best materials — from painted smooth-finish doors and solid oak to luxury quartz worktops and quality Häfele hardware. Every piece of furniture is built and installed by John himself, so you always know who's responsible for your project.\n\n[ADD PERSONAL QUOTE FROM JOHN HERE]",
+      "credentials": [
+        "[ADD QUALIFICATION / TRADE BODY MEMBERSHIP]",
+        "[ADD YEARS IN BUSINESS]",
+        "[ADD SERVICE AREA]"
+      ],
+      "photo": "[ADD PHOTO OF JOHN]"
+    },
+    "contact": {
+      "heading": "Get in Touch",
+      "subheading": "We'd love to talk about your project. Contact us for a free consultation and home visit.",
+      "address": "Duagh, Co. Kerry, Ireland",
+      "phone": "[ADD PHONE NUMBER]",
+      "email": "[ADD EMAIL ADDRESS]",
+      "hours": "[ADD OPENING HOURS]",
+      "map_embed": "[ADD GOOGLE MAPS EMBED CODE]",
+      "form_heading": "Send Us a Message",
+      "form_note": "Tell us a bit about your project and we'll get back to you within [X] working days."
+    },
+
+    "services": {
+      "kitchens": {
+        "heading": "Custom Kitchens",
+        "intro": "A kitchen built to your exact space and your exact taste. We design everything from the layout to the last handle — working with you to create a kitchen that's as practical as it is beautiful.",
+        "body": "From classic shaker styles to sleek contemporary designs, every kitchen we build is made to measure. We offer a wide range of door styles, colours, and finishes, paired with quality worktops in quartz, laminate, and solid oak. Whether you're starting from scratch or looking to transform an existing layout, John will work with you from first measurement to final installation.",
+        "features": ["Made to measure", "Full range of door styles and colours", "Quartz, laminate and solid oak worktops", "Fully installed by John himself", "Strip lighting available"],
+        "cta": "View Kitchen Projects"
+      },
+      "bedrooms": {
+        "heading": "Fitted Bedrooms & Wardrobes",
+        "intro": "Maximise your bedroom storage without compromising on style. Our fitted wardrobes and sliderobe systems are made to measure for every room shape and size.",
+        "body": "Whether you need a classic hinged wardrobe, a modern sliderobe, or a full walk-in wardrobe system, we design it to fit your room perfectly. Choose from a wide range of door styles, interior finishes, and handle options — from simple and clean to rich and detailed. Every wardrobe includes quality Blum soft-close hinges and Häfele drawer systems as standard.",
+        "features": ["Hinged and sliding wardrobe systems", "Mirror door options", "Full interior fitting — shelves, rails, drawers", "Soft-close hinges and drawer runners as standard", "Made to measure for any room"],
+        "cta": "View Bedroom Projects"
+      },
+      "living": {
+        "heading": "Living Room & Sitting Room Units",
+        "intro": "From TV units and display shelving to full-wall storage solutions, we create living room furniture that works beautifully in your home.",
+        "body": "A well-designed sitting room unit can transform a room. We create TV units, floating shelves, display units, and full-wall storage solutions — all made to your exact measurements and finished to match your style. We can also arrange integrated strip lighting to show off your shelving and displays.",
+        "features": ["TV units and media walls", "Display and storage shelving", "Strip lighting integration", "Full range of colours and finishes", "Designed around your existing room"],
+        "cta": "View Living Room Projects"
+      },
+      "utility": {
+        "heading": "Utility Rooms",
+        "intro": "A utility room should work as hard as you do. We design storage-focused utility rooms that make laundry, cleaning, and household organisation as easy as possible.",
+        "body": "Our utility rooms are designed with practicality at their core. Raised washing machine and dryer units with pull-out shelves, tall storage for coats and hoovers, overhead presses, and dedicated spaces for baskets and linen — every detail is thought through. Finished in any colour and style to match your home.",
+        "features": ["Raised appliance platforms with storage beneath", "Coat and hoover storage", "Pull-out shelves and baskets", "Overhead storage presses", "Matching worktops and splashbacks"],
+        "cta": "View Utility Projects"
+      },
+      "bathrooms": {
+        "heading": "Bathroom Furniture",
+        "intro": "Clean, functional bathroom furniture designed to make the most of your space.",
+        "body": "We design and install custom bathroom vanity units, storage presses, and fitted furniture to suit your bathroom layout. Whether you need under-sink storage, a tall linen press, or a fully fitted bathroom wall, we can create a solution that looks great and keeps everything organised.",
+        "features": ["Vanity units and sink cabinets", "Tall linen presses", "Fitted bathroom wall storage", "Water-resistant finishes available", "Made to measure"],
+        "cta": "Get in Touch"
+      },
+      "wall_panels": {
+        "heading": "Wall Panels",
+        "intro": "Add texture, warmth, and style to any room with custom wall panelling.",
+        "body": "Wall panels are one of the most effective ways to elevate a room's interior. We design and install custom panelling in a range of styles — from classic raised panels to contemporary ribbed and slatted designs. Perfect for hallways, bedrooms, sitting rooms, and more. Available in any painted finish.",
+        "features": ["Classic and contemporary panel styles", "Any painted colour", "Feature walls and full-room panelling", "Hallways, bedrooms, sitting rooms and more"],
+        "cta": "Get in Touch"
+      }
+    }
+  },
+
+  "projects": [
+    {
+      "id": "shaker-kitchen",
+      "title": "Shaker Kitchen — Ivory & Slaked Lime",
+      "room": "kitchen",
+      "featured": true,
+      "cover_image": "John Flavin/Our Work/Our Work 1/Images/shaker-kitchen-01.jpg",
+      "images": [
+        "John Flavin/Our Work/Our Work 1/Images/shaker-kitchen-01.jpg",
+        "John Flavin/Our Work/Our Work 1/Images/shaker-kitchen-02.jpg",
+        "John Flavin/Our Work/Our Work 1/Images/shaker-kitchen-03.jpg",
+        "John Flavin/Our Work/Our Work 1/Images/shaker-kitchen-04.jpg",
+        "John Flavin/Our Work/Our Work 1/Images/shaker-kitchen-05.jpg",
+        "John Flavin/Our Work/Our Work 1/Images/shaker-kitchen-06.jpg",
+        "John Flavin/Our Work/Our Work 1/Images/shaker-kitchen-07.jpg",
+        "John Flavin/Our Work/Our Work 1/Images/shaker-kitchen-08.jpg",
+        "John Flavin/Our Work/Our Work 1/Images/shaker-kitchen-09.jpg",
+        "John Flavin/Our Work/Our Work 1/Images/shaker-kitchen-10.jpg"
+      ],
+      "video": "John Flavin/Our Work/Our Work 1/Videos/shaker-kitchen-01.mp4",
+      "specs": {
+        "door_style": "Shaker",
+        "finish": "Smooth",
+        "worktop": "Quartz — Blanco Stellar by Elm Fireplaces",
+        "colour_units": "Ivory",
+        "colour_island": "Slaked Lime Dark (Little Green)",
+        "handles": "Queen Ann Beehive Knobs / Cup Handles on Drawers",
+        "interior": "—"
+      },
+      "description": "This kitchen was designed to work beautifully in a compact space without compromising on the essentials. The clever use of a peninsula unit really opens up the room — moving the sink, dishwasher, and bin to the peninsula frees up the other walls for ovens, hobs, and full-height fridge-freezer storage. The combination of Ivory units and Slaked Lime Dark on the lower section adds warmth and character, while the Blanco Stellar quartz worktop ties everything together. Finished to the ceiling with a traditional coving for a clean, polished look."
+    },
+    {
+      "id": "cardiff-sitting-room",
+      "title": "Cardiff Sitting Room Unit",
+      "room": "living",
+      "featured": true,
+      "cover_image": "John Flavin/Our Work/Our Work 2/Images/cardiff-sitting-room-01.jpg",
+      "images": [
+        "John Flavin/Our Work/Our Work 2/Images/cardiff-sitting-room-01.jpg",
+        "John Flavin/Our Work/Our Work 2/Images/cardiff-sitting-room-02.jpg",
+        "John Flavin/Our Work/Our Work 2/Images/cardiff-sitting-room-03.jpg",
+        "John Flavin/Our Work/Our Work 2/Images/cardiff-sitting-room-04.jpg"
+      ],
+      "specs": {
+        "door_style": "Cardiff",
+        "finish": "Smooth",
+        "shelves": "Pacific B",
+        "lighting": "Strip lighting (supplied and installed by Brendan O'Shea Electrical)",
+        "colour": "Wimborne White (Farrow & Ball)",
+        "handles": "Crystal Knobs"
+      },
+      "description": "The customer wanted open shelving that complemented the floor colour, combined with some enclosed storage below. The Pacific B shelf finish works perfectly alongside the floor tone, while Wimborne White keeps the room light and bright. Integrated strip lighting on the shelves adds a warm, ambient glow in the evenings. Simple, elegant, and exactly what the room needed."
+    },
+    {
+      "id": "sliderobe",
+      "title": "2-Door Mirror Sliderobe",
+      "room": "bedroom",
+      "featured": false,
+      "cover_image": "John Flavin/Our Work/Our Work 3/Images/sliderobe-01.jpg",
+      "images": [
+        "John Flavin/Our Work/Our Work 3/Images/sliderobe-01.jpg",
+        "John Flavin/Our Work/Our Work 3/Images/sliderobe-02.jpg",
+        "John Flavin/Our Work/Our Work 3/Images/sliderobe-03.jpg",
+        "John Flavin/Our Work/Our Work 3/Images/sliderobe-04.jpg",
+        "John Flavin/Our Work/Our Work 3/Images/sliderobe-05.jpg"
+      ],
+      "specs": {
+        "type": "2-Door Sliderobe",
+        "interior": "Ivory",
+        "doors": "1 × Mirror / 1 × Bordolino Oak",
+        "surround": "Chrome track and door surround"
+      },
+      "description": "A clean, practical sliderobe combining a full-length mirror door with a Bordolino Oak panel door — giving the room both a sense of light and warmth. Chrome track and surround finishes the whole unit neatly. The interior is fitted in Ivory for a bright, easy-to-use wardrobe space."
+    },
+    {
+      "id": "micro-shaker-wardrobe",
+      "title": "Micro Shaker Wardrobe — Pigeon",
+      "room": "bedroom",
+      "featured": false,
+      "cover_image": "John Flavin/Our Work/Our Work 4/Images/micro-shaker-wardrobe-01.jpg",
+      "images": [
+        "John Flavin/Our Work/Our Work 4/Images/micro-shaker-wardrobe-01.jpg",
+        "John Flavin/Our Work/Our Work 4/Images/micro-shaker-wardrobe-02.jpg",
+        "John Flavin/Our Work/Our Work 4/Images/micro-shaker-wardrobe-03.jpg",
+        "John Flavin/Our Work/Our Work 4/Images/micro-shaker-wardrobe-04.jpg",
+        "John Flavin/Our Work/Our Work 4/Images/micro-shaker-wardrobe-05.jpg"
+      ],
+      "specs": {
+        "door_style": "Micro Shaker",
+        "finish": "Smooth",
+        "interior": "Sand Gladstone Oak",
+        "colour": "Pigeon (Farrow & Ball)",
+        "handles": "Gold Bar Handle",
+        "hardware": "Soft-close drawers"
+      },
+      "description": "A beautifully understated wardrobe in Farrow & Ball's Pigeon — a muted blue-grey that works equally well in a contemporary or traditional bedroom. The Micro Shaker door adds subtle detail without being fussy, while the Sand Gladstone Oak interior brings warmth to the inside of the wardrobe. Gold bar handles tie together the whole look."
+    },
+    {
+      "id": "calaway-sitting-room",
+      "title": "Calaway Sitting Room Unit — Graphite Grey",
+      "room": "living",
+      "featured": true,
+      "cover_image": "John Flavin/Our Work/Our Work 5/Image/calaway-sitting-room-01.jpg",
+      "images": [
+        "John Flavin/Our Work/Our Work 5/Image/calaway-sitting-room-01.jpg",
+        "John Flavin/Our Work/Our Work 5/Image/calaway-sitting-room-02.jpg",
+        "John Flavin/Our Work/Our Work 5/Image/calaway-sitting-room-03.jpg",
+        "John Flavin/Our Work/Our Work 5/Image/calaway-sitting-room-04.jpg",
+        "John Flavin/Our Work/Our Work 5/Image/calaway-sitting-room-05.jpg"
+      ],
+      "video": "John Flavin/Our Work/Our Work 5/Videos/calaway-sitting-room-01.mp4",
+      "specs": {
+        "door_style": "Calaway Ash",
+        "finish": "Grained",
+        "colour": "Graphite Grey",
+        "shelves_and_top": "Raw Endgrain Oak",
+        "interior": "Raw Endgrain Oak",
+        "handles": "System Knurled Gold Knobs and Handles"
+      },
+      "description": "A striking sitting room unit in Graphite Grey with Calaway Ash grained doors and rich raw endgrain oak shelving and tops. The combination of dark grey and natural timber gives a high-end, contemporary look. System Knurled Gold hardware adds a touch of warmth and luxury. The endgrain oak detail on the shelves and interiors makes this unit truly stand out."
+    },
+    {
+      "id": "tv-unit",
+      "title": "Telford TV Unit — Alabaster White",
+      "room": "living",
+      "featured": false,
+      "cover_image": "John Flavin/Our Work/Our Work 6/Images/tv-unit-01.jpg",
+      "images": [
+        "John Flavin/Our Work/Our Work 6/Images/tv-unit-01.jpg",
+        "John Flavin/Our Work/Our Work 6/Images/tv-unit-02.jpg",
+        "John Flavin/Our Work/Our Work 6/Images/tv-unit-03.jpg",
+        "John Flavin/Our Work/Our Work 6/Images/tv-unit-04.jpg"
+      ],
+      "specs": {
+        "door_style": "Telford",
+        "finish": "Smooth",
+        "colour": "Alabaster White (Colortrend)",
+        "interior": "Hamilton Oak",
+        "shelves": "Hamilton Oak",
+        "lighting": "Strip lighting on shelves (supplied and installed by Damien Leahy Electrical)",
+        "handles": "Tapered Bow Brushed"
+      },
+      "description": "A clean, contemporary TV unit finished in Colortrend Alabaster White with Hamilton Oak interior shelving. The Telford door gives a subtle vertical detail without being overpowering. Strip lighting on the shelves, installed by Damien Leahy Electrical, adds atmosphere and shows off the Hamilton Oak finish. Tapered Bow Brushed handles complete the look."
+    },
+    {
+      "id": "display-storage-unit",
+      "title": "Display & Storage Unit — Inchyra",
+      "room": "living",
+      "featured": false,
+      "cover_image": "John Flavin/Our Work/Our Work 7/Images/display-storage-unit-01.jpg",
+      "images": [
+        "John Flavin/Our Work/Our Work 7/Images/display-storage-unit-01.jpg",
+        "John Flavin/Our Work/Our Work 7/Images/display-storage-unit-02.jpg",
+        "John Flavin/Our Work/Our Work 7/Images/display-storage-unit-03.jpg"
+      ],
+      "specs": {
+        "door_style": "Calaway Ash",
+        "finish": "Grained",
+        "colour": "Inchyra (Farrow & Ball)",
+        "interior": "Tobacco Halifax Oak",
+        "handles": "Knurled Bronze"
+      },
+      "description": "Farrow & Ball's Inchyra is a complex blue-green that looks different in different lights — perfect for a display unit that you want to notice. Calaway Ash grained doors add texture and depth, while Tobacco Halifax Oak on the interior creates a rich contrast. Knurled Bronze handles are the ideal finishing touch for this sophisticated, character-filled piece."
+    },
+    {
+      "id": "step-shaker-wardrobe",
+      "title": "Step Shaker Wardrobe — Shaded White",
+      "room": "bedroom",
+      "featured": false,
+      "cover_image": "John Flavin/Our Work/Our Work 8/Images/step-shaker-wardrobe-01.jpg",
+      "images": [
+        "John Flavin/Our Work/Our Work 8/Images/step-shaker-wardrobe-01.jpg",
+        "John Flavin/Our Work/Our Work 8/Images/step-shaker-wardrobe-02.jpg",
+        "John Flavin/Our Work/Our Work 8/Images/step-shaker-wardrobe-03.jpg"
+      ],
+      "specs": {
+        "door_style": "Step Shaker Ash",
+        "finish": "Grained",
+        "colour": "Shaded White (Farrow & Ball)",
+        "interior": "Bordino Oak",
+        "hardware": "Blum soft-close hinges / Häfele soft-close drawer runners",
+        "handles": "System Knurled Gold Handles and Knobs"
+      },
+      "description": "A classic Step Shaker wardrobe in Farrow & Ball's Shaded White — a warm, soft off-white that works beautifully in a bright bedroom. The grained Ash door adds subtle texture, while the Bordino Oak interior brings warmth and character to the inside. Fitted with Blum soft-close hinges and Häfele drawer runners throughout, with System Knurled Gold hardware."
+    },
+    {
+      "id": "black-mirror-sliderobe",
+      "title": "Mirror Sliderobe — Black Track",
+      "room": "bedroom",
+      "featured": false,
+      "cover_image": "John Flavin/Our Work/Our Work 9/Images/black-mirror-sliderobe-01.jpg",
+      "images": [
+        "John Flavin/Our Work/Our Work 9/Images/black-mirror-sliderobe-01.jpg",
+        "John Flavin/Our Work/Our Work 9/Images/black-mirror-sliderobe-02.jpg",
+        "John Flavin/Our Work/Our Work 9/Images/black-mirror-sliderobe-03.jpg",
+        "John Flavin/Our Work/Our Work 9/Images/black-mirror-sliderobe-04.jpg"
+      ],
+      "specs": {
+        "type": "Sliderobe",
+        "interior": "White",
+        "doors": "2 × Mirror doors with black track and surround",
+        "exterior": "Driftwood panel on outside"
+      },
+      "description": "A sleek, modern sliderobe with two full-length mirror doors set in a matte black track and surround. The all-white interior keeps the inside bright and easy to use. A driftwood panel on the outside face of the unit ties it into the room's décor. A contemporary and practical solution for any modern bedroom."
+    },
+    {
+      "id": "mfc-utility",
+      "title": "MFC Utility Room — Tyrolean Blue",
+      "room": "utility",
+      "featured": true,
+      "cover_image": "John Flavin/Our Work/Our Work 10/Images/mfc-utility-01.jpg",
+      "images": [
+        "John Flavin/Our Work/Our Work 10/Images/mfc-utility-01.jpg",
+        "John Flavin/Our Work/Our Work 10/Images/mfc-utility-02.jpg",
+        "John Flavin/Our Work/Our Work 10/Images/mfc-utility-03.jpg",
+        "John Flavin/Our Work/Our Work 10/Images/mfc-utility-04.jpg",
+        "John Flavin/Our Work/Our Work 10/Images/mfc-utility-05.jpg",
+        "John Flavin/Our Work/Our Work 10/Images/mfc-utility-06.jpg"
+      ],
+      "video": "John Flavin/Our Work/Our Work 10/Video/mfc-utility-01.mp4",
+      "specs": {
+        "door_style": "MFC",
+        "finish": "Smooth",
+        "colour": "Tyrolean Blue",
+        "interior": "Raw Endgrain Oak",
+        "worktop": "Topshape Carrara Marble 25mm",
+        "handles": "System Knurled Brushed Nickel Handles and Knobs",
+        "hardware": "Blum soft-close hinges / Häfele drawer system"
+      },
+      "description": "A hardworking utility room designed with storage at the forefront. This layout includes: raised washing machine and dryer with pull-out shelves and drawers underneath, a tall corner shelving unit, a tall unit for hanging coats and storing the hoover and mop, plus overhead presses throughout. The Tyrolean Blue MFC finish is practical and stylish, with Raw Endgrain Oak interiors adding warmth. Topped with a 25mm Topshape Carrara Marble worktop."
+    }
+  ],
+
+  "options": {
+    "door_styles": {
+      "heading": "Door Styles",
+      "intro": "We offer a wide range of door styles — from traditional shaker to contemporary smooth slab — in both painted and grained finishes. All doors are available in smooth (painted) or grained (timber-effect) finishes.",
+      "items": [
+        {"name": "Shaker", "description": "Classic raised-panel shaker door. Available smooth or in ash grained finish.", "image": "John Flavin/Options/Doors/shaker-door-smooth-dove-grey.jpg"},
+        {"name": "Micro Shaker", "description": "A slimmer, more refined take on the shaker — subtle detail without being traditional.", "image": "John Flavin/Options/Doors/marlow-micro-shaker-ash-pidgeon.jpg"},
+        {"name": "Step Shaker", "description": "Stepped profile shaker door, available in smooth or grained ash.", "image": "John Flavin/Options/Doors/stepped-shaker-oak-door-clear-laquer.jpg"},
+        {"name": "Step Shaker Ash", "description": "Step shaker in a natural ash grained finish — a rich timber look with classic detail.", "image": "John Flavin/Options/Doors/steppef-shaker-door-smooth-cornforth-white.jpg"},
+        {"name": "Calaway Ash", "description": "Contemporary door with a horizontal groove detail, in natural ash grained finish.", "image": "John Flavin/Options/Doors/calaway-oak-door-clear-laquer.jpg"},
+        {"name": "Calaway Ash (Grey)", "description": "Calaway ash door in a dove grey grained finish.", "image": "John Flavin/Options/Doors/calaway-shaket-ash-dove-grey.jpg"},
+        {"name": "Cardiff", "description": "Clean smooth door with a subtle vertical groove detail.", "image": "John Flavin/Options/Doors/cardiff-door-smooth-elephants-breath.jpg"},
+        {"name": "Porto", "description": "Modern profile door — strikes a balance between contemporary and traditional.", "image": "John Flavin/Options/Doors/porto-door-smooth-ammonite.jpg"},
+        {"name": "Telford", "description": "Smooth door with a delicate vertical detail — understated and versatile.", "image": "John Flavin/Options/Doors/telford-door-smooth-cornforth-white.jpg"},
+        {"name": "Harrington Shaker", "description": "Slipped shaker door in natural ash — traditional proportions with a light, modern touch.", "image": "John Flavin/Options/Doors/harrington-slipped-shaker-oak-door-rubio-smoke-5.jpg"},
+        {"name": "Harrington (Charcoal)", "description": "Harrington slipped shaker ash door in charcoal stain.", "image": "John Flavin/Options/Doors/harrington-slipped-shaker-ash-door-charcoal-stain.jpg"},
+        {"name": "Harrington (French Grey)", "description": "Harrington shaker ash door in French Grey.", "image": "John Flavin/Options/Doors/harrington-shaker-ash-french-grey.jpg"},
+        {"name": "J-Profile", "description": "Handleless J-profile door — a sleek, seamless contemporary look.", "image": "John Flavin/Options/Doors/j-profile-door-smooth-french-grey.jpg"},
+        {"name": "Plain Slab", "description": "Flat slab door — the most minimal, contemporary option available.", "image": "John Flavin/Options/Doors/plain-slab-smooth-downpipe.jpg"},
+        {"name": "Plain Slab with Groove", "description": "Slab door with a single decorative groove for subtle detail.", "image": "John Flavin/Options/Doors/plain-slab-with-groove-smooth-downpipe.jpg"},
+        {"name": "Mock Inframe", "description": "Gives the look of a traditional inframe kitchen with a modern construction.", "image": "John Flavin/Options/Doors/mock-inframe-smooth-purebrvk-stone.jpg"},
+        {"name": "Willow Oak (Smoke)", "description": "Willow oak door with Rubio Smoke 5% finish — warm natural timber.", "image": "John Flavin/Options/Doors/willow-oak-door-rubio-smoke-5.jpg"},
+        {"name": "Willow Oak (White)", "description": "Willow oak door with Rubio Super White finish — light and bright.", "image": "John Flavin/Options/Doors/willow-oak-door-rubio-super-white.jpg"},
+        {"name": "Oak (White Ash Stain)", "description": "Oak door with a white ash stain — beautiful grain, soft finish.", "image": "John Flavin/Options/Doors/oak-door-white-ash-stain.jpg"},
+        {"name": "Step Shaker Ash (Dove Grey)", "description": "Step shaker ash door in a dove grey grained finish.", "image": "John Flavin/Options/Doors/step-shaket-ash-dove-grey.jpg"}
+      ]
+    },
+
+    "colours": {
+      "heading": "Painted Colours",
+      "intro": "We work with several leading paint ranges to give you the widest possible choice of colour. Our most popular ranges are listed below — if you have a colour in mind that isn't listed, just ask.",
+      "ranges": {
+        "farrow_and_ball": {
+          "name": "Farrow & Ball",
+          "note": "Paint colours shown are indicative. Actual colours may vary on screen.",
+          "colours": [
+            "Wimborne White", "Shaded White", "Strong White", "All White", "White Tie", "Pointing",
+            "Pigeon", "French Grey", "Pavillion Grey", "Dove Grey", "Purbeck Stone", "Cornforth White",
+            "Railings", "Off Black", "Pitch Black", "Ammonite", "Elephants Breath",
+            "Inchyra", "Studio Green", "Green Smoke", "Hague Blue", "Slaked Lime Dark"
+          ]
+        },
+        "colortrend": {
+          "name": "Colortrend",
+          "note": "Full Colortrend range available on request.",
+          "colours": [
+            "Alabaster White", "Tyrolean Blue", "Huntsman", "[ADD MORE FROM COLORTREND.RTF]"
+          ]
+        }
+      }
+    },
+
+    "mfc_colours": {
+      "heading": "MFC Colours & Board Finishes",
+      "intro": "MFC (Melamine Faced Chipboard) is a durable, practical board used for carcasses and interiors, available in a wide range of colours and timber-effect finishes.",
+      "image_folder": "John Flavin/Options/MFC Colours/",
+      "note": "See image folder for full range of available MFC colours. Each board image has been named from its colour description."
+    },
+
+    "colour_samples": {
+      "heading": "Painted Colour Samples",
+      "intro": "The following painted finish samples show how our most popular Farrow & Ball and Colortrend colours look in person on a smooth door finish.",
+      "image_folder": "John Flavin/Options/Colour Sample images/",
+      "note": "All colour sample images named from their colour name (e.g. pavillion-grey.jpg)."
+    },
+
+    "worktops": {
+      "heading": "Worktops",
+      "intro": "We supply and fit a range of worktop materials to suit every style and budget — from practical laminates to luxury quartz and natural stone.",
+      "items": [
+        {
+          "name": "Quartz",
+          "description": "Durable, low-maintenance, and beautiful. We work with several quartz suppliers including Elm Fireplaces and Full House. Popular colours include Blanco Stellar, Treaty White, and Carrara.",
+          "image_folder": "John Flavin/Options/Micro worktops/"
+        },
+        {
+          "name": "Solid Oak",
+          "description": "Warm, natural, and timeless. Solid oak worktops are a popular choice for traditional kitchens and utility rooms. Available in several stain and lacquer finishes.",
+          "image_folder": "John Flavin/Options/Solid Oak Finishes/"
+        },
+        {
+          "name": "Laminate",
+          "description": "A practical, cost-effective option available in a huge range of colours and patterns including marble effects, timber effects, and solid colours.",
+          "image_folder": "John Flavin/Options/Micro worktops/"
+        }
+      ]
+    },
+
+    "handles": {
+      "heading": "Handles & Knobs",
+      "intro": "Handles are one of the most important finishing touches on any piece of furniture. We supply quality hardware from Häfele and Hendel & Hendel — leading Irish hardware suppliers — in a wide range of styles and finishes. Browse the full range at hafele.ie.",
+      "hafele_catalogue_url": "https://www.hafele.ie/en/products/handles-knobs/cabinet-handles-knobs/11/",
+      "note": "Handles shown are a selection of styles used in our projects. Many more options are available — ask John to see the full range.",
+      "categories": [
+        {
+          "category": "Knurled Handles & Knobs",
+          "description": "A tactile, textured finish that adds character to any door. Available in matte black, bronze, gold, and brushed nickel. Our most popular hardware choice for contemporary and transitional furniture.",
+          "hafele_search_url": "https://www.hafele.ie/en/search/?SearchTerm=knurled+handle",
+          "items": [
+            {
+              "name": "Knurled Pull Handle — Mild Steel",
+              "description": "A bold knurled bar handle in mild steel. Available in matte black, bronze, antique brass, and nickel finishes. Fixing centres 160–320mm.",
+              "finish_options": ["Matte Black", "Bronze / Antique", "Nickel", "Brass Plated"],
+              "style": "Contemporary",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=knurled+handle",
+              "used_in_projects": ["calaway-sitting-room", "mfc-utility", "step-shaker-wardrobe"]
+            },
+            {
+              "name": "Knurled Knob — Mild Steel, Ø38mm",
+              "description": "Round knurled knob in mild steel. Available in matte black, bronze, antique, and nickel. Pairs with the matching pull handle for a coordinated set.",
+              "finish_options": ["Matte Black", "Bronze / Antique", "Nickel"],
+              "style": "Contemporary",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=knurled+handle",
+              "used_in_projects": ["calaway-sitting-room", "display-storage-unit", "step-shaker-wardrobe", "mfc-utility"]
+            },
+            {
+              "name": "Barchester Knob — Iron, Ø38–49mm",
+              "description": "A beautiful iron knurled knob with an antique finish. A more traditional take on the knurled look — perfect for shaker or painted kitchen doors.",
+              "finish_options": ["Antique Iron", "Black"],
+              "style": "Traditional / Contemporary",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=knurled+handle"
+            },
+            {
+              "name": "Double Ringed T Knob — Iron, Ø18mm",
+              "description": "A compact knurled T-knob in iron with a distinctive double ring detail. Works well as a drawer knob alongside larger cup or pull handles.",
+              "finish_options": ["Antique Iron", "Black"],
+              "style": "Traditional",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=knurled+handle"
+            }
+          ]
+        },
+        {
+          "category": "Cup Handles",
+          "description": "The classic cup-style drawer pull — a timeless choice for shaker kitchens and traditional painted furniture. Available in a wide range of sizes and finishes.",
+          "hafele_search_url": "https://www.hafele.ie/en/search/?SearchTerm=cup+pull+handle",
+          "items": [
+            {
+              "name": "Cup Pull Handle — Hendel & Hendel Hampton",
+              "description": "An elegant cup pull handle from the prestigious Hendel & Hendel Hampton collection. Available in 10 finishes including satin nickel, polished nickel, and antique bronze. Fixing centres 64–96mm.",
+              "finish_options": ["Satin Nickel", "Polished Nickel", "Antique Bronze", "Matt Black", "Brushed Gold"],
+              "style": "Traditional / Transitional",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=cup+pull+handle",
+              "used_in_projects": ["shaker-kitchen"]
+            },
+            {
+              "name": "Cup Pull Handle — Hendel & Hendel Greenwich",
+              "description": "A refined cup pull from the Greenwich collection. Clean lines with a traditional feel. Available in multiple finishes. Fixing centres 64–96mm.",
+              "finish_options": ["Satin Nickel", "Antique Bronze", "Matt Black"],
+              "style": "Traditional",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=cup+pull+handle"
+            },
+            {
+              "name": "Cup Pull Handle — Hendel & Hendel Charlbury",
+              "description": "A subtly curved cup handle with a contemporary profile. Available in brushed and polished finishes.",
+              "finish_options": ["Brushed", "Polished"],
+              "style": "Transitional",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=cup+pull+handle"
+            },
+            {
+              "name": "Cup Pull Handle — Zinc Alloy",
+              "description": "A clean, affordable cup pull handle in zinc alloy. Available in chrome, satin nickel, and antique brass. Fixing centres 64–96mm.",
+              "finish_options": ["Chrome", "Satin Nickel", "Antique Brass"],
+              "style": "Traditional",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=cup+pull+handle"
+            }
+          ]
+        },
+        {
+          "category": "Bar Handles",
+          "description": "Clean, simple bar handles are one of the most versatile handle choices — at home in contemporary kitchens, bedroom wardrobes, and utility rooms alike.",
+          "hafele_search_url": "https://www.hafele.ie/en/search/?SearchTerm=bar+handle+cabinet",
+          "items": [
+            {
+              "name": "Hendel & Hendel Kellas Bar Handle — Aluminium",
+              "description": "A beautifully proportioned aluminium bar handle from Hendel & Hendel. Slim, elegant profile with a brushed finish. Fixing centres available from 96–448mm.",
+              "finish_options": ["Brushed Aluminium", "Matt Black", "Gold"],
+              "style": "Contemporary",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=kellas+bar+handle"
+            },
+            {
+              "name": "Bar Handle — Steel, Ø12mm",
+              "description": "A classic round-bar handle in steel. A clean, no-fuss choice that works in both modern and transitional interiors. Fixing centres 96–456mm.",
+              "finish_options": ["Satin Steel", "Matt Black", "Brushed Nickel"],
+              "style": "Timeless",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=bar+handle+cabinet"
+            },
+            {
+              "name": "Pimlico Bar Handle — Steel",
+              "description": "A clean, contemporary bar handle with a slightly tapered profile. Available in multiple lengths and finishes.",
+              "finish_options": ["Satin Steel", "Matt Black"],
+              "style": "Contemporary",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=pimlico+bar+handle"
+            }
+          ]
+        },
+        {
+          "category": "Bow & Pull Handles",
+          "description": "Bow handles offer a curved, arched profile that softens the look of any door — a great middle ground between the cup handle and the bar handle.",
+          "hafele_search_url": "https://www.hafele.ie/en/search/?SearchTerm=bow+handle+cabinet",
+          "items": [
+            {
+              "name": "Clifton Bow Handle — Steel",
+              "description": "A gently arched bow handle with a tapered profile and brushed steel finish. One of Häfele's most popular transitional handles — elegant and understated.",
+              "finish_options": ["Brushed Steel", "Satin Nickel", "Matt Black"],
+              "style": "Transitional",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=clifton+bow+handle",
+              "used_in_projects": ["tv-unit"]
+            },
+            {
+              "name": "Hendel & Hendel Quinn Pull Handle",
+              "description": "A sophisticated curved pull handle from the Quinn collection. Available in 15 finishes including antique bronze, satin nickel, and matt black. Fixing centres 64–320mm.",
+              "finish_options": ["Antique Bronze", "Satin Nickel", "Matt Black", "Brushed Gold", "Polished Nickel"],
+              "style": "Transitional / Traditional",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=quinn+pull+handle"
+            },
+            {
+              "name": "Hendel & Hendel Barrington Pull Handle",
+              "description": "A timeless pull handle from the iconic Barrington collection. Available with matching backplates in a full range of finishes. Fixing centres 96–448mm.",
+              "finish_options": ["Antique Bronze", "Satin Nickel", "Polished Nickel", "Matt Black"],
+              "style": "Traditional",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=barrington+pull+handle"
+            },
+            {
+              "name": "Hendel & Hendel Belgravia Pull Handle",
+              "description": "A beautifully crafted pull handle with an arched profile and detailed casting. One of Hendel & Hendel's most distinguished designs. Fixing centres 128–448mm.",
+              "finish_options": ["Antique Bronze", "Satin Nickel", "Matt Black", "Polished Brass"],
+              "style": "Traditional / Luxurious",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=belgravia+pull+handle"
+            }
+          ]
+        },
+        {
+          "category": "D-Pull Handles",
+          "description": "D-pull handles offer a clean, functional profile that works equally well in contemporary and traditional settings.",
+          "hafele_search_url": "https://www.hafele.ie/en/search/?SearchTerm=d+pull+handle+cabinet",
+          "items": [
+            {
+              "name": "D Pull Handle — Stainless Steel, Mandalay",
+              "description": "A high-quality stainless steel D-pull handle with a clean, contemporary profile. Available in 6 article sizes.",
+              "finish_options": ["Brushed Stainless Steel", "Polished Stainless Steel"],
+              "style": "Contemporary",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=mandalay+handle"
+            },
+            {
+              "name": "Hendel & Hendel Hampton D Handle — Zinc Alloy",
+              "description": "A refined D-pull from the Hampton collection. Available in 5 finishes with a matching cup handle and knob for a fully coordinated set.",
+              "finish_options": ["Antique Bronze", "Satin Nickel", "Matt Black", "Polished Nickel"],
+              "style": "Transitional",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=hampton+d+handle"
+            },
+            {
+              "name": "Hendel & Hendel Liberty D Handle",
+              "description": "A clean, architectural D-pull from the Liberty collection. Available in 10 finishes including gold and brushed options. Fixing centres 128–448mm.",
+              "finish_options": ["Brushed Gold", "Matt Black", "Satin Nickel", "Antique Bronze"],
+              "style": "Contemporary / Luxurious",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=liberty+d+handle"
+            }
+          ]
+        },
+        {
+          "category": "Knobs",
+          "description": "Cabinet knobs add a classic finishing touch. From simple round knobs to more decorative styles, we stock a wide range to suit every door style.",
+          "hafele_search_url": "https://www.hafele.ie/en/search/?SearchTerm=furniture+knob+cabinet",
+          "items": [
+            {
+              "name": "Henrietta Knob — Zinc Alloy, Ø38mm",
+              "description": "A smooth, classic round knob in zinc alloy. Simple and versatile — works on any painted door style. Available in multiple finishes.",
+              "finish_options": ["Chrome", "Satin Nickel", "Antique Brass", "Matt Black"],
+              "style": "Timeless",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=henrietta+knob"
+            },
+            {
+              "name": "Hendel & Hendel Greenwich Knob — Ø29mm",
+              "description": "A beautifully crafted round knob from the Greenwich collection. Available in 9 finishes including antique bronze and satin nickel.",
+              "finish_options": ["Antique Bronze", "Satin Nickel", "Polished Nickel", "Matt Black"],
+              "style": "Traditional / Transitional",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=greenwich+knob"
+            },
+            {
+              "name": "Hendel & Hendel Belgravia Knob",
+              "description": "A richly detailed knob from the Belgravia collection — the perfect partner to the Belgravia pull handle. Available in 5 finishes.",
+              "finish_options": ["Antique Bronze", "Satin Nickel", "Polished Brass", "Matt Black"],
+              "style": "Traditional / Luxurious",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=belgravia+knob"
+            },
+            {
+              "name": "Momo Hampton Knob — Zinc Alloy",
+              "description": "A stylish, slightly domed knob with a clean profile. Available in multiple finishes to suit both modern and traditional doors.",
+              "finish_options": ["Satin Nickel", "Antique Bronze", "Chrome"],
+              "style": "Contemporary / Transitional",
+              "hafele_url": "https://www.hafele.ie/en/search/?SearchTerm=hampton+knob"
+            }
+          ]
+        }
+      ]
+    },
+
+    "solid_oak": {
+      "heading": "Solid Oak Finishes",
+      "intro": "We offer a range of solid oak finishes for shelves, worktops, and interior details — from natural clear lacquer to stained and oiled finishes.",
+      "image_folder": "John Flavin/Options/Solid Oak Finishes/"
+    },
+
+    "sliderobe_surround": {
+      "heading": "Sliderobe Track & Surround Options",
+      "intro": "Sliderobe systems are available with a choice of track and surround finishes — chrome, black, and more.",
+      "image_folder": "John Flavin/Options/Sliderobe metal  Surround/"
+    }
+  },
+
+  "update_instructions": {
+    "_note": "How to add new content to the website",
+    "add_new_project": {
+      "steps": [
+        "1. Create a new folder in 'John Flavin/Our Work/' — e.g. 'Our Work 11'",
+        "2. Add an 'Images' subfolder and put your photos in it (name them descriptively or they'll be named sequentially)",
+        "3. Add a text file with the project specs and description",
+        "4. Copy and paste a project block from this JSON file, update all the fields",
+        "5. Ask Claude in Cowork to 'add the new project to the website content'"
+      ]
+    },
+    "add_new_colour": {
+      "steps": [
+        "1. Add the image to the appropriate Options folder",
+        "2. Make sure the image has an IPTC Description set (Claude can read this automatically)",
+        "3. Ask Claude in Cowork to 'update the colour options from the folder'"
+      ]
+    },
+    "add_new_door_style": {
+      "steps": [
+        "1. Add the HEIC or JPG image to 'Options/Doors/' with an IPTC description",
+        "2. Ask Claude to 'convert and add the new door style to the site'"
+      ]
+    }
+  }
+}
