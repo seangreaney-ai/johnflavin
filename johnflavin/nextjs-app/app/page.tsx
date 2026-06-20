@@ -94,7 +94,7 @@ export default function HomePage() {
           </p>
           <div className="hero__actions">
             <Link href="/showcase" className="btn btn--primary">See Our Work</Link>
-            <Link href="/contact" className="btn btn--ghost">Free Consultation</Link>
+            <Link href="/contact" className="btn btn--ghost">Call Today</Link>
           </div>
         </div>
       </section>
@@ -324,7 +324,7 @@ export default function HomePage() {
             ) : (
               <>
                 <Link href="/login" className="btn btn--light">Log in to see everything</Link>
-                <Link href="/contact" className="btn btn--ghost">Free Consultation</Link>
+                <Link href="/contact" className="btn btn--ghost">Call Today</Link>
               </>
             )}
           </div>

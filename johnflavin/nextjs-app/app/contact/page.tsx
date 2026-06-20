@@ -6,7 +6,7 @@ export default function ContactPage() {
           <p className="eyebrow eyebrow--light page-header__eyebrow">Get in Touch</p>
           <h1 className="display--xl page-header__title">Contact Us</h1>
           <p className="page-header__sub">
-            Arrange a free consultation and measure-up at your home — no obligation.
+            Call John to discuss your project. He&apos;ll visit your home, take measurements, and talk through your options.
           </p>
         </div>
       </header>

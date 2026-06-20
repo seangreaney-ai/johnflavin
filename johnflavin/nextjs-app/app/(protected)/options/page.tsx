@@ -551,25 +551,7 @@ export default function OptionsPage() {
               <p className="lead" style={{ marginTop: "1rem" }}>We supply and fit a range of worktop materials to suit every style and budget — from practical laminates to luxury quartz and natural stone.</p>
             </div>
 
-            <p className="eyebrow" style={{ marginBottom: "1.5rem" }}>Solid Oak Finishes</p>
-            <div className="worktops-grid">
-              {OAK_OIL_FINISHES.map(w => (
-                <div key={w.name} className="worktop-card">
-                  <div className="worktop-card__img-wrap" onClick={() => zoom(w.img, w.name)} style={{ cursor: "zoom-in" }}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img className="worktop-card__img" src={w.img} alt={w.name} loading="lazy" />
-                  </div>
-                  <HeartBtn
-                    item={{ id: `worktop-oak-${w.name}`, name: `${w.name} — Solid Oak Worktop`, image: w.img, category: "Worktop" }}
-                    wishlist={wishlist}
-                    onToggle={toggleWishlist}
-                  />
-                  <div className="worktop-card__info"><h3 className="worktop-card__name">{w.name}</h3></div>
-                </div>
-              ))}
-            </div>
-
-            <p className="eyebrow" style={{ marginTop: "3rem", marginBottom: "1.5rem" }}>Micro Worktops</p>
+            <p className="eyebrow" style={{ marginBottom: "1.5rem" }}>Micro Worktops</p>
             <div className="worktops-grid">
               {MICRO_WORKTOPS.map(w => (
                 <div key={w.slug} className="worktop-card">
@@ -589,8 +571,8 @@ export default function OptionsPage() {
 
             <div className="info-box">
               <p className="eyebrow" style={{ marginBottom: "0.75rem" }}>Not Sure Which Worktop to Choose?</p>
-              <p style={{ fontSize: "var(--text-sm)", color: "var(--text-secondary)", lineHeight: 1.65 }}>During your free consultation, John will discuss all the worktop options with you and help you choose the right material and finish for your project and budget.</p>
-              <Link href="/contact" className="btn btn--primary" style={{ marginTop: "1.5rem", display: "inline-flex" }}>Book a Free Consultation</Link>
+              <p style={{ fontSize: "var(--text-sm)", color: "var(--text-secondary)", lineHeight: 1.65 }}>John will discuss all the worktop options with you and help you choose the right material and finish for your project and budget.</p>
+              <Link href="/contact" className="btn btn--primary" style={{ marginTop: "1.5rem", display: "inline-flex" }}>Call Today</Link>
             </div>
           </div>
 

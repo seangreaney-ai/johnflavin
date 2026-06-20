@@ -257,6 +257,22 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .nav__cta:hover { background: var(--primary-hover); transform: translateY(-1px); }
 
+.nav__signin {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--warm-white);
+  background: transparent;
+  border: 1.5px solid rgba(245, 240, 234, 0.6);
+  padding: 0.5rem 1.2rem;
+  border-radius: 2px;
+  letter-spacing: 0.02em;
+  transition: border-color var(--dur-fast), background var(--dur-fast);
+  white-space: nowrap;
+}
+.nav__signin:hover { border-color: var(--warm-white); background: rgba(245,240,234,0.1); }
+.nav.light .nav__signin { color: var(--text-primary); border-color: rgba(15,13,11,0.35); }
+.nav.light .nav__signin:hover { border-color: var(--primary); color: var(--primary); background: transparent; }
+
 /* Hamburger */
 .hamburger {
   display: none;

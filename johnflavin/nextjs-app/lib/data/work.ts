@@ -143,6 +143,22 @@ export const WORK: WorkItem[] = [
     specs: { door_style:"Telford", finish:"Smooth", colour:"All White (Farrow & Ball)", interior:"Raw Endgrain Oak (Tailored Collection)", handles:"Monza Cups & Knobs", worktop:"Quartz" },
   },
   {
+    room: "living",
+    roomLabel: "Living Room",
+    title: "Acoustic Slat Wall Panels",
+    description: "Add warmth, texture and acoustic comfort to your home with acoustic slat wall panels. With realistic wood-effect vertical slats set against a dark acoustic felt backing, they bring depth, contrast and a high-end finish to living rooms, TV walls, bedrooms, hallways and home offices. They help soften echo while adding the warmth and character of timber — working especially well alongside bespoke media units, fitted storage, shelving, fireplaces and custom cabinetry.",
+    images: [
+      "/images/acoustic-panels/acoustic-main.png",
+      "/images/acoustic-panels/acoustic-01.jpg",
+      "/images/acoustic-panels/acoustic-02.jpg",
+      "/images/acoustic-panels/acoustic-03.jpg",
+      "/images/acoustic-panels/acoustic-04.jpg",
+      "/images/acoustic-panels/acoustic-05.jpg",
+      "/images/acoustic-panels/acoustic-06.jpg",
+    ],
+    specs: { finish: "Grey / Charcoal, Light Oak / Natural Oak, Walnut / Dark Wood", use: "Feature walls, TV walls, media units, hallways, bedrooms", style: "Vertical slat — acoustic felt backing", supply: "Supply & fit" },
+  },
+  {
     room: "kitchen",
     roomLabel: "Kitchen",
     title: "Clancy Kitchen — Ammonite",

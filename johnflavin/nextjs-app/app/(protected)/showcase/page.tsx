@@ -56,9 +56,12 @@ export default function ShowcasePage() {
       },
       { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
-    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    // Re-run when filter changes so newly rendered items get observed
+    requestAnimationFrame(() => {
+      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    });
     return () => observer.disconnect();
-  }, []);
+  }, [filter]);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -130,10 +133,10 @@ export default function ShowcasePage() {
         <div className="container" style={{ textAlign: "center" }}>
           <h2 className="display--lg reveal" style={{ color: "var(--warm-white)" }}>Like What You See?</h2>
           <p className="lead lead--light reveal reveal--delay-1" style={{ margin: "1.5rem auto 2.5rem" }}>
-            Get in touch to discuss your project. We&apos;ll arrange a free consultation and measure-up at your home.
+            Get in touch to discuss your project. John will visit your home, take measurements, and talk through your options.
           </p>
           <div className="reveal reveal--delay-2" style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/contact" className="btn btn--light">Book a Free Consultation</Link>
+            <Link href="/contact" className="btn btn--light">Call Today</Link>
             <Link href="/options" className="btn btn--ghost">Browse Options</Link>
           </div>
         </div>

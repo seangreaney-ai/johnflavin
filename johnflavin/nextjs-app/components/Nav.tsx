@@ -97,7 +97,9 @@ export default function Nav() {
               </>
             ) : (
               <>
-                {link("/login", "Sign in")}
+                <li>
+                  <Link href="/login" className="nav__signin">Sign In</Link>
+                </li>
                 <li>
                   <Link href="/contact" className="nav__cta">Get in Touch</Link>
                 </li>
