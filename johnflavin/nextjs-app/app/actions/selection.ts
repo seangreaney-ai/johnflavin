@@ -37,7 +37,9 @@ export async function sendSelection(state: SelectionState, formData: FormData): 
     return { error: "Your selection is empty. Add some items before sending." };
   }
 
-  const johnEmail = process.env.JOHN_EMAIL || "info@johnflavin.ie";
+  // Resend without domain verification can only deliver to the account owner's email.
+  // JOHN_EMAIL must be set to seanpaulgreaney@gmail.com until johnflavin.ie is verified in Resend.
+  const johnEmail = process.env.JOHN_EMAIL || "seanpaulgreaney@gmail.com";
 
   const grouped = items.reduce<Record<string, SelectionItem[]>>((acc, item) => {
     (acc[item.category] ||= []).push(item);
