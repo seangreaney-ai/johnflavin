@@ -1,6 +1,6 @@
 "use server";
 
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import { redirect } from "next/navigation";
 
 export type SelectionState = { error?: string } | undefined;
@@ -91,16 +91,7 @@ export async function sendSelection(state: SelectionState, formData: FormData): 
     </div>
   `;
 
-  const transporter = nodemailer.createTransport({
-    host: "smtp.hostgator.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.SMTP_USER || "info@johnflavin.ie",
-      pass: process.env.SMTP_PASS,
-    },
-    tls: { rejectUnauthorized: false },
-  });
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   const attachments = validFiles.length > 0
     ? await Promise.all(validFiles.map(async f => ({
@@ -110,17 +101,21 @@ export async function sendSelection(state: SelectionState, formData: FormData): 
     : undefined;
 
   try {
-    await transporter.sendMail({
-      from: `"Wood Interiors by John Flavin" <info@johnflavin.ie>`,
+    const { error: resendError } = await resend.emails.send({
+      from: "Wood Interiors by John Flavin <onboarding@resend.dev>",
       to: johnEmail,
       replyTo: email,
       subject: `New selection from ${name} — ${items.length} item${items.length !== 1 ? "s" : ""}${validFiles.length > 0 ? ` + ${validFiles.length} file${validFiles.length !== 1 ? "s" : ""}` : ""}`,
       html,
       attachments,
     });
+    if (resendError) {
+      console.error("Resend error:", resendError);
+      return { error: "Sorry, we couldn't send your selection right now. Please try again or contact John directly at info@johnflavin.ie." };
+    }
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
-    console.error("SMTP error:", msg);
+    console.error("Resend error:", msg);
     return { error: "Sorry, we couldn't send your selection right now. Please try again or contact John directly at info@johnflavin.ie." };
   }
 
