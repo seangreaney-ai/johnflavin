@@ -270,8 +270,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   white-space: nowrap;
 }
 .nav__signin:hover { border-color: var(--warm-white); background: rgba(245,240,234,0.1); }
-.nav.light .nav__signin { color: var(--text-primary); border-color: rgba(15,13,11,0.35); }
-.nav.light .nav__signin:hover { border-color: var(--primary); color: var(--primary); background: transparent; }
+.nav.light .nav__signin { color: var(--warm-white); border-color: var(--dark); background: var(--dark); }
+.nav.light .nav__signin:hover { background: var(--primary); border-color: var(--primary); color: var(--warm-white); }
 
 /* Hamburger */
 .hamburger {

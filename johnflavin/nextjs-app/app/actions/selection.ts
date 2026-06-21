@@ -37,9 +37,7 @@ export async function sendSelection(state: SelectionState, formData: FormData): 
     return { error: "Your selection is empty. Add some items before sending." };
   }
 
-  // Resend without domain verification can only deliver to the account owner's email.
-  // JOHN_EMAIL must be set to seanpaulgreaney@gmail.com until johnflavin.ie is verified in Resend.
-  const johnEmail = process.env.JOHN_EMAIL || "seanpaulgreaney@gmail.com";
+  const johnEmail = process.env.JOHN_EMAIL || "info@johnflavin.ie";
 
   const grouped = items.reduce<Record<string, SelectionItem[]>>((acc, item) => {
     (acc[item.category] ||= []).push(item);
@@ -104,7 +102,7 @@ export async function sendSelection(state: SelectionState, formData: FormData): 
 
   try {
     const { error: resendError } = await resend.emails.send({
-      from: "Wood Interiors by John Flavin <onboarding@resend.dev>",
+      from: "Wood Interiors by John Flavin <info@johnflavin.ie>",
       to: johnEmail,
       replyTo: email,
       subject: `New selection from ${name} — ${items.length} item${items.length !== 1 ? "s" : ""}${validFiles.length > 0 ? ` + ${validFiles.length} file${validFiles.length !== 1 ? "s" : ""}` : ""}`,

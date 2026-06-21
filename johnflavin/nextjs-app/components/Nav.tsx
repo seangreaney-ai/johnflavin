@@ -35,7 +35,7 @@ export default function Nav() {
 
   useEffect(() => {
     setLoggedIn(isProtected || checkLoggedIn());
-  }, [isProtected]);
+  }, [pathname, isProtected]);
 
   useEffect(() => {
     setMenuOpen(false);
