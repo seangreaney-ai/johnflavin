@@ -99,6 +99,7 @@ export async function sendSelection(state: SelectionState, formData: FormData): 
       user: process.env.SMTP_USER || "info@johnflavin.ie",
       pass: process.env.SMTP_PASS,
     },
+    tls: { rejectUnauthorized: false },
   });
 
   const attachments = validFiles.length > 0
