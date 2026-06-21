@@ -1,6 +1,6 @@
 "use server";
 
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 import { redirect } from "next/navigation";
 
 export type SelectionState = { error?: string } | undefined;
@@ -37,12 +37,7 @@ export async function sendSelection(state: SelectionState, formData: FormData): 
     return { error: "Your selection is empty. Add some items before sending." };
   }
 
-  const johnEmail = process.env.JOHN_EMAIL;
-  const resendKey = process.env.RESEND_API_KEY;
-
-  if (!resendKey || !johnEmail) {
-    redirect("/selection/sent");
-  }
+  const johnEmail = process.env.JOHN_EMAIL || "info@johnflavin.ie";
 
   const grouped = items.reduce<Record<string, SelectionItem[]>>((acc, item) => {
     (acc[item.category] ||= []).push(item);
@@ -96,6 +91,16 @@ export async function sendSelection(state: SelectionState, formData: FormData): 
     </div>
   `;
 
+  const transporter = nodemailer.createTransport({
+    host: "johnflavin.ie",
+    port: 465,
+    secure: true,
+    auth: {
+      user: process.env.SMTP_USER || "info@johnflavin.ie",
+      pass: process.env.SMTP_PASS,
+    },
+  });
+
   const attachments = validFiles.length > 0
     ? await Promise.all(validFiles.map(async f => ({
         filename: f.name,
@@ -103,19 +108,18 @@ export async function sendSelection(state: SelectionState, formData: FormData): 
       })))
     : undefined;
 
-  const resend = new Resend(resendKey);
-  const { error } = await resend.emails.send({
-    from: "Wood Interiors by John Flavin <noreply@johnflavin.ie>",
-    to: johnEmail,
-    replyTo: email,
-    subject: `New selection from ${name} — ${items.length} item${items.length !== 1 ? "s" : ""}${validFiles.length > 0 ? ` + ${validFiles.length} file${validFiles.length !== 1 ? "s" : ""}` : ""}`,
-    html,
-    attachments,
-  });
-
-  if (error) {
-    console.error("Resend error:", error);
-    return { error: "Sorry, we couldn't send your selection right now. Please try again or contact John directly." };
+  try {
+    await transporter.sendMail({
+      from: `"Wood Interiors by John Flavin" <info@johnflavin.ie>`,
+      to: johnEmail,
+      replyTo: email,
+      subject: `New selection from ${name} — ${items.length} item${items.length !== 1 ? "s" : ""}${validFiles.length > 0 ? ` + ${validFiles.length} file${validFiles.length !== 1 ? "s" : ""}` : ""}`,
+      html,
+      attachments,
+    });
+  } catch (err) {
+    console.error("SMTP error:", err);
+    return { error: "Sorry, we couldn't send your selection right now. Please try again or contact John directly at info@johnflavin.ie." };
   }
 
   redirect("/selection/sent");
