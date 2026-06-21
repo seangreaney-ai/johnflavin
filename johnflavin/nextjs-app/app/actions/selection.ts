@@ -92,7 +92,7 @@ export async function sendSelection(state: SelectionState, formData: FormData): 
   `;
 
   const transporter = nodemailer.createTransport({
-    host: "johnflavin.ie",
+    host: "smtp.hostgator.com",
     port: 465,
     secure: true,
     auth: {
@@ -119,7 +119,8 @@ export async function sendSelection(state: SelectionState, formData: FormData): 
       attachments,
     });
   } catch (err) {
-    console.error("SMTP error:", err);
+    const msg = err instanceof Error ? err.message : String(err);
+    console.error("SMTP error:", msg);
     return { error: "Sorry, we couldn't send your selection right now. Please try again or contact John directly at info@johnflavin.ie." };
   }
 
