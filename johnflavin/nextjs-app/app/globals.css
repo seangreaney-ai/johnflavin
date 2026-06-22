@@ -223,22 +223,24 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .nav__link {
   font-size: var(--text-sm);
   font-weight: 400;
-  color: var(--text-light);
+  color: var(--text-primary);
   position: relative;
   padding-bottom: 2px;
   transition: color var(--dur-fast);
 }
+.nav.scrolled .nav__link { color: var(--text-light); }
 
 .nav__link::after {
   content: '';
   position: absolute;
   bottom: -2px; left: 0; right: 0;
   height: 1px;
-  background: var(--warm-white);
+  background: var(--primary);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--dur-base) var(--ease-out-expo);
 }
+.nav.scrolled .nav__link::after { background: var(--warm-white); }
 
 .nav__link:hover::after,
 .nav__link.active::after { transform: scaleX(1); }
@@ -270,10 +272,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: block;
   width: 24px;
   height: 1.5px;
-  background: var(--warm-white);
+  background: var(--text-primary);
   transition: transform var(--dur-base) var(--ease-out-expo),
               opacity var(--dur-base);
 }
+.nav.scrolled .hamburger span { background: var(--warm-white); }
 
 .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
