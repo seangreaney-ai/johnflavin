@@ -61,7 +61,8 @@ function LoginForm() {
         <button
           type="submit"
           disabled={pending}
-          className="w-full bg-primary text-white py-3.5 text-sm tracking-wide hover:bg-primary/90 transition-colors mt-2 disabled:opacity-60"
+          className="btn btn--primary w-full justify-center mt-2"
+          style={{ opacity: pending ? 0.6 : 1 }}
         >
           {pending ? "Signing in…" : "Sign in"}
         </button>
