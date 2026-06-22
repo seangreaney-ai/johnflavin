@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
 
-export type AuthState = { error?: string } | undefined;
+export type AuthState = { error?: string; success?: string } | undefined;
 
 const DEMO_EMAIL = "demo@johnflavin.ie";
 const DEMO_PASSWORD = "Flavin2025";
@@ -37,15 +37,16 @@ export async function signUp(state: AuthState, formData: FormData): Promise<Auth
   }
 
   const supabase = await createClient();
-  const { error } = await supabase.auth.signUp({ email, password, options: { data: { name } } });
+  const { data, error } = await supabase.auth.signUp({ email, password, options: { data: { name } } });
   if (error) return { error: error.message };
-  redirect("/catalogue");
+  if (data.session) redirect("/showcase");
+  return { success: "Account created! Check your email for a confirmation link, then sign in." };
 }
 
 export async function signIn(state: AuthState, formData: FormData): Promise<AuthState> {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
-  const next = (formData.get("next") as string) || "/catalogue";
+  const next = (formData.get("next") as string) || "/showcase";
 
   if (!hasSupabase()) {
     if (email === DEMO_EMAIL && password === DEMO_PASSWORD) {

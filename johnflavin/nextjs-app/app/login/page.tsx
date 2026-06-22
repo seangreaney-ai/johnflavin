@@ -70,7 +70,7 @@ function LoginForm() {
       <p className="text-center text-sm text-near-black/60 mt-6">
         Don&apos;t have an account?{" "}
         <Link href="/register" className="text-primary hover:underline">
-          Create one free
+          Create account
         </Link>
       </p>
     </div>
