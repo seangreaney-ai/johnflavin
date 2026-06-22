@@ -98,7 +98,10 @@ export default function Nav() {
             ) : (
               <>
                 <li>
-                  <Link href="/login" className="nav__signin">Sign In</Link>
+                  <Link href="/login" className="nav__link">Sign In</Link>
+                </li>
+                <li>
+                  <Link href="/register" className="nav__link">Create Account</Link>
                 </li>
                 <li>
                   <Link href="/contact" className="nav__cta">Get in Touch</Link>
