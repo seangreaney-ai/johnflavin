@@ -141,6 +141,23 @@ const KNURLED_HANDLES = [
   { name: "System Knurled Brushed Nickel Bar Handle & Knob", desc: "Modern knurled touchpoints in brushed nickel finish.", img: "/images/options/handles/mvi/system-knurled-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
 ];
 
+const BAR_HANDLES = [
+  { name: "System Linear Gun Metal Bar Handle & Knob", desc: "Decorative linear bar handle and knob in gun metal finish.", img: "/images/options/handles/mvi/system-linear-gun-metal.jpg", finishes: ["Gun Metal"] },
+  { name: "System Linear Bronze Bar Handle & Knob", desc: "Linear bar handle and knob in bronze finish.", img: "/images/options/handles/mvi/system-linear-bronze.jpg", finishes: ["Bronze"] },
+  { name: "System Linear Black Bar Handle & Knob", desc: "Modern linear design in popular black finish.", img: "/images/options/handles/mvi/system-linear-black.jpg", finishes: ["Matt Black"] },
+  { name: "System Linear Brushed Nickel Bar Handle & Knob", desc: "Sterling theme in linear pattern.", img: "/images/options/handles/mvi/system-linear-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  { name: "System Linear Gold Bar Handle & Knob", desc: "Highly stylish gold finish with darkened linear patterns.", img: "/images/options/handles/mvi/system-linear-gold.jpg", finishes: ["Gold"] },
+  { name: "System Linear Rustic Brown Bar Handle", desc: "Warm rustic brown finish with a linear design.", img: "/images/options/handles/mvi/system-linear-rustic-brown.jpg", finishes: ["Rustic Brown"] },
+];
+
+const GIULIO_KNURLED = [
+  { name: "Giulio Gold Knurled Handle & Knob Collection", desc: "Premium knurled bar handle and knob set in gold finish.", img: "/images/options/handles/mvi/giulio-gold-knurled.jpg", finishes: ["Gold"] },
+  { name: "Giulio Black Knurled Handle & Knob Collection", desc: "Premium knurled bar handle and knob set in matt black.", img: "/images/options/handles/mvi/giulio-black-knurled.jpg", finishes: ["Matt Black"] },
+  { name: "Giulio Rosa Knurled Handle & Knob Collection", desc: "Premium knurled bar handle and knob set in rose gold.", img: "/images/options/handles/mvi/giulio-rosa-knurled.jpg", finishes: ["Rose Gold"] },
+  { name: "Giulio Satin Bronze Knurled Handle & Knob Collection", desc: "Premium knurled bar handle and knob set in satin bronze.", img: "/images/options/handles/mvi/giulio-satin-bronze-knurled.jpg", finishes: ["Satin Bronze"] },
+  { name: "Giulio Verde Knurled Handle & Knob Collection", desc: "Premium knurled bar handle and knob set in verde finish.", img: "/images/options/handles/mvi/giulio-verde-knurled.jpg", finishes: ["Verde"] },
+];
+
 const CUP_HANDLES = [
   { name: "Tapered Chunky D Handle", desc: "Available in satin nickel.", img: "/images/options/handles/mvi/tapered-chunky-d-handle.jpg", finishes: ["Satin Nickel"] },
   { name: "Chunky D Handle", desc: "Available in brushed nickel, dull brass, bronze or matt black.", img: "/images/options/handles/mvi/chunky-d-handle.jpg", finishes: ["Brushed Nickel", "Dull Brass", "Bronze", "Matt Black"] },
@@ -150,20 +167,47 @@ const CUP_HANDLES = [
   { name: "Camden Satin Brass D Handle", desc: "Contemporary D handles in stunning satin brass finish.", img: "/images/options/handles/mvi/camden-satin-brass.jpg", finishes: ["Satin Brass"] },
 ];
 
-const BAR_HANDLES = [
-  { name: "System Linear Gun Metal Bar Handle & Knob", desc: "Decorative linear bar handle and knob in gun metal finish.", img: "/images/options/handles/mvi/system-linear-gun-metal.jpg", finishes: ["Gun Metal"] },
-  { name: "System Linear Bronze Bar Handle & Knob", desc: "Linear bar handle and knob in bronze finish.", img: "/images/options/handles/mvi/system-linear-bronze.jpg", finishes: ["Bronze"] },
-  { name: "System Linear Black Bar Handle & Knob", desc: "Modern linear design in popular black finish.", img: "/images/options/handles/mvi/system-linear-black.jpg", finishes: ["Matt Black"] },
-  { name: "System Linear Brushed Nickel Bar Handle & Knob", desc: "Sterling theme in linear pattern.", img: "/images/options/handles/mvi/system-linear-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
-  { name: "System Linear Gold Bar Handle & Knob", desc: "Highly stylish gold finish with darkened linear patterns.", img: "/images/options/handles/mvi/system-linear-gold.jpg", finishes: ["Gold"] },
-];
-
 const KNOBS = [
   { name: "Rear Fixing Unit Handle — Chrome", desc: "Front lip grip handles in chrome finish.", img: "/images/options/handles/mvi/rear-fixing-chrome.jpg", finishes: ["Chrome"] },
   { name: "Rear Fixing Unit Handle — Black", desc: "Front lip grip handles in black finish for a handless interior feel.", img: "/images/options/handles/mvi/rear-fixing-black.jpg", finishes: ["Matt Black"] },
   { name: "Rear Fixing Unit Handle — Brushed Steel", desc: "Front lip grip handles in brushed steel finish.", img: "/images/options/handles/mvi/rear-fixing-brushed.jpg", finishes: ["Brushed Steel"] },
   { name: "Rear Fixing Unit Handle — Satin Brass", desc: "Front lip grip handles in stunning satin brass finish.", img: "/images/options/handles/mvi/rear-fixing-satin-brass.jpg", finishes: ["Satin Brass"] },
   { name: "Finesse Rear Fixing Handle — Black", desc: "Finesse rear fixing handle in black finish, available in three sizes.", img: "/images/options/handles/mvi/finesse-rear-fixing-black.jpg", finishes: ["Matt Black"] },
+  { name: "Finesse Rear Fixing Handle — Brushed", desc: "Finesse rear fixing handle in brushed finish.", img: "/images/options/handles/mvi/finesse-rear-fixing-brushed.jpg", finishes: ["Brushed"] },
+  { name: "Finesse Rear Fixing Handle — Satin Brass", desc: "Finesse rear fixing handle in satin brass finish.", img: "/images/options/handles/mvi/finesse-rear-fixing-satin-brass.jpg", finishes: ["Satin Brass"] },
+];
+
+const GIULIO_BAR = [
+  { name: "Giulio Crystal Handle", desc: "Crystal bar handle from the Giulio range.", img: "/images/options/handles/mvi/giulio-crystal-handle.jpg", finishes: ["Chrome Base"] },
+  { name: "Giulio Grain Handle", desc: "Textured grain finish bar handle.", img: "/images/options/handles/mvi/giulio-grain.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Giulio Trellis Handle", desc: "Decorative trellis pattern bar handle.", img: "/images/options/handles/mvi/giulio-trellis.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Giulio Bridge Handle", desc: "Bridge-style bar handle from the Giulio range.", img: "/images/options/handles/mvi/giulio-bridge.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Giulio Bar Handle (8/1066)", desc: "Contemporary bar handle from the Giulio collection.", img: "/images/options/handles/mvi/giulio-8-1066.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Giulio Bar Handle (8/1010)", desc: "Contemporary bar handle from the Giulio collection.", img: "/images/options/handles/mvi/giulio-8-1010.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Giulio Bar Handle (8/1075)", desc: "Contemporary bar handle from the Giulio collection.", img: "/images/options/handles/mvi/giulio-8-1075.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Giulio Bar Handle (8/1027)", desc: "Contemporary bar handle from the Giulio collection.", img: "/images/options/handles/mvi/giulio-8-1027.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Giulio Bar Handle (8/972)", desc: "Contemporary bar handle from the Giulio collection.", img: "/images/options/handles/mvi/giulio-8-972.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Giulio Dubai Handle", desc: "Dubai collection bar handle from Giulio.", img: "/images/options/handles/mvi/giulio-dubai-handle.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Giulio American Copper Handle", desc: "American copper finish bar handle from Giulio.", img: "/images/options/handles/mvi/giulio-american-copper.jpg", finishes: ["Copper"] },
+  { name: "Giulio Winged Handle", desc: "Winged profile bar handle from the Giulio range.", img: "/images/options/handles/mvi/giulio-winged.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Tapered Bow Handle", desc: "Classic tapered bow-shaped pull handle.", img: "/images/options/handles/mvi/tapered-bow-handle.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Wide Handle", desc: "Wide profile bar handle.", img: "/images/options/handles/mvi/wide-handle.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Scoop Handle", desc: "Scoop profile handle.", img: "/images/options/handles/mvi/scoop-handle.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Bridge Handle", desc: "Classic bridge-style handle.", img: "/images/options/handles/mvi/bridge-handle.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Matching Handle for Integrated Appliances", desc: "Handle designed to coordinate with integrated appliances.", img: "/images/options/handles/mvi/matching-handle-appliances.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Flush Pull Inset Handle", desc: "Inset flush pull handle for a handless look.", img: "/images/options/handles/mvi/flush-pull-inset.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Circular Flush Inset Handle", desc: "Circular inset flush pull for a hidden-handle look.", img: "/images/options/handles/mvi/circular-flush-inset.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Satin Nickel Inset Handle", desc: "Inset handle in satin nickel finish.", img: "/images/options/handles/mvi/satin-nickel-inset.jpg", finishes: ["Satin Nickel"] },
+];
+
+const CRYSTAL_AND_KNOBS = [
+  { name: "Crystal Handle", desc: "Crystal bar handle with a striking transparent effect.", img: "/images/options/handles/mvi/crystal-handle.jpg", finishes: ["Chrome Base"] },
+  { name: "Crystal Knob With Chrome Base", desc: "Crystal-effect cabinet knob with chrome base.", img: "/images/options/handles/mvi/crystal-knob-chrome.jpg", finishes: ["Chrome Base"] },
+  { name: "Giulio Dubai Knob", desc: "Dubai collection cabinet knob from Giulio.", img: "/images/options/handles/mvi/giulio-dubai-knob.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Giulio Square Knob", desc: "Square profile cabinet knob from the Giulio range.", img: "/images/options/handles/mvi/giulio-square-knob.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Cabinet Knob No. 786", desc: "Classic cabinet knob.", img: "/images/options/handles/mvi/no-786-knob.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Kitchen Knob No. 756", desc: "Kitchen cabinet knob.", img: "/images/options/handles/mvi/kitchen-knob-756.jpg", finishes: ["Multiple Finishes"] },
+  { name: "Bathroom Cabinet Knob", desc: "Knob designed for bathroom furniture.", img: "/images/options/handles/mvi/bathroom-cabinet-knob.jpg", finishes: ["Multiple Finishes"] },
 ];
 
 const MICRO_WORKTOPS = [
@@ -521,8 +565,15 @@ export default function OptionsPage() {
               />
               <HandleCategory
                 title="System Linear Bar Handles & Knobs"
-                desc="A clean linear pattern with a contemporary feel. Each set includes a matching bar handle and knob — available in gun metal, bronze, black, brushed nickel, and gold."
+                desc="A clean linear pattern with a contemporary feel. Each set includes a matching bar handle and knob — available in gun metal, bronze, black, brushed nickel, gold, and rustic brown."
                 items={BAR_HANDLES}
+                wishlist={wishlist}
+                onToggle={toggleWishlist}
+              />
+              <HandleCategory
+                title="Giulio Knurled Collections"
+                desc="Premium knurled bar handle and matching knob sets from the Giulio range — available in gold, black, rose gold, satin bronze, and verde."
+                items={GIULIO_KNURLED}
                 wishlist={wishlist}
                 onToggle={toggleWishlist}
               />
@@ -537,6 +588,20 @@ export default function OptionsPage() {
                 title="Rear Fixing Handles"
                 desc="Front lip grip handles that fix from behind the door — perfect for a handless look. Available in chrome, black, brushed steel, and satin brass."
                 items={KNOBS}
+                wishlist={wishlist}
+                onToggle={toggleWishlist}
+              />
+              <HandleCategory
+                title="Giulio Bar & Statement Handles"
+                desc="A wide range of distinctive bar handles from the Giulio collection — grain, trellis, bridge, crystal, and more. Ideal for making a statement in kitchens, bedrooms, and bathrooms."
+                items={GIULIO_BAR}
+                wishlist={wishlist}
+                onToggle={toggleWishlist}
+              />
+              <HandleCategory
+                title="Crystal Handles & Knobs"
+                desc="Crystal-effect handles and cabinet knobs — a luxurious finishing touch for painted furniture and bathroom cabinetry."
+                items={CRYSTAL_AND_KNOBS}
                 wishlist={wishlist}
                 onToggle={toggleWishlist}
               />
