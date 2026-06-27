@@ -135,29 +135,35 @@ const COLORTREND_COLOURS = [
 ];
 
 const KNURLED_HANDLES = [
-  { name: "Knurled Pull Handle — Mild Steel", desc: "A bold knurled bar handle in mild steel. Fixing centres 160–320mm.", img: "/images/options/handles/knurled-pull-handle.jpg", finishes: ["Matte Black", "Bronze", "Nickel", "Brass"] },
-  { name: "Knurled Knob — Mild Steel, Ø38mm", desc: "Round knurled knob in mild steel. Pairs with the matching pull handle for a coordinated set.", img: "/images/options/handles/knurled-knob-38mm.jpg", finishes: ["Matte Black", "Bronze", "Nickel"] },
-  { name: "Barchester Knob — Iron, Ø38–49mm", desc: "A beautiful iron knurled knob with an antique finish — perfect for shaker or painted kitchen doors.", img: "/images/options/handles/barchester-knob-iron.jpg", finishes: ["Antique Iron", "Black"] },
-  { name: "Double Ringed T Knob — Iron, Ø18mm", desc: "A compact knurled T-knob with a distinctive double ring detail. Works well as a drawer knob.", img: "/images/options/handles/double-ringed-t-knob.jpg", finishes: ["Antique Iron", "Black"] },
+  { name: "System Knurled Bronze Bar Handle & Knob", desc: "Modern design with traditional circlets in bronze finish.", img: "/images/options/handles/mvi/system-knurled-bronze.jpg", finishes: ["Bronze"] },
+  { name: "System Knurled Black Bar Handle & Knob", desc: "Modern design with traditional circlets in stunning black finish.", img: "/images/options/handles/mvi/system-knurled-black.jpg", finishes: ["Matt Black"] },
+  { name: "System Knurled Gold Bar Handle & Knob", desc: "Modern knurled touchpoints in bar handle and circular knob in gold finish.", img: "/images/options/handles/mvi/system-knurled-gold.jpg", finishes: ["Gold"] },
+  { name: "System Knurled Brushed Nickel Bar Handle & Knob", desc: "Modern knurled touchpoints in brushed nickel finish.", img: "/images/options/handles/mvi/system-knurled-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
 ];
 
 const CUP_HANDLES = [
-  { name: "Cup Pull — Hendel & Hendel Hampton", desc: "An elegant cup pull handle from the prestigious Hampton collection. 10 finish options. Fixing centres 64–96mm.", img: "/images/options/handles/hampton-cup-pull.jpg", finishes: ["Satin Nickel", "Polished Nickel", "Antique Bronze", "Matt Black", "Brushed Gold"] },
-  { name: "Cup Pull — Hendel & Hendel Greenwich", desc: "A refined cup pull from the Greenwich collection. Clean lines with a traditional feel. Fixing centres 64–96mm.", img: "/images/options/handles/greenwich-cup-pull.jpg", finishes: ["Satin Nickel", "Antique Bronze", "Matt Black"] },
-  { name: "Cup Pull — Hendel & Hendel Charlbury", desc: "A subtly curved cup handle with a contemporary profile.", img: "/images/options/handles/charlbury-cup-pull.jpg", finishes: ["Brushed", "Polished"] },
+  { name: "Tapered Chunky D Handle", desc: "Available in satin nickel.", img: "/images/options/handles/mvi/tapered-chunky-d-handle.jpg", finishes: ["Satin Nickel"] },
+  { name: "Chunky D Handle", desc: "Available in brushed nickel, dull brass, bronze or matt black.", img: "/images/options/handles/mvi/chunky-d-handle.jpg", finishes: ["Brushed Nickel", "Dull Brass", "Bronze", "Matt Black"] },
+  { name: "Palermo Handle", desc: "Available in 5 finishes.", img: "/images/options/handles/mvi/palermo-handle.jpg", finishes: ["5 Finishes"] },
+  { name: "Camden Matt Black D Handle", desc: "Modern design D handles in matt black finish.", img: "/images/options/handles/mvi/camden-matt-black.jpg", finishes: ["Matt Black"] },
+  { name: "Camden Brushed Nickel D Handle", desc: "Contemporary D handle in brushed nickel finish.", img: "/images/options/handles/mvi/camden-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  { name: "Camden Satin Brass D Handle", desc: "Contemporary D handles in stunning satin brass finish.", img: "/images/options/handles/mvi/camden-satin-brass.jpg", finishes: ["Satin Brass"] },
 ];
 
 const BAR_HANDLES = [
-  { name: "Tapered Bow Brushed Handle", desc: "An elegant tapered bow handle in brushed finish — works beautifully on smooth contemporary doors.", img: "/images/options/handles/tapered-bow-handle.jpg", finishes: ["Brushed Nickel", "Brushed Brass"] },
-  { name: "Gold Bar Handle", desc: "A simple, elegant bar handle in gold — adds warmth and a touch of luxury to any painted door.", img: "/images/options/handles/gold-bar-handle.jpg", finishes: ["Brushed Gold", "Polished Gold"] },
-  { name: "Clifton Bow Handle", desc: "A classic bow-shaped handle — available in multiple finishes. Suitable for drawers and doors.", img: "/images/options/handles/clifton-bow-handle.jpg", finishes: ["Chrome", "Antique Brass", "Matt Black"] },
-  { name: "Kellas / Pimlico Bar Handle", desc: "Slender bar handles with a minimalist profile — ideal for contemporary kitchens and wardrobes.", img: "/images/options/handles/pimlico-bar-handle.jpg", finishes: ["Brushed Nickel", "Matt Black", "Brushed Gold"] },
+  { name: "System Linear Gun Metal Bar Handle & Knob", desc: "Decorative linear bar handle and knob in gun metal finish.", img: "/images/options/handles/mvi/system-linear-gun-metal.jpg", finishes: ["Gun Metal"] },
+  { name: "System Linear Bronze Bar Handle & Knob", desc: "Linear bar handle and knob in bronze finish.", img: "/images/options/handles/mvi/system-linear-bronze.jpg", finishes: ["Bronze"] },
+  { name: "System Linear Black Bar Handle & Knob", desc: "Modern linear design in popular black finish.", img: "/images/options/handles/mvi/system-linear-black.jpg", finishes: ["Matt Black"] },
+  { name: "System Linear Brushed Nickel Bar Handle & Knob", desc: "Sterling theme in linear pattern.", img: "/images/options/handles/mvi/system-linear-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  { name: "System Linear Gold Bar Handle & Knob", desc: "Highly stylish gold finish with darkened linear patterns.", img: "/images/options/handles/mvi/system-linear-gold.jpg", finishes: ["Gold"] },
 ];
 
 const KNOBS = [
-  { name: "Queen Ann Beehive Knob", desc: "A classic beehive profile knob — elegant and traditional. Popular for shaker kitchens.", img: "/images/options/handles/queen-ann-beehive-knob.jpg", finishes: ["Antique Brass", "Chrome", "Nickel"] },
-  { name: "Crystal Knob", desc: "A delicate crystal-effect knob — adds a touch of elegance to painted furniture.", img: "/images/options/handles/crystal-knob.jpg", finishes: ["Clear Crystal", "Chrome Base"] },
-  { name: "Henrietta / Greenwich / Belgravia Knob", desc: "Elegant round knobs from the Hendel & Hendel range — available in multiple sizes and finishes.", img: "/images/options/handles/belgravia-knob.jpg", finishes: ["Satin Nickel", "Antique Brass", "Matt Black"] },
+  { name: "Rear Fixing Unit Handle — Chrome", desc: "Front lip grip handles in chrome finish.", img: "/images/options/handles/mvi/rear-fixing-chrome.jpg", finishes: ["Chrome"] },
+  { name: "Rear Fixing Unit Handle — Black", desc: "Front lip grip handles in black finish for a handless interior feel.", img: "/images/options/handles/mvi/rear-fixing-black.jpg", finishes: ["Matt Black"] },
+  { name: "Rear Fixing Unit Handle — Brushed Steel", desc: "Front lip grip handles in brushed steel finish.", img: "/images/options/handles/mvi/rear-fixing-brushed.jpg", finishes: ["Brushed Steel"] },
+  { name: "Rear Fixing Unit Handle — Satin Brass", desc: "Front lip grip handles in stunning satin brass finish.", img: "/images/options/handles/mvi/rear-fixing-satin-brass.jpg", finishes: ["Satin Brass"] },
+  { name: "Finesse Rear Fixing Handle — Black", desc: "Finesse rear fixing handle in black finish, available in three sizes.", img: "/images/options/handles/mvi/finesse-rear-fixing-black.jpg", finishes: ["Matt Black"] },
 ];
 
 const MICRO_WORKTOPS = [
@@ -502,34 +508,34 @@ export default function OptionsPage() {
             <div className="section-header">
               <p className="eyebrow">Hardware</p>
               <h2 className="display--md" style={{ marginTop: "0.75rem" }}>Handles &amp; Knobs</h2>
-              <p className="lead" style={{ marginTop: "1rem" }}>We supply quality hardware from Häfele and Hendel &amp; Hendel — leading Irish hardware suppliers — in a wide range of styles and finishes. The right handle makes all the difference.</p>
+              <p className="lead" style={{ marginTop: "1rem" }}>We supply quality hardware from MVI Hazel — a leading contemporary hardware supplier — in a wide range of styles and finishes. The right handle makes all the difference.</p>
             </div>
 
             <div className="handles-categories">
               <HandleCategory
-                title="Knurled Handles & Knobs"
-                desc="A tactile, textured finish that adds character to any door. Available in matte black, bronze, gold, and brushed nickel. Our most popular hardware choice for contemporary and transitional furniture."
+                title="System Knurled Bar Handles & Knobs"
+                desc="A tactile knurled finish that adds character to any door. Each set includes a matching bar handle and circular knob — available in bronze, black, gold, and brushed nickel."
                 items={KNURLED_HANDLES}
                 wishlist={wishlist}
                 onToggle={toggleWishlist}
               />
               <HandleCategory
-                title="Cup Handles"
-                desc="The classic cup-style drawer pull — a timeless choice for shaker kitchens and traditional painted furniture. Available in a wide range of sizes and finishes."
-                items={CUP_HANDLES}
-                wishlist={wishlist}
-                onToggle={toggleWishlist}
-              />
-              <HandleCategory
-                title="Bar & Pull Handles"
-                desc="Sleek bar handles for a contemporary look — available in a range of lengths and finishes to suit any style of furniture."
+                title="System Linear Bar Handles & Knobs"
+                desc="A clean linear pattern with a contemporary feel. Each set includes a matching bar handle and knob — available in gun metal, bronze, black, brushed nickel, and gold."
                 items={BAR_HANDLES}
                 wishlist={wishlist}
                 onToggle={toggleWishlist}
               />
               <HandleCategory
-                title="Knobs"
-                desc="A great finishing touch for painted shaker and traditional-style furniture — available in round, beehive, and decorative profiles."
+                title="D Handles"
+                desc="Chunky, substantial D-profile handles with a premium feel. Suitable for doors and drawers in contemporary and transitional kitchens."
+                items={CUP_HANDLES}
+                wishlist={wishlist}
+                onToggle={toggleWishlist}
+              />
+              <HandleCategory
+                title="Rear Fixing Handles"
+                desc="Front lip grip handles that fix from behind the door — perfect for a handless look. Available in chrome, black, brushed steel, and satin brass."
                 items={KNOBS}
                 wishlist={wishlist}
                 onToggle={toggleWishlist}
@@ -537,9 +543,9 @@ export default function OptionsPage() {
             </div>
 
             <div className="info-box">
-              <p className="eyebrow" style={{ marginBottom: "0.75rem" }}>Full Häfele Catalogue</p>
-              <p style={{ fontSize: "var(--text-sm)", color: "var(--text-secondary)", lineHeight: 1.65 }}>Browse the full range of handles and knobs from Häfele — our primary hardware supplier. Many more options are available beyond those listed here.</p>
-              <a href="https://www.hafele.ie/en/products/handles-knobs/cabinet-handles-knobs/11/" target="_blank" rel="noopener noreferrer" className="btn btn--ghost-dark" style={{ marginTop: "1.5rem", display: "inline-flex" }}>Browse Häfele Catalogue →</a>
+              <p className="eyebrow" style={{ marginBottom: "0.75rem" }}>Full MVI Hazel Catalogue</p>
+              <p style={{ fontSize: "var(--text-sm)", color: "var(--text-secondary)", lineHeight: 1.65 }}>Browse the full range of contemporary handles and knobs from MVI Hazel — our hardware supplier. Many more options are available beyond those listed here.</p>
+              <a href="https://www.mvihazel.com/shop/catalogue?i=6464&c=6403&n=Contemporary-Handles" target="_blank" rel="noopener noreferrer" className="btn btn--ghost-dark" style={{ marginTop: "1.5rem", display: "inline-flex" }}>Browse MVI Hazel Catalogue →</a>
             </div>
           </div>
 
