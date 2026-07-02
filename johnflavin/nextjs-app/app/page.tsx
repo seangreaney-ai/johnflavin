@@ -149,43 +149,141 @@ export default function HomePage() {
             <p className="eyebrow reveal">What We Make</p>
             <h2 className="display--lg reveal reveal--delay-1">Every Room in Your Home</h2>
           </div>
-          <div className="services__grid reveal reveal--delay-2">
-            <Link href="/showcase" className="service-card">
-              <span className="service-card__number">01</span>
-              <h3 className="service-card__title">Custom Kitchens</h3>
-              <p className="service-card__text">From classic shaker styles to sleek contemporary designs — made to measure, finished to your exact taste, and fully installed by John himself.</p>
-              <span className="service-card__link">Learn more →</span>
-            </Link>
-            <Link href="/showcase" className="service-card">
-              <span className="service-card__number">02</span>
-              <h3 className="service-card__title">Bedrooms &amp; Wardrobes</h3>
-              <p className="service-card__text">Hinged wardrobes, sliderobe systems, and walk-in wardrobes — made to fit your room exactly, with soft-close hardware throughout.</p>
-              <span className="service-card__link">Learn more →</span>
-            </Link>
-            <Link href="/showcase" className="service-card">
-              <span className="service-card__number">03</span>
-              <h3 className="service-card__title">Living Room Units</h3>
-              <p className="service-card__text">TV units, display shelving, and full-wall storage solutions — designed around your room, with optional integrated strip lighting.</p>
-              <span className="service-card__link">Learn more →</span>
-            </Link>
-            <Link href="/showcase" className="service-card">
-              <span className="service-card__number">04</span>
-              <h3 className="service-card__title">Utility Rooms</h3>
-              <p className="service-card__text">Practical, storage-focused utility rooms with raised appliance platforms, pull-out shelves, coat storage, and overhead presses.</p>
-              <span className="service-card__link">Learn more →</span>
-            </Link>
-            <Link href="/showcase" className="service-card">
-              <span className="service-card__number">05</span>
-              <h3 className="service-card__title">Bathroom Furniture</h3>
-              <p className="service-card__text">Vanity units, linen presses, and fitted bathroom storage — water-resistant finishes available, made to measure for any layout.</p>
-              <span className="service-card__link">Learn more →</span>
-            </Link>
-            <Link href="/showcase" className="service-card">
-              <span className="service-card__number">06</span>
-              <h3 className="service-card__title">Wall Panels</h3>
-              <p className="service-card__text">Classic and contemporary panel styles for hallways, bedrooms and sitting rooms — available in any painted colour.</p>
-              <span className="service-card__link">Learn more →</span>
-            </Link>
+
+          <div className="services-showcase">
+
+            {/* 01 — Kitchens */}
+            <div className="service-showcase__item reveal">
+              <div className="service-showcase__header">
+                <span className="service-showcase__number">01</span>
+                <h3 className="service-showcase__title">Custom Kitchens</h3>
+                <p className="service-showcase__desc">From classic shaker styles to sleek contemporary designs — made to measure, finished to your exact taste, and fully installed.</p>
+                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__link">See more →</Link>
+              </div>
+              <div className="service-showcase__images">
+                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/home-services/kitchen-oconnor-01.jpg" alt="O'Connor Kitchen" loading="lazy" />
+                  <span className="service-showcase__img-label">O&apos;Connor Kitchen</span>
+                </Link>
+                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/home-services/kitchen-flaherty-01.jpg" alt="Flaherty Kitchen" loading="lazy" />
+                  <span className="service-showcase__img-label">Flaherty Kitchen</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* 02 — Bedrooms & Wardrobes */}
+            <div className="service-showcase__item reveal">
+              <div className="service-showcase__header">
+                <span className="service-showcase__number">02</span>
+                <h3 className="service-showcase__title">Bedrooms &amp; Wardrobes</h3>
+                <p className="service-showcase__desc">Hinged wardrobes, sliderobe systems, and walk-in wardrobes — made to fit your room exactly, with soft-close hardware throughout.</p>
+                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__link">See more →</Link>
+              </div>
+              <div className="service-showcase__images">
+                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/work8/step-shaker-wardrobe-01.jpg" alt="Step Shaker Wardrobe" loading="lazy" />
+                  <span className="service-showcase__img-label">Step Shaker Wardrobe</span>
+                </Link>
+                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/work9/black-mirror-sliderobe-01.jpg" alt="Mirror Black Track Sliderobe" loading="lazy" />
+                  <span className="service-showcase__img-label">Mirror Black Track</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* 03 — Living Rooms */}
+            <div className="service-showcase__item reveal">
+              <div className="service-showcase__header">
+                <span className="service-showcase__number">03</span>
+                <h3 className="service-showcase__title">Living Room Units</h3>
+                <p className="service-showcase__desc">TV units, display shelving, and full-wall storage solutions — designed around your room, with optional integrated strip lighting.</p>
+                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__link">See more →</Link>
+              </div>
+              <div className="service-showcase__images">
+                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/work7/display-storage-unit-01.jpg" alt="Display & Storage Unit — Inchyra" loading="lazy" />
+                  <span className="service-showcase__img-label">Inchyra Display Unit</span>
+                </Link>
+                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/home-services/living-telford-01.jpg" alt="Telford TV Unit" loading="lazy" />
+                  <span className="service-showcase__img-label">Telford TV Unit</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* 04 — Utility Rooms */}
+            <div className="service-showcase__item reveal">
+              <div className="service-showcase__header">
+                <span className="service-showcase__number">04</span>
+                <h3 className="service-showcase__title">Utility Rooms</h3>
+                <p className="service-showcase__desc">Practical, storage-focused utility rooms with raised appliance platforms, pull-out shelves, coat storage, and overhead presses.</p>
+                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__link">See more →</Link>
+              </div>
+              <div className="service-showcase__images">
+                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/work14/moloney-utility-01.jpg" alt="Moloney Utility Room" loading="lazy" />
+                  <span className="service-showcase__img-label">Moloney Utility</span>
+                </Link>
+                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/work15/obrien-utility-01.jpg" alt="O'Brien Utility Room" loading="lazy" />
+                  <span className="service-showcase__img-label">O&apos;Brien Utility</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* 05 — Bathroom Furniture */}
+            <div className="service-showcase__item reveal">
+              <div className="service-showcase__header">
+                <span className="service-showcase__number">05</span>
+                <h3 className="service-showcase__title">Bathroom Furniture</h3>
+                <p className="service-showcase__desc">Vanity units, linen presses, and fitted bathroom storage — water-resistant finishes available, made to measure for any layout.</p>
+                <Link href="/contact" className="service-showcase__link">Enquire →</Link>
+              </div>
+              <div className="service-showcase__images">
+                <div className="service-showcase__img-wrap">
+                  <div className="service-showcase__placeholder">
+                    <span className="service-showcase__placeholder-text">Photos coming soon</span>
+                  </div>
+                </div>
+                <div className="service-showcase__img-wrap">
+                  <div className="service-showcase__placeholder">
+                    <span className="service-showcase__placeholder-text">Photos coming soon</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 06 — Bespoke & Specialist */}
+            <div className="service-showcase__item reveal">
+              <div className="service-showcase__header">
+                <span className="service-showcase__number">06</span>
+                <h3 className="service-showcase__title">Bespoke &amp; Specialist</h3>
+                <p className="service-showcase__desc">Acoustic slat wall panels, hallway furniture, commercial fit-outs, and other one-off timber projects — if it&apos;s wood, John can build it.</p>
+                <Link href="/contact" className="service-showcase__link">Enquire →</Link>
+              </div>
+              <div className="service-showcase__images">
+                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/acoustic-panels/acoustic-main.png" alt="Acoustic Slat Wall Panels" loading="lazy" />
+                  <span className="service-showcase__img-label">Acoustic Slat Wall Panels</span>
+                </Link>
+                <div className="service-showcase__img-wrap">
+                  <div className="service-showcase__placeholder">
+                    <span className="service-showcase__placeholder-text">More examples coming</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
