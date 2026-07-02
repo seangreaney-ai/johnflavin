@@ -72,7 +72,7 @@ export default function HomePage() {
     );
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, [loggedIn]);
 
   // Auth + selection state
   useEffect(() => {
