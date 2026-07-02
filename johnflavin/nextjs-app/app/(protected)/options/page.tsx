@@ -71,16 +71,28 @@ const OAK_OIL_FINISHES = [
 ];
 
 const OAK_STAINED_FINISHES = [
-  { name: "Amber Ember", img: "/images/options/oak-finishes/stained-amber-ember.jpg" },
-  { name: "Old Chalet No.20", img: "/images/options/oak-finishes/stained-old-chalet.jpg" },
-  { name: "Champagne Oak", img: "/images/options/oak-finishes/stained-champagne-oak.jpg" },
-  { name: "Aged Acorn No.15", img: "/images/options/oak-finishes/stained-aged-acorn.jpg" },
-  { name: "Obsidian No.33", img: "/images/options/oak-finishes/stained-obsidian.jpg" },
-  { name: "Swiss Pearl", img: "/images/options/oak-finishes/stained-swiss-pearl.jpg" },
-  { name: "Irish Meadow", img: "/images/options/oak-finishes/stained-irish-meadow.jpg" },
-  { name: "Weathered Bork No.8", img: "/images/options/oak-finishes/stained-weathered-bork.jpg" },
-  { name: "White Ash Stain", img: "/images/options/oak-finishes/stained-white-ash.jpg" },
-  { name: "Tobacco Walnut", img: "/images/options/oak-finishes/stained-tobacco-walnut.jpg" },
+  { name: "Amber Ember", img: "/images/options/oak-finishes/stained-6613.jpg" },
+  { name: "Old Chalet No.20", img: "/images/options/oak-finishes/stained-6614.jpg" },
+  { name: "Champagne Oak", img: "/images/options/oak-finishes/stained-6615.jpg" },
+  { name: "Aged Acorn No.15", img: "/images/options/oak-finishes/stained-6616.jpg" },
+  { name: "Obsidian No.33", img: "/images/options/oak-finishes/stained-6617.jpg" },
+  { name: "Swiss Pearl", img: "/images/options/oak-finishes/stained-6618.jpg" },
+  { name: "Irish Meadow", img: "/images/options/oak-finishes/stained-6619.jpg" },
+  { name: "Weathered Bork No.8", img: "/images/options/oak-finishes/stained-6620.jpg" },
+  { name: "Warm Walnut", img: "/images/options/oak-finishes/stained-6621.jpg" },
+  { name: "Natural Lacquer", img: "/images/options/oak-finishes/stained-6622.jpg" },
+  { name: "Dark Chocolate", img: "/images/options/oak-finishes/stained-6623.jpg" },
+  { name: "Weathered Bork No.8", img: "/images/options/oak-finishes/stained-6626.jpg" },
+  { name: "Swiss Pearl", img: "/images/options/oak-finishes/stained-6627.jpg" },
+  { name: "Old Chalet No.20", img: "/images/options/oak-finishes/stained-6628.jpg" },
+  { name: "Champagne Oak", img: "/images/options/oak-finishes/stained-6629.jpg" },
+  { name: "White Ash Stain", img: "/images/options/oak-finishes/stained-6630.jpg" },
+  { name: "Aged Acorn No.15", img: "/images/options/oak-finishes/stained-6631.jpg" },
+  { name: "Ebony Stain", img: "/images/options/oak-finishes/stained-6632.jpg" },
+  { name: "Obsidian No.33", img: "/images/options/oak-finishes/stained-6633.jpg" },
+  { name: "Amber Ember", img: "/images/options/oak-finishes/stained-6634.jpg" },
+  { name: "Irish Meadow", img: "/images/options/oak-finishes/stained-6635.jpg" },
+  { name: "Tobacco Walnut", img: "/images/options/oak-finishes/stained-6636.jpg" },
 ];
 
 const REFINED_CARDS = [
@@ -451,11 +463,11 @@ export default function OptionsPage() {
                 <p className="oak-finishes__title">Stained &amp; Lacquered Finishes for Solid Oak</p>
                 <div className="oak-finishes__grid">
                   {OAK_STAINED_FINISHES.map(f => (
-                    <div key={f.name} style={{ position: "relative", cursor: "zoom-in" }} onClick={() => zoom(f.img, f.name)}>
+                    <div key={f.img} style={{ position: "relative", cursor: "zoom-in" }} onClick={() => zoom(f.img, f.name)}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img className="oak-finish__img" src={f.img} alt={f.name} loading="lazy" />
                       <HeartBtn
-                        item={{ id: `oak-stained-${f.name}`, name: `${f.name} — Stained/Lacquered Finish`, image: f.img, category: "Oak Stained Finish" }}
+                        item={{ id: `oak-stained-${f.img}`, name: `${f.name} — Stained/Lacquered Finish`, image: f.img, category: "Oak Stained Finish" }}
                         wishlist={wishlist}
                         onToggle={toggleWishlist}
                       />
