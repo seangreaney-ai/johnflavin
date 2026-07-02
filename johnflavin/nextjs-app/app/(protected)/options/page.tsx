@@ -527,6 +527,7 @@ export default function OptionsPage() {
                 <h3 className="door-collection__title">The Tailored Collection</h3>
                 <p className="door-collection__sub">Standard MFC</p>
                 <p className="door-collection__desc">A comprehensive range of melamine faced chipboard finishes — solid colours, wood grains, ash textures, and textured surfaces. Practical, hardwearing, and available in an exceptionally wide palette.</p>
+                <p className="door-collection__desc" style={{ marginTop: "0.75rem" }}>Any colour from the Tailored Collection can also be used for the interior of your kitchen, utility room, wardrobe, or living room unit — not just the doors. The swatches below are the most popular choices our customers select.</p>
               </div>
               <div className="mfc-swatches">
                 {MFC_SWATCHES.map(s => (
