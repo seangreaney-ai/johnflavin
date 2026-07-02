@@ -71,16 +71,16 @@ const OAK_OIL_FINISHES = [
 ];
 
 const OAK_STAINED_FINISHES = [
-  { name: "Amber Ember", img: "/images/options/doors/oak-finish-amber-ember.jpg" },
-  { name: "Old Chalet No.20", img: "/images/options/doors/oak-finish-old-chalet.jpg" },
-  { name: "Champagne Oak", img: "/images/options/doors/oak-finish-champagne-oak.jpg" },
-  { name: "Aged Acorn No.15", img: "/images/options/doors/oak-finish-aged-acorn.jpg" },
-  { name: "Obsidian No.33", img: "/images/options/doors/oak-finish-obsidian.jpg" },
-  { name: "Swiss Pearl", img: "/images/options/doors/oak-finish-swiss-pearl.jpg" },
-  { name: "Irish Meadow", img: "/images/options/doors/oak-finish-irish-meadow.jpg" },
-  { name: "Weathered Bork No.8", img: "/images/options/doors/oak-finish-weathered-bork.jpg" },
-  { name: "White Ash Stain", img: "/images/options/doors/oak-finish-white-ash.jpg" },
-  { name: "Tobacco Walnut", img: "/images/options/doors/oak-finish-tobacco-walnut.jpg" },
+  { name: "Amber Ember", img: "/images/options/oak-finishes/stained-amber-ember.jpg" },
+  { name: "Old Chalet No.20", img: "/images/options/oak-finishes/stained-old-chalet.jpg" },
+  { name: "Champagne Oak", img: "/images/options/oak-finishes/stained-champagne-oak.jpg" },
+  { name: "Aged Acorn No.15", img: "/images/options/oak-finishes/stained-aged-acorn.jpg" },
+  { name: "Obsidian No.33", img: "/images/options/oak-finishes/stained-obsidian.jpg" },
+  { name: "Swiss Pearl", img: "/images/options/oak-finishes/stained-swiss-pearl.jpg" },
+  { name: "Irish Meadow", img: "/images/options/oak-finishes/stained-irish-meadow.jpg" },
+  { name: "Weathered Bork No.8", img: "/images/options/oak-finishes/stained-weathered-bork.jpg" },
+  { name: "White Ash Stain", img: "/images/options/oak-finishes/stained-white-ash.jpg" },
+  { name: "Tobacco Walnut", img: "/images/options/oak-finishes/stained-tobacco-walnut.jpg" },
 ];
 
 const REFINED_CARDS = [
