@@ -112,9 +112,12 @@ export default function HomePage() {
               <p className="intro__body reveal reveal--delay-3" style={{ marginTop: 0 }}>
                 John visits your home, listens to what you need, and designs a solution that works for your space and your lifestyle. Whether it&apos;s a full kitchen fit-out, a run of bedroom wardrobes, or a bespoke TV unit, the same care and attention goes into every job.
               </p>
+              <p className="intro__body reveal reveal--delay-3" style={{ marginTop: 0 }}>
+                Each project is carefully installed by David O&apos;Sullivan of O&apos;Sullivan Woodcraft. With over ten years of experience, David takes great pride in the precision and quality of every installation.
+              </p>
               <div className="intro__stat reveal reveal--delay-4">
                 <div className="intro__stat-item">
-                  <div className="intro__stat-number">10+</div>
+                  <div className="intro__stat-number">20+</div>
                   <div className="intro__stat-label">Years Experience</div>
                 </div>
                 <div className="intro__stat-item">
