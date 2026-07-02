@@ -22,6 +22,7 @@ function getSelectionCount(): number {
 export default function HomePage() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [selectionCount, setSelectionCount] = useState(0);
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
 
   // Hero entrance animation
   useEffect(() => {
@@ -62,8 +63,30 @@ export default function HomePage() {
     if (loggedInState) setSelectionCount(getSelectionCount());
   }, []);
 
+  // Lightbox ESC key
+  useEffect(() => {
+    if (!lightboxSrc) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setLightboxSrc(null); };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [lightboxSrc]);
+
   return (
     <>
+      {/* ── Lightbox ── */}
+      {lightboxSrc && (
+        <div className="home-lightbox" onClick={() => setLightboxSrc(null)}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className="home-lightbox__img"
+            src={lightboxSrc}
+            alt=""
+            onClick={e => e.stopPropagation()}
+          />
+          <button className="home-lightbox__close" onClick={() => setLightboxSrc(null)} aria-label="Close">✕</button>
+        </div>
+      )}
+
       {/* ── Hero ── */}
       <section className="hero">
         <div className="hero__bg">
@@ -157,19 +180,19 @@ export default function HomePage() {
                 <span className="service-showcase__number">01</span>
                 <h3 className="service-showcase__title">Custom Kitchens</h3>
                 <p className="service-showcase__desc">From classic shaker styles to sleek contemporary designs — made to measure, finished to your exact taste, and fully installed.</p>
-                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__link">See more →</Link>
+                <Link href="/showcase" className="service-showcase__link">See more →</Link>
               </div>
               <div className="service-showcase__images">
-                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/home-services/kitchen-oconnor-01.jpg")}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/home-services/kitchen-oconnor-01.jpg" alt="O'Connor Kitchen" loading="lazy" />
                   <span className="service-showcase__img-label">O&apos;Connor Kitchen</span>
-                </Link>
-                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                </button>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/home-services/kitchen-flaherty-01.jpg")}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/home-services/kitchen-flaherty-01.jpg" alt="Flaherty Kitchen" loading="lazy" />
                   <span className="service-showcase__img-label">Flaherty Kitchen</span>
-                </Link>
+                </button>
               </div>
             </div>
 
@@ -179,19 +202,19 @@ export default function HomePage() {
                 <span className="service-showcase__number">02</span>
                 <h3 className="service-showcase__title">Bedrooms &amp; Wardrobes</h3>
                 <p className="service-showcase__desc">Hinged wardrobes, sliderobe systems, and walk-in wardrobes — made to fit your room exactly, with soft-close hardware throughout.</p>
-                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__link">See more →</Link>
+                <Link href="/showcase" className="service-showcase__link">See more →</Link>
               </div>
               <div className="service-showcase__images">
-                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/work8/step-shaker-wardrobe-01.jpg")}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/work8/step-shaker-wardrobe-01.jpg" alt="Step Shaker Wardrobe" loading="lazy" />
                   <span className="service-showcase__img-label">Step Shaker Wardrobe</span>
-                </Link>
-                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                </button>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/work9/black-mirror-sliderobe-01.jpg")}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/work9/black-mirror-sliderobe-01.jpg" alt="Mirror Black Track Sliderobe" loading="lazy" />
                   <span className="service-showcase__img-label">Mirror Black Track</span>
-                </Link>
+                </button>
               </div>
             </div>
 
@@ -201,19 +224,19 @@ export default function HomePage() {
                 <span className="service-showcase__number">03</span>
                 <h3 className="service-showcase__title">Living Room Units</h3>
                 <p className="service-showcase__desc">TV units, display shelving, and full-wall storage solutions — designed around your room, with optional integrated strip lighting.</p>
-                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__link">See more →</Link>
+                <Link href="/showcase" className="service-showcase__link">See more →</Link>
               </div>
               <div className="service-showcase__images">
-                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/work7/display-storage-unit-01.jpg")}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/work7/display-storage-unit-01.jpg" alt="Display & Storage Unit — Inchyra" loading="lazy" />
                   <span className="service-showcase__img-label">Inchyra Display Unit</span>
-                </Link>
-                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                </button>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/home-services/living-telford-01.jpg")}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/home-services/living-telford-01.jpg" alt="Telford TV Unit" loading="lazy" />
                   <span className="service-showcase__img-label">Telford TV Unit</span>
-                </Link>
+                </button>
               </div>
             </div>
 
@@ -223,19 +246,19 @@ export default function HomePage() {
                 <span className="service-showcase__number">04</span>
                 <h3 className="service-showcase__title">Utility Rooms</h3>
                 <p className="service-showcase__desc">Practical, storage-focused utility rooms with raised appliance platforms, pull-out shelves, coat storage, and overhead presses.</p>
-                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__link">See more →</Link>
+                <Link href="/showcase" className="service-showcase__link">See more →</Link>
               </div>
               <div className="service-showcase__images">
-                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/work14/moloney-utility-01.jpg")}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/work14/moloney-utility-01.jpg" alt="Moloney Utility Room" loading="lazy" />
                   <span className="service-showcase__img-label">Moloney Utility</span>
-                </Link>
-                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                </button>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/work15/obrien-utility-01.jpg")}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/work15/obrien-utility-01.jpg" alt="O'Brien Utility Room" loading="lazy" />
                   <span className="service-showcase__img-label">O&apos;Brien Utility</span>
-                </Link>
+                </button>
               </div>
             </div>
 
@@ -270,11 +293,11 @@ export default function HomePage() {
                 <Link href="/contact" className="service-showcase__link">Enquire →</Link>
               </div>
               <div className="service-showcase__images">
-                <Link href={loggedIn ? "/showcase" : "/login"} className="service-showcase__img-wrap">
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/acoustic-panels/acoustic-main.png")}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/acoustic-panels/acoustic-main.png" alt="Acoustic Slat Wall Panels" loading="lazy" />
                   <span className="service-showcase__img-label">Acoustic Slat Wall Panels</span>
-                </Link>
+                </button>
                 <div className="service-showcase__img-wrap">
                   <div className="service-showcase__placeholder">
                     <span className="service-showcase__placeholder-text">More examples coming</span>
