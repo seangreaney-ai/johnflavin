@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { FEATURED_WORK } from "@/lib/data/work";
 
 const LS_KEY = "jf_wishlist";
 
@@ -284,51 +283,6 @@ export default function HomePage() {
               </div>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* ── Featured Projects (teaser) ── */}
-      <section className="projects section">
-        <div className="container">
-          <div
-            className="section-header"
-            style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem" }}
-          >
-            <div>
-              <p className="eyebrow reveal">Recent Projects</p>
-              <h2 className="display--lg reveal reveal--delay-1">Our Work</h2>
-              <p className="lead reveal reveal--delay-2" style={{ marginTop: "1rem" }}>
-                A selection of recently completed kitchens, bedrooms, sitting rooms and more.
-              </p>
-            </div>
-            {loggedIn && (
-              <Link href="/showcase" className="btn btn--ghost-dark reveal" style={{ flexShrink: 0 }}>
-                View All Projects
-              </Link>
-            )}
-          </div>
-
-          <div className="projects__grid">
-            {FEATURED_WORK.map((item, i) => (
-              <Link
-                key={item.title}
-                href={loggedIn ? "/showcase" : "/login"}
-                className={`project-card reveal${i > 0 ? ` reveal--delay-${i}` : ""}`}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="project-card__img" src={item.images[0]} alt={item.title} loading="lazy" />
-                <div className="project-card__overlay" />
-                <div className="project-card__info">
-                  <p className="project-card__tag">{item.roomLabel}</p>
-                  <p className="project-card__title">{item.title}</p>
-                </div>
-                <div className="project-card__label">
-                  <p className="project-card__tag">{item.roomLabel}</p>
-                  <p className="project-card__title">{item.title}</p>
-                </div>
-              </Link>
-            ))}
           </div>
         </div>
       </section>
