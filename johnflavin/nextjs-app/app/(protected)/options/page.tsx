@@ -46,6 +46,7 @@ const MAKERS_DOORS = [
   { name: "Plain Slab", desc: "Flat slab door — the most minimal, contemporary option available.", img: "/images/options/doors/plain-slab-smooth-downpipe.jpg" },
   { name: "Plain Slab with Groove", desc: "Slab door with a single decorative groove for subtle detail.", img: "/images/options/doors/plain-slab-with-groove-smooth-downpipe.jpg" },
   { name: "Mock Inframe", desc: "Gives the look of a traditional inframe kitchen with a modern construction.", img: "/images/options/doors/mock-inframe-smooth-purebrvk-stone.jpg" },
+  { name: "Harrington — French Grey", desc: "Harrington slipped shaker in solid oak — French Grey stain finish.", img: "/images/options/doors/harrington-shaker-ash-french-grey.jpg" },
 ];
 
 const HERITAGE_DOORS = [
@@ -55,7 +56,6 @@ const HERITAGE_DOORS = [
   { name: "Step Shaker Oak", desc: "Step shaker profile in solid oak — clear lacquer finish shown.", img: "/images/options/doors/stepped-shaker-oak-door-clear-laquer.jpg" },
   { name: "Harrington Shaker", desc: "Slipped shaker door in solid oak — Rubio Smoke 5% finish shown.", img: "/images/options/doors/harrington-slipped-shaker-oak-door-rubio-smoke-5.jpg" },
   { name: "Harrington — Charcoal", desc: "Harrington slipped shaker in solid oak — charcoal stain finish.", img: "/images/options/doors/harrington-slipped-shaker-ash-door-charcoal-stain.jpg" },
-  { name: "Harrington — French Grey", desc: "Harrington slipped shaker in solid oak — French Grey stain finish.", img: "/images/options/doors/harrington-shaker-ash-french-grey.jpg" },
   { name: "Willow Oak — Smoke", desc: "Willow oak door — Rubio Smoke 5% finish. Warm, natural timber feel.", img: "/images/options/doors/willow-oak-door-rubio-smoke-5.jpg" },
 ];
 
