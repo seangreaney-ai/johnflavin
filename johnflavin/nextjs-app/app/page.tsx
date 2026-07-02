@@ -2,6 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { WORK, type WorkItem } from "@/lib/data/work";
+
+function formatKey(k: string) {
+  return k.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+}
 
 const LS_KEY = "jf_wishlist";
 
@@ -22,7 +27,20 @@ function getSelectionCount(): number {
 export default function HomePage() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [selectionCount, setSelectionCount] = useState(0);
-  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
+  const [lightboxItem, setLightboxItem] = useState<WorkItem | null>(null);
+
+  // Pre-resolve the 9 home page work items
+  const W = {
+    oconnor:    WORK.find(w => w.title.includes("O’Connor"))!,
+    flaherty:   WORK.find(w => w.title.includes("Flaherty"))!,
+    stepShaker: WORK.find(w => w.title.includes("Step Shaker Wardrobe"))!,
+    mirrorBlack:WORK.find(w => w.title.includes("Mirror Sliderobe"))!,
+    inchyra:    WORK.find(w => w.title.includes("Inchyra"))!,
+    telford:    WORK.find(w => w.title.includes("Telford TV Unit — Graphite"))!,
+    moloney:    WORK.find(w => w.title.includes("Moloney"))!,
+    obrien:     WORK.find(w => w.title.includes("O’Brien Utility"))!,
+    acoustic:   WORK.find(w => w.title.includes("Acoustic"))!,
+  };
 
   // Hero entrance animation
   useEffect(() => {
@@ -63,27 +81,59 @@ export default function HomePage() {
     if (loggedInState) setSelectionCount(getSelectionCount());
   }, []);
 
-  // Lightbox ESC key
+  // Lightbox ESC key + body scroll lock
   useEffect(() => {
-    if (!lightboxSrc) return;
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setLightboxSrc(null); };
+    if (!lightboxItem) return;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setLightboxItem(null); };
     document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
-  }, [lightboxSrc]);
+    return () => {
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [lightboxItem]);
 
   return (
     <>
-      {/* ── Lightbox ── */}
-      {lightboxSrc && (
-        <div className="home-lightbox" onClick={() => setLightboxSrc(null)}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            className="home-lightbox__img"
-            src={lightboxSrc}
-            alt=""
-            onClick={e => e.stopPropagation()}
-          />
-          <button className="home-lightbox__close" onClick={() => setLightboxSrc(null)} aria-label="Close">✕</button>
+      {/* ── Project Lightbox ── */}
+      {lightboxItem && (
+        <div
+          className="lightbox open"
+          role="dialog"
+          aria-modal
+          aria-label="Project detail"
+          onClick={e => { if (e.target === e.currentTarget) setLightboxItem(null); }}
+        >
+          <div className="lightbox__header">
+            <h2 className="lightbox__title">{lightboxItem.title}</h2>
+            <button className="lightbox__close" aria-label="Close" onClick={() => setLightboxItem(null)}>
+              &times;
+            </button>
+          </div>
+          <div className="lightbox__body">
+            <div className="lightbox__images">
+              {lightboxItem.images.map(src => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img key={src} className="lightbox__img" src={src} alt={lightboxItem.title} loading="lazy" />
+              ))}
+            </div>
+            <div className="lightbox__meta">
+              <p className="lightbox__room">{lightboxItem.roomLabel}</p>
+              <p className="lightbox__desc">{lightboxItem.description}</p>
+              <p className="lightbox__specs-heading">Specification</p>
+              {Object.entries(lightboxItem.specs).map(([k, v]) => (
+                <div key={k} className="lightbox__spec">
+                  <span className="lightbox__spec-key">{formatKey(k)}</span>
+                  <span className="lightbox__spec-val">{v}</span>
+                </div>
+              ))}
+              <div style={{ marginTop: "2rem" }}>
+                <Link href="/contact" className="btn btn--primary" style={{ width: "100%", justifyContent: "center" }}>
+                  Enquire About This Project
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       )}
 
@@ -183,12 +233,12 @@ export default function HomePage() {
                 <Link href="/showcase" className="service-showcase__link">See more →</Link>
               </div>
               <div className="service-showcase__images">
-                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/home-services/kitchen-oconnor-01.jpg")}>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxItem(W.oconnor)}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/home-services/kitchen-oconnor-01.jpg" alt="O'Connor Kitchen" loading="lazy" />
                   <span className="service-showcase__img-label">O&apos;Connor Kitchen</span>
                 </button>
-                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/home-services/kitchen-flaherty-01.jpg")}>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxItem(W.flaherty)}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/home-services/kitchen-flaherty-01.jpg" alt="Flaherty Kitchen" loading="lazy" />
                   <span className="service-showcase__img-label">Flaherty Kitchen</span>
@@ -205,12 +255,12 @@ export default function HomePage() {
                 <Link href="/showcase" className="service-showcase__link">See more →</Link>
               </div>
               <div className="service-showcase__images">
-                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/work8/step-shaker-wardrobe-01.jpg")}>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxItem(W.stepShaker)}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/work8/step-shaker-wardrobe-01.jpg" alt="Step Shaker Wardrobe" loading="lazy" />
                   <span className="service-showcase__img-label">Step Shaker Wardrobe</span>
                 </button>
-                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/work9/black-mirror-sliderobe-01.jpg")}>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxItem(W.mirrorBlack)}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/work9/black-mirror-sliderobe-01.jpg" alt="Mirror Black Track Sliderobe" loading="lazy" />
                   <span className="service-showcase__img-label">Mirror Black Track</span>
@@ -227,12 +277,12 @@ export default function HomePage() {
                 <Link href="/showcase" className="service-showcase__link">See more →</Link>
               </div>
               <div className="service-showcase__images">
-                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/work7/display-storage-unit-01.jpg")}>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxItem(W.inchyra)}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/work7/display-storage-unit-01.jpg" alt="Display & Storage Unit — Inchyra" loading="lazy" />
                   <span className="service-showcase__img-label">Inchyra Display Unit</span>
                 </button>
-                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/home-services/living-telford-01.jpg")}>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxItem(W.telford)}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/home-services/living-telford-01.jpg" alt="Telford TV Unit" loading="lazy" />
                   <span className="service-showcase__img-label">Telford TV Unit</span>
@@ -249,12 +299,12 @@ export default function HomePage() {
                 <Link href="/showcase" className="service-showcase__link">See more →</Link>
               </div>
               <div className="service-showcase__images">
-                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/work14/moloney-utility-01.jpg")}>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxItem(W.moloney)}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/work14/moloney-utility-01.jpg" alt="Moloney Utility Room" loading="lazy" />
                   <span className="service-showcase__img-label">Moloney Utility</span>
                 </button>
-                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/work15/obrien-utility-01.jpg")}>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxItem(W.obrien)}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/work15/obrien-utility-01.jpg" alt="O'Brien Utility Room" loading="lazy" />
                   <span className="service-showcase__img-label">O&apos;Brien Utility</span>
@@ -293,7 +343,7 @@ export default function HomePage() {
                 <Link href="/contact" className="service-showcase__link">Enquire →</Link>
               </div>
               <div className="service-showcase__images">
-                <button className="service-showcase__img-wrap" onClick={() => setLightboxSrc("/images/acoustic-panels/acoustic-main.png")}>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxItem(W.acoustic)}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/acoustic-panels/acoustic-main.png" alt="Acoustic Slat Wall Panels" loading="lazy" />
                   <span className="service-showcase__img-label">Acoustic Slat Wall Panels</span>
