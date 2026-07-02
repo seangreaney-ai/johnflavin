@@ -105,6 +105,24 @@ const REFINED_CARDS = [
   { name: "Monte Porcelain", img: "/images/options/doors/refined-monte-porcelain.jpg" },
   { name: "Monte Agave", img: "/images/options/doors/refined-monte-agave.jpg" },
   { name: "Monte Verde", img: "/images/options/doors/refined-monte-verde.jpg" },
+  { name: "Monte Cielo", img: "/images/options/doors/refined-monte-cielo.jpg" },
+  { name: "Porcelain Charcoal", img: "/images/options/doors/refined-porcelain-charcoal.jpg" },
+  { name: "Oxid Charcoal", img: "/images/options/doors/refined-oxid-charcoal.jpg" },
+  { name: "Ice Charcoal", img: "/images/options/doors/refined-ice-charcoal.jpg" },
+  { name: "Palido", img: "/images/options/doors/refined-palido.jpg" },
+  { name: "Picasso", img: "/images/options/doors/refined-picasso.jpg" },
+  { name: "Woodline", img: "/images/options/doors/refined-woodline.jpg" },
+  { name: "Alhambra", img: "/images/options/doors/refined-alhambra.jpg" },
+  { name: "Palido II", img: "/images/options/doors/refined-palido-2.jpg" },
+  { name: "Syncron", img: "/images/options/doors/refined-syncron.jpg" },
+  { name: "Avante Bronze", img: "/images/options/doors/refined-avante-bronze.jpg" },
+  { name: "Avante Vulcano", img: "/images/options/doors/refined-avante-vulcano.jpg" },
+  { name: "Avante Dusty Rose", img: "/images/options/doors/refined-avante-dusty-rose.jpg" },
+  { name: "Avante Gris", img: "/images/options/doors/refined-avante-gris.jpg" },
+  { name: "Nogal Rosa", img: "/images/options/doors/refined-nogal-rosa.jpg" },
+  { name: "Innato", img: "/images/options/doors/refined-innato.jpg" },
+  { name: "Andalusia Tierra", img: "/images/options/doors/refined-andalusia-tierra.jpg" },
+  { name: "Metal Gold", img: "/images/options/doors/refined-metal-gold.jpg" },
 ];
 
 const MFC_SWATCHES = [
@@ -486,13 +504,13 @@ export default function OptionsPage() {
               </div>
               <div className="refined-grid">
                 {REFINED_CARDS.map(c => (
-                  <div key={c.name} className="refined-card">
+                  <div key={c.img} className="refined-card">
                     <div className="refined-card__img-wrap" onClick={() => zoom(c.img, c.name)} style={{ cursor: "zoom-in" }}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img className="refined-card__img" src={c.img} alt={c.name} loading="lazy" />
                     </div>
                     <HeartBtn
-                      item={{ id: `door-refined-${c.name}`, name: c.name, image: c.img, category: "Door Style — Refined MFC" }}
+                      item={{ id: `door-refined-${c.img}`, name: c.name, image: c.img, category: "Door Style — Refined MFC" }}
                       wishlist={wishlist}
                       onToggle={toggleWishlist}
                     />
