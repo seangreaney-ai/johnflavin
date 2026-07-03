@@ -23,6 +23,7 @@ const FILTERS = [
   { key: "living", label: "Living Rooms" },
   { key: "bedroom", label: "Bedrooms" },
   { key: "utility", label: "Utility Rooms" },
+  { key: "bespoke", label: "Bespoke & Specialist" },
 ];
 
 function formatKey(k: string) {

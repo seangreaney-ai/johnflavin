@@ -95,6 +95,26 @@ const OAK_STAINED_FINISHES = [
   { name: "Tobacco Walnut", img: "/images/options/oak-finishes/stained-6636.jpg" },
 ];
 
+const STUDIO_CARDS = [
+  { name: "Zenit Cielo", img: "/images/options/studio-collection/zenit-cielo.jpg" },
+  { name: "Zenit Antracite", img: "/images/options/studio-collection/zenit-antracite.jpg" },
+  { name: "Zenit Marina", img: "/images/options/studio-collection/zenit-marina.jpg" },
+  { name: "Zenit Verde", img: "/images/options/studio-collection/zenit-verde.jpg" },
+  { name: "Zenit Black", img: "/images/options/studio-collection/zenit-black.jpg" },
+  { name: "Zenit Indigo", img: "/images/options/studio-collection/zenit-indigo.jpg" },
+  { name: "Zenit Ice Blue", img: "/images/options/studio-collection/zenit-ice-blue.jpg" },
+  { name: "Zenit Cotto", img: "/images/options/studio-collection/zenit-cotto.jpg" },
+  { name: "Zenit Nube", img: "/images/options/studio-collection/zenit-nube.jpg" },
+  { name: "Zenit Tortora", img: "/images/options/studio-collection/zenit-tortora.jpg" },
+  { name: "Zenit Greige", img: "/images/options/studio-collection/zenit-greige.jpg" },
+  { name: "Zenit Cashmere", img: "/images/options/studio-collection/zenit-cashmere.jpg" },
+  { name: "Zenit Nuvola", img: "/images/options/studio-collection/zenit-nuvola.jpg" },
+  { name: "Zenit Onyx", img: "/images/options/studio-collection/zenit-onyx.jpg" },
+  { name: "Zenit White", img: "/images/options/studio-collection/zenit-white.jpg" },
+  { name: "Zenit Dove Grey", img: "/images/options/studio-collection/zenit-dove-grey.jpg" },
+  { name: "Zenit Camel", img: "/images/options/studio-collection/zenit-camel.jpg" },
+];
+
 const REFINED_CARDS = [
   { name: "Monte Black", img: "/images/options/doors/refined-monte-black.jpg" },
   { name: "Monte Antracite", img: "/images/options/doors/refined-monte-antracite.jpg" },
@@ -548,31 +568,26 @@ export default function OptionsPage() {
             <div className="door-collection">
               <div className="door-collection__header">
                 <h3 className="door-collection__title">The Studio Collection</h3>
-                <p className="door-collection__desc">A bold, statement range available in two finishes — a mirror-like high gloss and a refined, light-absorbing matt. Both deliver a seamless, handleless look that&apos;s equally at home in contemporary kitchens and fitted bedrooms.</p>
+                <p className="door-collection__sub">Matte &amp; Wood Grain</p>
+                <p className="door-collection__desc">The Zenit range — slab doors in matte and wood grain finishes across a curated palette of contemporary colours. A clean, seamless look with a light-absorbing surface quality suited to kitchens, bedrooms, and utility rooms.</p>
               </div>
-
-              <div className="studio-subsection">
-                <p className="studio-subsection__label">High Gloss</p>
-                <div className="doors-grid">
-                  {[1,2,3,4].map(i => (
-                    <div key={i} className="door-card door-card--placeholder">
-                      <div className="door-card__img-wrap door-card__placeholder" style={{ aspectRatio: "3/4" }}></div>
-                      <div className="door-card__info"><p className="door-card__name">Coming Soon</p></div>
+              <div className="refined-grid">
+                {STUDIO_CARDS.map(c => (
+                  <div key={c.img} className="refined-card">
+                    <div className="refined-card__img-wrap" onClick={() => zoom(c.img, c.name)} style={{ cursor: "zoom-in" }}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img className="refined-card__img" src={c.img} alt={c.name} loading="lazy" />
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="studio-subsection">
-                <p className="studio-subsection__label">Matt</p>
-                <div className="doors-grid">
-                  {[1,2,3,4].map(i => (
-                    <div key={i} className="door-card door-card--placeholder">
-                      <div className="door-card__img-wrap door-card__placeholder" style={{ aspectRatio: "3/4" }}></div>
-                      <div className="door-card__info"><p className="door-card__name">Coming Soon</p></div>
+                    <HeartBtn
+                      item={{ id: `door-studio-${c.img}`, name: c.name, image: c.img, category: "Door Style — Studio Collection" }}
+                      wishlist={wishlist}
+                      onToggle={toggleWishlist}
+                    />
+                    <div className="refined-card__info">
+                      <p className="refined-card__name">{c.name}</p>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
 

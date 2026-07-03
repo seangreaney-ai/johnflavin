@@ -369,32 +369,10 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* 05 — Bathroom Furniture */}
+            {/* 05 — Bespoke & Specialist */}
             <div className="service-showcase__item reveal">
               <div className="service-showcase__header">
                 <span className="service-showcase__number">05</span>
-                <h3 className="service-showcase__title">Bathroom Furniture</h3>
-                <p className="service-showcase__desc">Vanity units, linen presses, and fitted bathroom storage — water-resistant finishes available, made to measure for any layout.</p>
-                <Link href="/contact" className="service-showcase__link">Enquire →</Link>
-              </div>
-              <div className="service-showcase__images">
-                <div className="service-showcase__img-wrap">
-                  <div className="service-showcase__placeholder">
-                    <span className="service-showcase__placeholder-text">Photos coming soon</span>
-                  </div>
-                </div>
-                <div className="service-showcase__img-wrap">
-                  <div className="service-showcase__placeholder">
-                    <span className="service-showcase__placeholder-text">Photos coming soon</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* 06 — Bespoke & Specialist */}
-            <div className="service-showcase__item reveal">
-              <div className="service-showcase__header">
-                <span className="service-showcase__number">06</span>
                 <h3 className="service-showcase__title">Bespoke &amp; Specialist</h3>
                 <p className="service-showcase__desc">Acoustic slat wall panels, hallway furniture, commercial fit-outs, and other one-off timber projects — if it&apos;s wood, John can build it.</p>
                 <Link href="/contact" className="service-showcase__link">Enquire →</Link>

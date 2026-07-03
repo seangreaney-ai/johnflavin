@@ -143,8 +143,8 @@ export const WORK: WorkItem[] = [
     specs: { door_style:"Telford", finish:"Smooth", colour:"All White (Farrow & Ball)", interior:"Raw Endgrain Oak (Tailored Collection)", handles:"Monza Cups & Knobs", worktop:"Quartz" },
   },
   {
-    room: "living",
-    roomLabel: "Living Room",
+    room: "bespoke",
+    roomLabel: "Bespoke & Specialist",
     title: "Acoustic Slat Wall Panels",
     description: "Add warmth, texture and acoustic comfort to your home with acoustic slat wall panels. With realistic wood-effect vertical slats set against a dark acoustic felt backing, they bring depth, contrast and a high-end finish to living rooms, TV walls, bedrooms, hallways and home offices. They help soften echo while adding the warmth and character of timber — working especially well alongside bespoke media units, fitted storage, shelving, fireplaces and custom cabinetry.",
     images: [
