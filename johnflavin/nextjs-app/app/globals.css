@@ -523,6 +523,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .intro__image:hover img { transform: scale(1.03); }
 
 /* ---- Intro image slideshow ---- */
+@keyframes kb {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+
 .intro__image--slideshow:hover img { transform: none; }
 
 .intro__slide {
@@ -532,13 +537,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1s var(--ease-standard);
+  transition: opacity 1.5s var(--ease-standard);
+  will-change: opacity, transform;
   pointer-events: none;
 }
 
 .intro__slide.active {
   opacity: 1;
   pointer-events: auto;
+  animation: kb 6s ease-out forwards;
 }
 
 .intro__dots {
@@ -1271,7 +1278,7 @@ button:focus-visible {
   .nav__links { display: none; }
   .hamburger { display: flex; }
   .intro__inner { grid-template-columns: 1fr; }
-  .intro__image { display: none; }
+  .intro__image { aspect-ratio: 4/3; }
   .services__grid { grid-template-columns: 1fr; }
   .service-showcase__images { grid-template-columns: 1fr; }
   .projects__grid { grid-template-columns: 1fr; }
