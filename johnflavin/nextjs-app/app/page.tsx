@@ -28,6 +28,19 @@ export default function HomePage() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [selectionCount, setSelectionCount] = useState(0);
   const [lightboxItem, setLightboxItem] = useState<WorkItem | null>(null);
+  const [introSlide, setIntroSlide] = useState(0);
+  const [introPaused, setIntroPaused] = useState(false);
+
+  const MCENRY = [
+    "/images/mcenry/mcenry-01.jpg",
+    "/images/mcenry/mcenry-02.jpg",
+    "/images/mcenry/mcenry-03.jpg",
+    "/images/mcenry/mcenry-04.jpg",
+    "/images/mcenry/mcenry-05.jpg",
+    "/images/mcenry/mcenry-06.jpg",
+    "/images/mcenry/mcenry-07.jpg",
+    "/images/mcenry/mcenry-08.jpg",
+  ];
 
   // Pre-resolve the 9 home page work items
   const W = {
@@ -80,6 +93,13 @@ export default function HomePage() {
     setLoggedIn(loggedInState);
     if (loggedInState) setSelectionCount(getSelectionCount());
   }, []);
+
+  // Intro slideshow auto-advance
+  useEffect(() => {
+    if (introPaused) return;
+    const t = setInterval(() => setIntroSlide(s => (s + 1) % 8), 4500);
+    return () => clearInterval(t);
+  }, [introPaused]);
 
   // Lightbox ESC key + body scroll lock
   useEffect(() => {
@@ -202,13 +222,31 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="intro__image reveal reveal--delay-2">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/calaway-sitting-room-01.jpg"
-                alt="Calaway Sitting Room Unit — Graphite Grey"
-                loading="lazy"
-              />
+            <div
+              className="intro__image intro__image--slideshow reveal reveal--delay-2"
+              onMouseEnter={() => setIntroPaused(true)}
+              onMouseLeave={() => setIntroPaused(false)}
+            >
+              {MCENRY.map((src, i) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={src}
+                  src={src}
+                  alt="McEnry Kitchen — John Flavin"
+                  className={`intro__slide${i === introSlide ? " active" : ""}`}
+                  loading={i === 0 ? "eager" : "lazy"}
+                />
+              ))}
+              <div className="intro__dots">
+                {MCENRY.map((_, i) => (
+                  <button
+                    key={i}
+                    className={`intro__dot${i === introSlide ? " active" : ""}`}
+                    onClick={() => setIntroSlide(i)}
+                    aria-label={`Go to slide ${i + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>

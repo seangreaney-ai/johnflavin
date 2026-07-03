@@ -522,6 +522,52 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .intro__image:hover img { transform: scale(1.03); }
 
+/* ---- Intro image slideshow ---- */
+.intro__image--slideshow:hover img { transform: none; }
+
+.intro__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s var(--ease-standard);
+  pointer-events: none;
+}
+
+.intro__slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.intro__dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.4rem;
+  z-index: 2;
+}
+
+.intro__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(245, 240, 234, 0.45);
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--dur-base) var(--ease-standard),
+              transform var(--dur-base) var(--ease-standard);
+}
+
+.intro__dot.active {
+  background: var(--warm-white);
+  transform: scale(1.35);
+}
+
 .intro__stat {
   margin-top: var(--space-8);
   padding-top: var(--space-5);
