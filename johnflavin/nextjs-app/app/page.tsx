@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { WORK, type WorkItem } from "@/lib/data/work";
 
@@ -30,6 +30,7 @@ export default function HomePage() {
   const [lightboxItem, setLightboxItem] = useState<WorkItem | null>(null);
   const [introSlide, setIntroSlide] = useState(0);
   const [introPaused, setIntroPaused] = useState(false);
+  const touchStartX = useRef<number>(0);
 
   const MCENRY = [
     "/images/mcenry/mcenry-01.jpg",
@@ -112,6 +113,22 @@ export default function HomePage() {
       document.removeEventListener("keydown", onKey);
     };
   }, [lightboxItem]);
+
+  function handleTouchStart(e: React.TouchEvent) {
+    touchStartX.current = e.touches[0].clientX;
+    setIntroPaused(true);
+  }
+
+  function handleTouchEnd(e: React.TouchEvent) {
+    const delta = e.changedTouches[0].clientX - touchStartX.current;
+    if (Math.abs(delta) > 40) {
+      setIntroSlide(s => delta < 0
+        ? (s + 1) % MCENRY.length
+        : (s - 1 + MCENRY.length) % MCENRY.length
+      );
+    }
+    setIntroPaused(false);
+  }
 
   return (
     <>
@@ -226,6 +243,8 @@ export default function HomePage() {
               className="intro__image intro__image--slideshow reveal reveal--delay-2"
               onMouseEnter={() => setIntroPaused(true)}
               onMouseLeave={() => setIntroPaused(false)}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
             >
               {MCENRY.map((src, i) => (
                 // eslint-disable-next-line @next/next/no-img-element
