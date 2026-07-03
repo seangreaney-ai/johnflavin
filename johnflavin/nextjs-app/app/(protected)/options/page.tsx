@@ -22,6 +22,7 @@ function saveWishlist(items: WishlistItem[]) {
 
 const TABS = [
   { id: "doors", label: "Door Styles" },
+  { id: "interiors", label: "Interior Finishes" },
   { id: "handles", label: "Handles & Knobs" },
   { id: "worktops", label: "Worktops" },
 ];
@@ -93,6 +94,24 @@ const OAK_STAINED_FINISHES = [
   { name: "Amber Ember", img: "/images/options/oak-finishes/stained-6634.jpg" },
   { name: "Irish Meadow", img: "/images/options/oak-finishes/stained-6635.jpg" },
   { name: "Tobacco Walnut", img: "/images/options/oak-finishes/stained-6636.jpg" },
+];
+
+const INTERIOR_FINISHES = [
+  { name: "Cashmere", img: "/images/options/mfc/cashmere.jpg" },
+  { name: "White Halifax Oak", img: "/images/options/mfc/white-halifax-oak.jpg" },
+  { name: "Sand Gladstone Oak", img: "/images/options/mfc/sand-gladstone-oak.jpg" },
+  { name: "Sand Lyon Ash", img: "/images/options/mfc/sand-lyon-ash.jpg" },
+  { name: "Bordilino Oak", img: "/images/options/mfc/bordilino-oak.jpg" },
+  { name: "Hamilton Oak", img: "/images/options/mfc/hamilton-oak.jpg" },
+  { name: "Natural Halifax Oak", img: "/images/options/mfc/natural-halifax-oak.jpg" },
+  { name: "Alibastet Woodgrain", img: "/images/options/mfc/alibastet-woodgrain.jpg" },
+  { name: "Platnum Ash", img: "/images/options/mfc/platnum-ash.jpg" },
+  { name: "Grey Nebraska Oak", img: "/images/options/mfc/grey-nebraska-oak.jpg" },
+  { name: "Dakar Ash", img: "/images/options/mfc/dakar-ash.jpg" },
+  { name: "Pacific Walnut", img: "/images/options/mfc/pacific-walnut-a.jpg" },
+  { name: "Pacific Walnut (Dark)", img: "/images/options/mfc/pacific-walnut-b.jpg" },
+  { name: "Tobaco Gladstone Oak", img: "/images/options/mfc/tobaco-gladstone-oak.jpg" },
+  { name: "Tobaco Halifax Oak", img: "/images/options/mfc/tobaco-halifax-oak.jpg" },
 ];
 
 const STUDIO_CARDS = [
@@ -591,6 +610,34 @@ export default function OptionsPage() {
               </div>
             </div>
 
+          </div>
+
+          {/* ── INTERIOR FINISHES ── */}
+          <div className={`options-section${tab === "interiors" ? " active" : ""}`}>
+            <div className="section-header">
+              <p className="eyebrow">Interiors</p>
+              <h2 className="display--md" style={{ marginTop: "0.75rem" }}>Interior Finishes</h2>
+              <p className="lead" style={{ marginTop: "1rem" }}>The inside of your units matters as much as the outside. These are the most popular interior finishes our customers choose — all from the Tailored Collection, selected for their warmth, versatility, and durability.</p>
+            </div>
+
+            <div className="door-collection">
+              <div className="door-collection__header">
+                <h3 className="door-collection__title">Tailored Collection Interiors</h3>
+                <p className="door-collection__sub">MFC Interior Finishes</p>
+                <p className="door-collection__desc">A hand-picked selection of melamine faced chipboard finishes for the inside of kitchens, wardrobes, utility rooms, and living room units. Practical, hardwearing, and coordinated to work alongside the full door range.</p>
+              </div>
+              <div className="refined-grid">
+                {INTERIOR_FINISHES.map(c => (
+                  <div key={c.img} className="refined-card">
+                    <div className="refined-card__img-wrap" onClick={() => zoom(c.img, c.name)} style={{ cursor: "zoom-in" }}>
+                      <img className="refined-card__img" src={c.img} alt={c.name} loading="lazy" />
+                    </div>
+                    <HeartBtn item={{ id: `interior-${c.img}`, name: c.name, image: c.img, category: "Interior Finish" }} wishlist={wishlist} onToggle={toggleWishlist} />
+                    <div className="refined-card__info"><p className="refined-card__name">{c.name}</p></div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* ── HANDLES ── */}
