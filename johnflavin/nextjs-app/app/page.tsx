@@ -41,6 +41,7 @@ export default function HomePage() {
     "/images/mcenry/mcenry-06.jpg",
     "/images/mcenry/mcenry-07.jpg",
     "/images/mcenry/mcenry-08.jpg",
+    "/images/mcenry/mcenry-09.jpg",
   ];
 
   // Pre-resolve the 9 home page work items

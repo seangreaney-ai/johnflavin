@@ -145,6 +145,22 @@ export const WORK: WorkItem[] = [
   {
     room: "bespoke",
     roomLabel: "Bespoke & Specialist",
+    title: "Lyons Motorgroup — BYD Boardroom",
+    description: "A bespoke commercial boardroom fitout for Lyons Motorgroup in Limerick — one of Ireland's leading motor dealerships. Commissioned as part of their BYD showroom expansion, the brief called for a high-spec contemporary boardroom with custom lath wall units, a full-width fitted unit run, and a large central board table. The lath panels and storage units are finished in Dark Grey Ash from the Tailored Collection; the board table top is Tobacco Gladstone Oak — a rich, warm contrast against the dark cabinetry. Cirrus Cloud Formica surface on the fitted units. Lit with a circular suspended ring and integrated strip lighting.",
+    images: [1,2,3,4,5,6,7,8,9,10,11].map(n => `/images/bespoke-lyons/lyons-${String(n).padStart(2,"0")}.jpg`),
+    specs: { type: "Commercial Boardroom Fitout", client: "Lyons Motorgroup, Limerick", units_and_laths: "Dark Grey Ash (Tailored Collection)", board_table: "Tobacco Gladstone Oak (Tailored Collection)", worktop: "Cirrus Cloud (Formica)", lighting: "Circular suspended ring / strip lighting" },
+  },
+  {
+    room: "bespoke",
+    roomLabel: "Bespoke & Specialist",
+    title: "Hallway Panelling, Staircase & Radiator Covers",
+    description: "A comprehensive bespoke joinery project transforming a home's hallway from top to bottom. Full-height panel mouldings run the length of the landing and hallway, cut and mitred around the staircase for a seamless architectural finish. Matching bespoke radiator covers with lattice grilles are built to integrate flush with the panelling. A tall hallway press with frame-and-panel doors provides fitted storage while continuing the same classical detail throughout. All painted bright white to tie together every element of the space.",
+    images: [1,2,3,4,5,6,7,8,9,10,11].map(n => `/images/bespoke-panelling/panelling-${String(n).padStart(2,"0")}.jpg`),
+    specs: { type: "Bespoke Hallway Joinery", includes: "Wall panelling, staircase panels, radiator covers, hallway unit", finish: "Painted — Bright White", hardware: "Gold bar handles" },
+  },
+  {
+    room: "bespoke",
+    roomLabel: "Bespoke & Specialist",
     title: "Acoustic Slat Wall Panels",
     description: "Add warmth, texture and acoustic comfort to your home with acoustic slat wall panels. With realistic wood-effect vertical slats set against a dark acoustic felt backing, they bring depth, contrast and a high-end finish to living rooms, TV walls, bedrooms, hallways and home offices. They help soften echo while adding the warmth and character of timber — working especially well alongside bespoke media units, fitted storage, shelving, fireplaces and custom cabinetry.",
     images: [
