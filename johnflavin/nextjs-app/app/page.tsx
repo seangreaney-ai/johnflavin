@@ -55,6 +55,7 @@ export default function HomePage() {
     moloney:    WORK.find(w => w.title.includes("Moloney"))!,
     obrien:     WORK.find(w => w.title.includes("O’Brien Utility"))!,
     acoustic:   WORK.find(w => w.title.includes("Acoustic"))!,
+    panelling:  WORK.find(w => w.title.includes("Hallway Panelling"))!,
   };
 
   // Hero entrance animation
@@ -384,11 +385,11 @@ export default function HomePage() {
                   <img src="/images/acoustic-panels/acoustic-main.png" alt="Acoustic Slat Wall Panels" loading="lazy" />
                   <span className="service-showcase__img-label">Acoustic Slat Wall Panels</span>
                 </button>
-                <div className="service-showcase__img-wrap">
-                  <div className="service-showcase__placeholder">
-                    <span className="service-showcase__placeholder-text">More examples coming</span>
-                  </div>
-                </div>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxItem(W.panelling)}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/bespoke-panelling/panelling-03.jpg" alt="Hallway Panelling, Staircase & Radiator Covers" loading="lazy" />
+                  <span className="service-showcase__img-label">Hallway Panelling &amp; Joinery</span>
+                </button>
               </div>
             </div>
 
