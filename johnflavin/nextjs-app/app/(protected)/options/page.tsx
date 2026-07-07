@@ -53,7 +53,7 @@ const MAKERS_DOORS = [
 const HERITAGE_DOORS = [
   { name: "Slim Shaker", desc: "Slim shaker profile in solid oak — Rubio Monocoat 5% finish shown.", img: "/images/options/doors/slim-shaker-oak-rubio-5pct.jpg" },
   { name: "Calaway Oak", desc: "Calaway profile in solid oak — Rubio Smoke 5% finish shown.", img: "/images/options/doors/calaway-oak-rubio-smoke-5pct.jpg" },
-  { name: "Calaway Ash", desc: "Contemporary horizontal groove door in natural ash — clear lacquer finish.", img: "/images/options/doors/calaway-oak-door-clear-laquer.jpg" },
+  { name: "Calaway Oak — 60mm Stile", desc: "Calaway profile in solid oak with wider 60mm stile — clear lacquer finish shown.", img: "/images/options/doors/calaway-oak-door-clear-laquer.jpg" },
   { name: "Step Shaker Oak", desc: "Step shaker profile in solid oak — clear lacquer finish shown.", img: "/images/options/doors/stepped-shaker-oak-door-clear-laquer.jpg" },
   { name: "Harrington Shaker", desc: "Slipped shaker door in solid oak — Rubio Smoke 5% finish shown.", img: "/images/options/doors/harrington-slipped-shaker-oak-door-rubio-smoke-5.jpg" },
   { name: "Harrington — Charcoal", desc: "Harrington slipped shaker in solid oak — charcoal stain finish.", img: "/images/options/doors/harrington-slipped-shaker-ash-door-charcoal-stain.jpg" },
@@ -587,8 +587,8 @@ export default function OptionsPage() {
             <div className="door-collection">
               <div className="door-collection__header">
                 <h3 className="door-collection__title">The Studio Collection</h3>
-                <p className="door-collection__sub">Matte &amp; Wood Grain</p>
-                <p className="door-collection__desc">The Zenit range — slab doors in matte and wood grain finishes across a curated palette of contemporary colours. A clean, seamless look with a light-absorbing surface quality suited to kitchens, bedrooms, and utility rooms.</p>
+                <p className="door-collection__sub">Matte Lacquer</p>
+                <p className="door-collection__desc">The Zenit range — slab doors in matte lacquer across a curated palette of contemporary colours. A clean, seamless look with a light-absorbing surface quality suited to kitchens, bedrooms, and utility rooms.</p>
               </div>
               <div className="refined-grid">
                 {STUDIO_CARDS.map(c => (
@@ -711,11 +711,11 @@ export default function OptionsPage() {
           <div className={`options-section${tab === "worktops" ? " active" : ""}`}>
             <div className="section-header">
               <p className="eyebrow">Worktops</p>
-              <h2 className="display--md" style={{ marginTop: "0.75rem" }}>Worktop Materials</h2>
-              <p className="lead" style={{ marginTop: "1rem" }}>We supply and fit a range of worktop materials to suit every style and budget — from practical laminates to luxury quartz and natural stone.</p>
+              <h2 className="display--md" style={{ marginTop: "0.75rem" }}>Formica Worktops</h2>
+              <p className="lead" style={{ marginTop: "1rem" }}>We supply and fit Formica laminate worktops — a practical, hardwearing surface available in a wide range of colours and finishes to suit any kitchen or utility room.</p>
             </div>
 
-            <p className="eyebrow" style={{ marginBottom: "1.5rem" }}>Micro Worktops</p>
+            <p className="eyebrow" style={{ marginBottom: "1.5rem" }}>Formica Samples</p>
             <div className="worktops-grid">
               {MICRO_WORKTOPS.map(w => (
                 <div key={w.slug} className="worktop-card">
@@ -724,7 +724,7 @@ export default function OptionsPage() {
                     <img className="worktop-card__img" src={w.img} alt={w.name} loading="lazy" />
                   </div>
                   <HeartBtn
-                    item={{ id: `worktop-micro-${w.slug}`, name: `${w.name} — Micro Worktop`, image: w.img, category: "Worktop" }}
+                    item={{ id: `worktop-micro-${w.slug}`, name: `${w.name} — Formica Worktop`, image: w.img, category: "Formica Worktop" }}
                     wishlist={wishlist}
                     onToggle={toggleWishlist}
                   />

@@ -46,14 +46,14 @@ export default function HomePage() {
 
   // Pre-resolve the 9 home page work items
   const W = {
-    oconnor:    WORK.find(w => w.title.includes("O’Connor"))!,
+    oconnor:    WORK.find(w => w.title.includes("O'Connor"))!,
     flaherty:   WORK.find(w => w.title.includes("Flaherty"))!,
     stepShaker: WORK.find(w => w.title.includes("Step Shaker Wardrobe"))!,
-    mirrorBlack:WORK.find(w => w.title.includes("Mirror Sliderobe"))!,
+    mirrorBlack:WORK.find(w => w.title.includes("Mirror Sliderobe — Black Track"))!,
     inchyra:    WORK.find(w => w.title.includes("Inchyra"))!,
     telford:    WORK.find(w => w.title.includes("Telford TV Unit — Graphite"))!,
     moloney:    WORK.find(w => w.title.includes("Moloney"))!,
-    obrien:     WORK.find(w => w.title.includes("O’Brien Utility"))!,
+    obrien:     WORK.find(w => w.title.includes("O'Brien Utility"))!,
     acoustic:   WORK.find(w => w.title.includes("Acoustic"))!,
     panelling:  WORK.find(w => w.title.includes("Hallway Panelling"))!,
   };
@@ -100,7 +100,7 @@ export default function HomePage() {
   // Intro slideshow auto-advance
   useEffect(() => {
     if (introPaused) return;
-    const t = setInterval(() => setIntroSlide(s => (s + 1) % 8), 4500);
+    const t = setInterval(() => setIntroSlide(s => (s + 1) % MCENRY.length), 4500);
     return () => clearInterval(t);
   }, [introPaused]);
 
@@ -294,12 +294,12 @@ export default function HomePage() {
               <div className="service-showcase__images">
                 <button className="service-showcase__img-wrap" onClick={() => setLightboxItem(W.oconnor)}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/home-services/kitchen-oconnor-01.jpg" alt="O'Connor Kitchen" loading="lazy" />
+                  <img src="/images/work19/oconnor-kitchen-01.jpg" alt="O'Connor Kitchen" loading="lazy" />
                   <span className="service-showcase__img-label">O&apos;Connor Kitchen</span>
                 </button>
                 <button className="service-showcase__img-wrap" onClick={() => setLightboxItem(W.flaherty)}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/home-services/kitchen-flaherty-01.jpg" alt="Flaherty Kitchen" loading="lazy" />
+                  <img src="/images/work18/flaherty-kitchen-01.jpg" alt="Flaherty Kitchen" loading="lazy" />
                   <span className="service-showcase__img-label">Flaherty Kitchen</span>
                 </button>
               </div>
