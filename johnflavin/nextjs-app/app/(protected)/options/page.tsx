@@ -97,17 +97,21 @@ const OAK_STAINED_FINISHES = [
 ];
 
 const INTERIOR_FINISHES = [
+  { name: "White", img: "/images/options/mfc/white.jpg" },
+  { name: "Light Grey", img: "/images/options/mfc/light-grey.jpg" },
+  { name: "Stone Grey", img: "/images/options/mfc/stone-grey.jpg" },
   { name: "Cashmere", img: "/images/options/mfc/cashmere.jpg" },
   { name: "White Halifax Oak", img: "/images/options/mfc/white-halifax-oak.jpg" },
   { name: "Sand Gladstone Oak", img: "/images/options/mfc/sand-gladstone-oak.jpg" },
   { name: "Sand Lyon Ash", img: "/images/options/mfc/sand-lyon-ash.jpg" },
+  { name: "Lancaster Oak", img: "/images/options/mfc/lancaster-oak.jpg" },
   { name: "Bordilino Oak", img: "/images/options/mfc/bordilino-oak.jpg" },
   { name: "Hamilton Oak", img: "/images/options/mfc/hamilton-oak.jpg" },
+  { name: "Pippy Oak", img: "/images/options/mfc/pippy-oak.jpg" },
   { name: "Natural Halifax Oak", img: "/images/options/mfc/natural-halifax-oak.jpg" },
-  { name: "Alibastet Woodgrain", img: "/images/options/mfc/alibastet-woodgrain.jpg" },
-  { name: "Platnum Ash", img: "/images/options/mfc/platnum-ash.jpg" },
+  { name: "Lorenzo Oak", img: "/images/options/mfc/lorenzo-oak.jpg" },
   { name: "Grey Nebraska Oak", img: "/images/options/mfc/grey-nebraska-oak.jpg" },
-  { name: "Dakar Ash", img: "/images/options/mfc/dakar-ash.jpg" },
+  { name: "Dakar", img: "/images/options/mfc/dakar.jpg" },
   { name: "Pacific Walnut", img: "/images/options/mfc/pacific-walnut-a.jpg" },
   { name: "Pacific Walnut (Dark)", img: "/images/options/mfc/pacific-walnut-b.jpg" },
   { name: "Tobaco Gladstone Oak", img: "/images/options/mfc/tobaco-gladstone-oak.jpg" },
@@ -247,15 +251,9 @@ const KNOBS = [
 ];
 
 const GIULIO_BAR = [
-  { name: "Giulio Crystal Handle", desc: "Crystal bar handle from the Giulio range.", img: "/images/options/handles/mvi/giulio-crystal-handle.jpg", finishes: ["Chrome Base"] },
-  { name: "Giulio Grain Handle", desc: "Textured grain finish bar handle.", img: "/images/options/handles/mvi/giulio-grain.jpg", finishes: ["Multiple Finishes"] },
-  { name: "Giulio Trellis Handle", desc: "Decorative trellis pattern bar handle.", img: "/images/options/handles/mvi/giulio-trellis.jpg", finishes: ["Multiple Finishes"] },
-  { name: "Giulio Bridge Handle", desc: "Bridge-style bar handle from the Giulio range.", img: "/images/options/handles/mvi/giulio-bridge.jpg", finishes: ["Multiple Finishes"] },
   { name: "Giulio Bar Handle (8/1066)", desc: "Contemporary bar handle from the Giulio collection.", img: "/images/options/handles/mvi/giulio-8-1066.jpg", finishes: ["Multiple Finishes"] },
-  { name: "Giulio Bar Handle (8/1010)", desc: "Contemporary bar handle from the Giulio collection.", img: "/images/options/handles/mvi/giulio-8-1010.jpg", finishes: ["Multiple Finishes"] },
   { name: "Giulio Bar Handle (8/1075)", desc: "Contemporary bar handle from the Giulio collection.", img: "/images/options/handles/mvi/giulio-8-1075.jpg", finishes: ["Multiple Finishes"] },
   { name: "Giulio Bar Handle (8/1027)", desc: "Contemporary bar handle from the Giulio collection.", img: "/images/options/handles/mvi/giulio-8-1027.jpg", finishes: ["Multiple Finishes"] },
-  { name: "Giulio Bar Handle (8/972)", desc: "Contemporary bar handle from the Giulio collection.", img: "/images/options/handles/mvi/giulio-8-972.jpg", finishes: ["Multiple Finishes"] },
   { name: "Giulio Dubai Handle", desc: "Dubai collection bar handle from Giulio.", img: "/images/options/handles/mvi/giulio-dubai-handle.jpg", finishes: ["Multiple Finishes"] },
   { name: "Giulio American Copper Handle", desc: "American copper finish bar handle from Giulio.", img: "/images/options/handles/mvi/giulio-american-copper.jpg", finishes: ["Copper"] },
   { name: "Giulio Winged Handle", desc: "Winged profile bar handle from the Giulio range.", img: "/images/options/handles/mvi/giulio-winged.jpg", finishes: ["Multiple Finishes"] },
