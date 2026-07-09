@@ -277,6 +277,117 @@ const CRYSTAL_AND_KNOBS = [
   { name: "Bathroom Cabinet Knob", desc: "Knob designed for bathroom furniture.", img: "/images/options/handles/mvi/bathroom-cabinet-knob.jpg", finishes: ["Multiple Finishes"] },
 ];
 
+const TRADITIONAL_HANDLES = [
+  // Flat Top Knob
+  { name: "Flat Top Knob — Black", desc: "Classic flat-top cabinet knob in matt black finish.", img: "/images/options/handles/mvi/flat-top-knob-black.jpg", finishes: ["Matt Black"] },
+  { name: "Flat Top Knob — Brushed Nickel", desc: "Classic flat-top cabinet knob in brushed nickel finish.", img: "/images/options/handles/mvi/flat-top-knob-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  { name: "Flat Top Knob — Chrome", desc: "Classic flat-top cabinet knob in polished chrome finish.", img: "/images/options/handles/mvi/flat-top-knob-chrome.jpg", finishes: ["Chrome"] },
+  { name: "Flat Top Knob — Bronze", desc: "Classic flat-top cabinet knob in Florentine bronze finish.", img: "/images/options/handles/mvi/flat-top-knob-bronze.jpg", finishes: ["Bronze"] },
+  { name: "Flat Top Knob — Copper", desc: "Classic flat-top cabinet knob in copper finish.", img: "/images/options/handles/mvi/flat-top-knob-copper.jpg", finishes: ["Copper"] },
+  { name: "Flat Top Knob — Satin Brass", desc: "Classic flat-top cabinet knob in brushed satin brass finish.", img: "/images/options/handles/mvi/flat-top-knob-satin-brass.jpg", finishes: ["Satin Brass"] },
+  // Cambridge Knob
+  { name: "Cambridge Knob — Brushed Nickel", desc: "Elegant domed cabinet knob in brushed nickel.", img: "/images/options/handles/mvi/cambridge-knob-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  { name: "Cambridge Knob — Chrome", desc: "Elegant domed cabinet knob in polished chrome.", img: "/images/options/handles/mvi/cambridge-knob-chrome.jpg", finishes: ["Chrome"] },
+  { name: "Cambridge Knob — Black", desc: "Elegant domed cabinet knob in matt black.", img: "/images/options/handles/mvi/cambridge-knob-black.jpg", finishes: ["Matt Black"] },
+  { name: "Cambridge Knob — Bronze", desc: "Elegant domed cabinet knob in bronze finish.", img: "/images/options/handles/mvi/cambridge-knob-bronze.jpg", finishes: ["Bronze"] },
+  { name: "Cambridge Knob — Dull Brass", desc: "Elegant domed cabinet knob in dull brass finish.", img: "/images/options/handles/mvi/cambridge-knob-dull-brass.jpg", finishes: ["Dull Brass"] },
+  // Button Knob
+  { name: "Button Knob — Black", desc: "Compact button-profile cabinet knob in matt black.", img: "/images/options/handles/mvi/button-knob-black.jpg", finishes: ["Matt Black"] },
+  { name: "Button Knob — Pewter", desc: "Compact button-profile cabinet knob in pewter finish.", img: "/images/options/handles/mvi/button-knob-pewter.jpg", finishes: ["Pewter"] },
+  { name: "Button Knob — Bronze", desc: "Compact button-profile cabinet knob in bronze finish.", img: "/images/options/handles/mvi/button-knob-bronze.jpg", finishes: ["Bronze"] },
+  { name: "Button Knob — Chrome", desc: "Compact button-profile cabinet knob in polished chrome.", img: "/images/options/handles/mvi/button-knob-chrome.jpg", finishes: ["Chrome"] },
+  { name: "Button Knob — Satin Nickel", desc: "Compact button-profile cabinet knob in satin nickel.", img: "/images/options/handles/mvi/button-knob-satin-nickel.jpg", finishes: ["Satin Nickel"] },
+  // Monza Oval Knob
+  { name: "Monza Oval Knob — Bronze", desc: "Oval-profile Monza knob in bronze finish.", img: "/images/options/handles/mvi/monza-oval-knob-bronze.jpg", finishes: ["Bronze"] },
+  { name: "Monza Oval Knob — Brushed Nickel", desc: "Oval-profile Monza knob in brushed nickel finish.", img: "/images/options/handles/mvi/monza-oval-knob-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  { name: "Monza Oval Knob — Satin Gold", desc: "Oval-profile Monza knob in satin gold finish.", img: "/images/options/handles/mvi/monza-oval-knob-satin-gold.jpg", finishes: ["Satin Gold"] },
+  // Monza Cup Handle
+  { name: "Monza Cup Handle — Bronze", desc: "Monza cup-pull handle in bronze finish.", img: "/images/options/handles/mvi/monza-cup-bronze.jpg", finishes: ["Bronze"] },
+  { name: "Monza Cup Handle — Brushed Nickel", desc: "Monza cup-pull handle in brushed nickel finish.", img: "/images/options/handles/mvi/monza-cup-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  { name: "Monza Cup Handle — Satin Gold", desc: "Monza cup-pull handle in satin gold finish.", img: "/images/options/handles/mvi/monza-cup-satin-gold.jpg", finishes: ["Satin Gold"] },
+  // Oxford Knob
+  { name: "Oxford Knob — Black", desc: "Oxford cabinet knob in matt black finish.", img: "/images/options/handles/mvi/oxford-knob-black.jpg", finishes: ["Matt Black"] },
+  { name: "Oxford Knob — Bronze", desc: "Oxford cabinet knob in bronze finish.", img: "/images/options/handles/mvi/oxford-knob-bronze.jpg", finishes: ["Bronze"] },
+  { name: "Oxford Knob — Chrome", desc: "Oxford cabinet knob in polished chrome finish.", img: "/images/options/handles/mvi/oxford-knob-chrome.jpg", finishes: ["Chrome"] },
+  { name: "Oxford Knob — Gun Metal", desc: "Oxford cabinet knob in gun metal finish.", img: "/images/options/handles/mvi/oxford-knob-gun-metal.jpg", finishes: ["Gun Metal"] },
+  { name: "Oxford Knob — Satin Nickel", desc: "Oxford cabinet knob in satin nickel finish.", img: "/images/options/handles/mvi/oxford-knob-satin-nickel.jpg", finishes: ["Satin Nickel"] },
+  // Oxford Cup Handle
+  { name: "Oxford Cup Handle — Black", desc: "Oxford cup-pull handle in matt black finish.", img: "/images/options/handles/mvi/oxford-cup-black.jpg", finishes: ["Matt Black"] },
+  { name: "Oxford Cup Handle — Bronze", desc: "Oxford cup-pull handle in bronze finish.", img: "/images/options/handles/mvi/oxford-cup-bronze.jpg", finishes: ["Bronze"] },
+  { name: "Oxford Cup Handle — Chrome", desc: "Oxford cup-pull handle in polished chrome finish.", img: "/images/options/handles/mvi/oxford-cup-chrome.jpg", finishes: ["Chrome"] },
+  { name: "Oxford Cup Handle — Gun Metal", desc: "Oxford cup-pull handle in gun metal finish.", img: "/images/options/handles/mvi/oxford-cup-gun-metal.jpg", finishes: ["Gun Metal"] },
+  { name: "Oxford Cup Handle — Satin Nickel", desc: "Oxford cup-pull handle in satin nickel finish.", img: "/images/options/handles/mvi/oxford-cup-satin-nickel.jpg", finishes: ["Satin Nickel"] },
+  // System Cup Handle
+  { name: "System Cup Handle — Brushed Nickel", desc: "Traditional system cup-pull in brushed nickel.", img: "/images/options/handles/mvi/trad-system-cup-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  { name: "System Cup Handle — Light Bronze", desc: "Traditional system cup-pull in light bronze.", img: "/images/options/handles/mvi/trad-system-cup-light-bronze.jpg", finishes: ["Light Bronze"] },
+  { name: "System Cup Handle — Polished Brass", desc: "Traditional system cup-pull in polished brass.", img: "/images/options/handles/mvi/trad-system-cup-polished-brass.jpg", finishes: ["Polished Brass"] },
+  { name: "System Cup Handle — Polished Chrome", desc: "Traditional system cup-pull in polished chrome.", img: "/images/options/handles/mvi/trad-system-cup-polished-chrome.jpg", finishes: ["Polished Chrome"] },
+  { name: "System Cup Handle — Rose Gold", desc: "Traditional system cup-pull in rose gold.", img: "/images/options/handles/mvi/trad-system-cup-rose-gold.jpg", finishes: ["Rose Gold"] },
+  // System Knob
+  { name: "System Knob — Brushed Nickel", desc: "Traditional system cabinet knob in brushed nickel.", img: "/images/options/handles/mvi/trad-system-knob-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  { name: "System Knob — Light Bronze", desc: "Traditional system cabinet knob in light bronze.", img: "/images/options/handles/mvi/trad-system-knob-light-bronze.jpg", finishes: ["Light Bronze"] },
+  { name: "System Knob — Polished Brass", desc: "Traditional system cabinet knob in polished brass.", img: "/images/options/handles/mvi/trad-system-knob-polished-brass.jpg", finishes: ["Polished Brass"] },
+  { name: "System Knob — Polished Chrome", desc: "Traditional system cabinet knob in polished chrome.", img: "/images/options/handles/mvi/trad-system-knob-polished-chrome.jpg", finishes: ["Polished Chrome"] },
+  { name: "System Knob — Rose Gold", desc: "Traditional system cabinet knob in rose gold.", img: "/images/options/handles/mvi/trad-system-knob-rose-gold.jpg", finishes: ["Rose Gold"] },
+  // Kensington D Handle
+  { name: "Kensington D Handle — Black Nickel", desc: "Classic Kensington D-profile handle in black nickel.", img: "/images/options/handles/mvi/kensington-d-black-nickel.jpg", finishes: ["Black Nickel"] },
+  { name: "Kensington D Handle — Chrome", desc: "Classic Kensington D-profile handle in polished chrome.", img: "/images/options/handles/mvi/kensington-d-chrome.jpg", finishes: ["Chrome"] },
+  { name: "Kensington D Handle — Satin Nickel", desc: "Classic Kensington D-profile handle in satin nickel.", img: "/images/options/handles/mvi/kensington-d-satin-nickel.jpg", finishes: ["Satin Nickel"] },
+  { name: "Kensington D Handle — Matt Brass", desc: "Classic Kensington D-profile handle in matt brass.", img: "/images/options/handles/mvi/kensington-d-matt-brass.jpg", finishes: ["Matt Brass"] },
+  // Kensington Knob
+  { name: "Kensington Knob — Black Nickel", desc: "Kensington cabinet knob in black nickel finish.", img: "/images/options/handles/mvi/kensington-knob-black-nickel.jpg", finishes: ["Black Nickel"] },
+  { name: "Kensington Knob — Chrome", desc: "Kensington cabinet knob in polished chrome finish.", img: "/images/options/handles/mvi/kensington-knob-chrome.jpg", finishes: ["Chrome"] },
+  { name: "Kensington Knob — Satin Nickel", desc: "Kensington cabinet knob in satin nickel finish.", img: "/images/options/handles/mvi/kensington-knob-satin-nickel.jpg", finishes: ["Satin Nickel"] },
+  { name: "Kensington Knob — Matt Brass", desc: "Kensington cabinet knob in matt brass finish.", img: "/images/options/handles/mvi/kensington-knob-matt-brass.jpg", finishes: ["Matt Brass"] },
+  // Windsor Knob
+  { name: "Windsor Knob — Chrome", desc: "Windsor round cabinet knob in polished chrome.", img: "/images/options/handles/mvi/windsor-knob-chrome.jpg", finishes: ["Chrome"] },
+  { name: "Windsor Knob — Rose Gold", desc: "Windsor round cabinet knob in rose gold copper.", img: "/images/options/handles/mvi/windsor-knob-rose-gold.jpg", finishes: ["Rose Gold"] },
+  { name: "Windsor Knob — Satin Brass", desc: "Windsor round cabinet knob in satin brass.", img: "/images/options/handles/mvi/windsor-knob-satin-brass.jpg", finishes: ["Satin Brass"] },
+  { name: "Windsor Knob — Black", desc: "Windsor round cabinet knob in matt black.", img: "/images/options/handles/mvi/windsor-knob-black.jpg", finishes: ["Matt Black"] },
+  { name: "Windsor Knob — Brushed Nickel", desc: "Windsor round cabinet knob in brushed nickel.", img: "/images/options/handles/mvi/windsor-knob-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  // Windsor Cup Handle
+  { name: "Windsor Cup Handle — Chrome", desc: "Windsor cup-pull handle in polished chrome.", img: "/images/options/handles/mvi/windsor-cup-chrome.jpg", finishes: ["Chrome"] },
+  { name: "Windsor Cup Handle — Rose Gold", desc: "Windsor cup-pull handle in rose gold copper.", img: "/images/options/handles/mvi/windsor-cup-rose-gold.jpg", finishes: ["Rose Gold"] },
+  { name: "Windsor Cup Handle — Satin Brass", desc: "Windsor cup-pull handle in satin brass.", img: "/images/options/handles/mvi/windsor-cup-satin-brass.jpg", finishes: ["Satin Brass"] },
+  { name: "Windsor Cup Handle — Black", desc: "Windsor cup-pull handle in matt black.", img: "/images/options/handles/mvi/windsor-cup-black.jpg", finishes: ["Matt Black"] },
+  { name: "Windsor Cup Handle — Brushed Nickel", desc: "Windsor cup-pull handle in brushed nickel.", img: "/images/options/handles/mvi/windsor-cup-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  // Beehive Knob
+  { name: "Beehive Knob — Brushed Nickel", desc: "Traditional beehive-shaped cabinet knob in brushed nickel.", img: "/images/options/handles/mvi/beehive-knob-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  { name: "Beehive Knob — Chrome", desc: "Traditional beehive-shaped cabinet knob in polished chrome.", img: "/images/options/handles/mvi/beehive-knob-chrome.jpg", finishes: ["Chrome"] },
+  { name: "Queen Anne Beehive Knob — Chrome", desc: "Classic Queen Anne beehive knob in polished chrome.", img: "/images/options/handles/mvi/beehive-queen-anne-chrome.jpg", finishes: ["Chrome"] },
+  { name: "Queen Anne Beehive Knob — Mixed Finishes", desc: "Queen Anne beehive knob available in chrome, satin chrome, and bronze.", img: "/images/options/handles/mvi/beehive-queen-anne-multi.jpg", finishes: ["Chrome", "Satin Chrome", "Bronze"] },
+  // Reeded Knob
+  { name: "Reeded Knob — Pewter", desc: "Reeded-effect cabinet knob in pewter finish.", img: "/images/options/handles/mvi/reeded-knob-pewter.jpg", finishes: ["Pewter", "Black"] },
+];
+
+const MVI_BAR_HANDLES = [
+  // MVI Bari
+  { name: "MVI Bari — Brushed Nickel", desc: "Sleek contemporary bar handle in brushed nickel finish.", img: "/images/options/handles/mvi/bari-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  { name: "MVI Bari — Chrome", desc: "Sleek contemporary bar handle in polished chrome finish.", img: "/images/options/handles/mvi/bari-chrome.jpg", finishes: ["Chrome"] },
+  { name: "MVI Bari — Satin Brass", desc: "Sleek contemporary bar handle in satin brass finish.", img: "/images/options/handles/mvi/bari-satin-brass.jpg", finishes: ["Satin Brass"] },
+  { name: "MVI Bari — Brushed Bronze", desc: "Sleek contemporary bar handle in brushed bronze finish.", img: "/images/options/handles/mvi/bari-brush-bronze.jpg", finishes: ["Brushed Bronze"] },
+  { name: "MVI Bari — Black Nickel", desc: "Sleek contemporary bar handle in black nickel finish.", img: "/images/options/handles/mvi/bari-black-nickel.jpg", finishes: ["Black Nickel"] },
+  { name: "MVI Bari — Matt Black", desc: "Sleek contemporary bar handle in matt black finish.", img: "/images/options/handles/mvi/bari-matt-black.jpg", finishes: ["Matt Black"] },
+  // Block Bar
+  { name: "Block Bar Handle", desc: "Bold block-section bar handle in brushed steel finish.", img: "/images/options/handles/mvi/block-bar-brushed-steel.jpg", finishes: ["Brushed Steel"] },
+  // Flat Bar
+  { name: "Flat Bar Handle", desc: "Minimal flat-profile bar handle — available in chrome and brushed nickel.", img: "/images/options/handles/mvi/flat-bar.jpg", finishes: ["Chrome", "Brushed Nickel"] },
+  // T Bar
+  { name: "T Bar Handle", desc: "Classic T-bar profile handle in brushed nickel — available in seven sizes.", img: "/images/options/handles/mvi/t-bar-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  // Nice Handle
+  { name: "Nice Handle — Copper", desc: "Curved contemporary bar handle in copper finish.", img: "/images/options/handles/mvi/nice-copper.jpg", finishes: ["Copper"] },
+  { name: "Nice Handle — Satin Brass", desc: "Curved contemporary bar handle in satin brass finish.", img: "/images/options/handles/mvi/nice-satin-brass.jpg", finishes: ["Satin Brass"] },
+  { name: "Nice Handle — Black", desc: "Curved contemporary bar handle in matt black finish.", img: "/images/options/handles/mvi/nice-black.jpg", finishes: ["Matt Black"] },
+  { name: "Nice Handle — Chrome", desc: "Curved contemporary bar handle in polished chrome finish.", img: "/images/options/handles/mvi/nice-chrome.jpg", finishes: ["Chrome"] },
+  { name: "Nice Handle — Brushed Nickel", desc: "Curved contemporary bar handle in brushed nickel finish.", img: "/images/options/handles/mvi/nice-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  // Genoa Handle
+  { name: "Genoa Handle — Satin Brass", desc: "Architectural bar handle from the Genoa range in satin brass.", img: "/images/options/handles/mvi/genoa-satin-brass.jpg", finishes: ["Satin Brass"] },
+  { name: "Genoa Handle — Matt Black", desc: "Architectural bar handle from the Genoa range in matt black.", img: "/images/options/handles/mvi/genoa-matt-black.jpg", finishes: ["Matt Black"] },
+  { name: "Genoa Handle — Brushed Nickel", desc: "Architectural bar handle from the Genoa range in brushed nickel.", img: "/images/options/handles/mvi/genoa-brushed-nickel.jpg", finishes: ["Brushed Nickel"] },
+  // Twist Chrome
+  { name: "Twist Handle — Chrome", desc: "Distinctive twisted-profile bar handle in polished chrome.", img: "/images/options/handles/mvi/twist-chrome.jpg", finishes: ["Chrome"] },
+];
+
 const MICRO_WORKTOPS = [
   "barnwood","black-marble","calacata-marble","castle-marble-white","causeway","cirrus-cloud","copper-stone","dusky-black","fossil-grey","frosty","highland-oak","jade","jet-quarry","latte-dream","light-walnut","limestone","lorenzo","milan-marble","mount-blanc-stone","mourne-slate","pebbles","recyled-plank","safari-oak","silverback-marble","soft-oak","soft-shimmer-matt","storm-terrazzo","white-quartz","winter-stone","winter-stone-2"
 ].map((s: string) => ({
@@ -693,6 +804,20 @@ export default function OptionsPage() {
                 title="Crystal Handles & Knobs"
                 desc="Crystal-effect handles and cabinet knobs — a luxurious finishing touch for painted furniture and bathroom cabinetry."
                 items={CRYSTAL_AND_KNOBS}
+                wishlist={wishlist}
+                onToggle={toggleWishlist}
+              />
+              <HandleCategory
+                title="Traditional Range"
+                desc="Classic knobs, cup handles, and D-handles from MVI Hazel's traditional range — available in a wide choice of finishes including chrome, brass, bronze, nickel, and black. Suited to painted kitchens, solid oak doors, and bedroom furniture."
+                items={TRADITIONAL_HANDLES}
+                wishlist={wishlist}
+                onToggle={toggleWishlist}
+              />
+              <HandleCategory
+                title="Bar Handles"
+                desc="A selection of contemporary bar handles from MVI Hazel — from the slender Bari and Nice profiles to the bold Block Bar and architectural Genoa. Available in chrome, brushed nickel, black, brass, bronze, and more."
+                items={MVI_BAR_HANDLES}
                 wishlist={wishlist}
                 onToggle={toggleWishlist}
               />
