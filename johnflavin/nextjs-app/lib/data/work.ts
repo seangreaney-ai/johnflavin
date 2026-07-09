@@ -177,10 +177,10 @@ export const WORK: WorkItem[] = [
   {
     room: "kitchen",
     roomLabel: "Kitchen",
-    title: "Flaherty Kitchen — Hidden Cove",
-    description: "A bright, well-considered kitchen in Colortrend's Hidden Cove — a warm, off-white with subtle depth. Step Shaker doors from the Makers Collection give a classic profile, finished in smooth paint with Natural Halifax Oak on the interiors. The island is painted in Pine Martin for a two-tone contrast, and System Knurled Gold handles run throughout. Finished with a quartz worktop.",
+    title: "Flaherty Kitchen — Elephants Breath & Hague Blue",
+    description: "A classic kitchen built around the Porto door — a curved arch panel profile from the Makers Collection that brings real character to a painted finish. The main units are sprayed in Farrow & Ball's Elephants Breath, a warm, complex grey that shifts beautifully in natural light. The island takes Hague Blue — a deep, inky navy that anchors the space and gives the kitchen a strong focal point. Natural Halifax Oak interiors from the Tailored Collection add warmth inside the units. Giulio Knurled Black handles on the main run and Giulio Knurled Rosa on the island carry the two-tone theme through to the hardware. Finished with a quartz worktop throughout.",
     images: [1,2,3,4,5,6,7,8,9,10,11,12].map(n => `/images/work18/flaherty-kitchen-${String(n).padStart(2,"0")}.jpg`),
-    specs: { door_style:"Step Shaker", finish:"Smooth", colour_units:"Hidden Cove (Colortrend)", colour_island:"Pine Martin (Colortrend)", interior:"Natural Halifax Oak (Tailored Collection)", handles:"System Knurled Gold", worktop:"Quartz" },
+    specs: { door_style:"Porto", finish:"Smooth", colour_units:"Elephants Breath (Farrow & Ball)", colour_island:"Hague Blue (Farrow & Ball)", interior:"Natural Halifax Oak (Tailored Collection)", handles_units:"Giulio Knurled Black", handles_island:"Giulio Knurled Rosa", worktop:"Quartz" },
   },
   {
     featured: true,
