@@ -175,6 +175,15 @@ export const WORK: WorkItem[] = [
     specs: { finish: "Grey / Charcoal, Light Oak / Natural Oak, Walnut / Dark Wood", use: "Feature walls, TV walls, media units, hallways, bedrooms", style: "Vertical slat — acoustic felt backing", supply: "Supply & fit" },
   },
   {
+    featured: true,
+    room: "kitchen",
+    roomLabel: "Kitchen",
+    title: "J-Profile Kitchen — Graphite Grey",
+    description: "A striking handleless kitchen built around the J-Profile door from the Makers Collection — a sleek, integrated-grip design that gives a completely seamless look. Sprayed in Graphite Grey, the units have real presence and weight without feeling heavy. Natural Halifax Oak interiors from the Tailored Collection bring warmth inside, balancing the dark exterior. Finished with a quartz worktop throughout.",
+    images: [1,2,3,4,5,6,7,8,9,10,11,12].map(n => `/images/work21/j-profile-kitchen-${String(n).padStart(2,"0")}.jpg`),
+    specs: { door_style:"J-Profile", finish:"Smooth", colour:"Graphite Grey", interior:"Natural Halifax Oak (Tailored Collection)", worktop:"Quartz" },
+  },
+  {
     room: "kitchen",
     roomLabel: "Kitchen",
     title: "Flaherty Kitchen — Elephants Breath & Hague Blue",

@@ -47,7 +47,7 @@ export default function HomePage() {
   // Pre-resolve the 9 home page work items
   const W = {
     oconnor:    WORK.find(w => w.title.includes("O'Connor"))!,
-    flaherty:   WORK.find(w => w.title.includes("Flaherty"))!,
+    jProfile:   WORK.find(w => w.title.includes("J-Profile Kitchen"))!,
     stepShaker: WORK.find(w => w.title.includes("Step Shaker Wardrobe"))!,
     mirrorBlack:WORK.find(w => w.title.includes("Mirror Sliderobe — Black Track"))!,
     inchyra:    WORK.find(w => w.title.includes("Inchyra"))!,
@@ -297,10 +297,10 @@ export default function HomePage() {
                   <img src="/images/work19/oconnor-kitchen-01.jpg" alt="O'Connor Kitchen" loading="lazy" />
                   <span className="service-showcase__img-label">O&apos;Connor Kitchen</span>
                 </button>
-                <button className="service-showcase__img-wrap" onClick={() => setLightboxItem(W.flaherty)}>
+                <button className="service-showcase__img-wrap" onClick={() => setLightboxItem(W.jProfile)}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/work18/flaherty-kitchen-01.jpg" alt="Flaherty Kitchen" loading="lazy" />
-                  <span className="service-showcase__img-label">Flaherty Kitchen</span>
+                  <img src="/images/work21/j-profile-kitchen-01.jpg" alt="J-Profile Kitchen" loading="lazy" />
+                  <span className="service-showcase__img-label">J-Profile Kitchen</span>
                 </button>
               </div>
             </div>
