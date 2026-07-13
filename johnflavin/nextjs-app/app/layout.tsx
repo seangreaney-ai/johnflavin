@@ -52,9 +52,6 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${abril.variable} ${poppins.variable}`}>
-      <head>
-        <link rel="icon" href="/logo/WIbJF_Logo_v3.png" type="image/png" />
-      </head>
       <body>
         <script
           type="application/ld+json"
