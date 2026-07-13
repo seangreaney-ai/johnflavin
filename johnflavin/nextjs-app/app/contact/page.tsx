@@ -31,7 +31,7 @@ export default function ContactPage() {
             </div>
             <div style={{ borderBottom: "1px solid var(--border)", paddingBottom: "1.5rem" }}>
               <p className="eyebrow" style={{ marginBottom: "0.5rem" }}>Email</p>
-              <a href="mailto:info@johnflavin.ie" className="display--md" style={{ fontFamily: "var(--font-display)", color: "inherit", textDecoration: "none" }}>info@johnflavin.ie</a>
+              <a href="mailto:jfwoodinteriors@outlook.com" className="display--md" style={{ fontFamily: "var(--font-display)", color: "inherit", textDecoration: "none" }}>jfwoodinteriors@outlook.com</a>
             </div>
           </div>
         </div>

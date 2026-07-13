@@ -66,7 +66,7 @@ export default function RootLayout({
               description: "Custom fitted kitchens, wardrobes, living room units, utility rooms and bespoke furniture — handcrafted in Co. Kerry and installed throughout Munster.",
               url: "https://johnflavin.ie",
               telephone: "+353870632065",
-              email: "info@johnflavin.ie",
+              email: "jfwoodinteriors@outlook.com",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Duagh",

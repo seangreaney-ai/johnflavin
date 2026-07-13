@@ -42,7 +42,7 @@ export default function Footer() {
             <ul className="footer__links">
               <li><span className="footer__link">Duagh, Co. Kerry</span></li>
               <li><a href="tel:0870632065" className="footer__link">087 063 2065</a></li>
-              <li><a href="mailto:info@johnflavin.ie" className="footer__link">info@johnflavin.ie</a></li>
+              <li><a href="mailto:jfwoodinteriors@outlook.com" className="footer__link">jfwoodinteriors@outlook.com</a></li>
             </ul>
           </div>
         </div>
