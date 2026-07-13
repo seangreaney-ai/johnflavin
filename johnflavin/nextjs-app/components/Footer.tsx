@@ -51,13 +51,19 @@ export default function Footer() {
           <p className="footer__copy">
             &copy; {new Date().getFullYear()} Wood Interiors by John Flavin. All rights reserved.
           </p>
-          <p className="footer__location">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-            Duagh, Co. Kerry, Ireland
-          </p>
+          <div style={{ display: "flex", gap: "1.5rem", alignItems: "center", flexWrap: "wrap", justifyContent: "flex-end" }}>
+            <p style={{ fontSize: "var(--text-xs)", color: "rgba(245,240,234,0.4)", margin: 0 }}>
+              This site uses essential cookies for login functionality.{" "}
+              <Link href="/privacy" style={{ color: "rgba(245,240,234,0.5)", textDecoration: "underline" }}>Privacy Policy</Link>
+            </p>
+            <p className="footer__location">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Duagh, Co. Kerry, Ireland
+            </p>
+          </div>
         </div>
       </div>
     </footer>
