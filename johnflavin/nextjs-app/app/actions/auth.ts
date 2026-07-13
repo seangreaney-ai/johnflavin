@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
+import { Resend } from "resend";
 
 export type AuthState = { error?: string; success?: string } | undefined;
 
@@ -39,6 +40,60 @@ export async function signUp(state: AuthState, formData: FormData): Promise<Auth
   const supabase = await createClient();
   const { data, error } = await supabase.auth.signUp({ email, password, options: { data: { name } } });
   if (error) return { error: error.message };
+
+  // Send confirmation email to user + notification to John
+  try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const johnEmail = process.env.JOHN_EMAIL || "info@johnflavin.ie";
+    const displayName = name || email;
+
+    await Promise.all([
+      // To the new user
+      resend.emails.send({
+        from: "Wood Interiors by John Flavin <info@johnflavin.ie>",
+        to: email,
+        subject: "Welcome to John Flavin Wood Interiors",
+        html: `
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:560px;margin:0 auto;padding:40px 24px;color:#0f0d0b;">
+            <div style="border-bottom:2px solid #702f18;padding-bottom:20px;margin-bottom:32px;">
+              <p style="margin:0 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:0.15em;color:#9a8878;">Wood Interiors by John Flavin</p>
+              <h1 style="margin:0;font-size:26px;font-weight:400;color:#0f0d0b;">You're registered</h1>
+            </div>
+            <p style="font-size:16px;line-height:1.7;color:#0f0d0b;">Hi ${displayName},</p>
+            <p style="font-size:15px;line-height:1.7;color:#3a3530;">Thanks for registering. You now have access to the John Flavin catalogue — browse door styles, finishes, handles, and worktops, and heart anything you like to build your selection.</p>
+            <p style="font-size:15px;line-height:1.7;color:#3a3530;">When you're ready, send your selection through and John will get back to you to discuss your project.</p>
+            <div style="margin:32px 0;">
+              <a href="https://johnflavin.ie/catalogue" style="display:inline-block;background:#702f18;color:#f5f0ea;text-decoration:none;padding:14px 28px;font-size:14px;letter-spacing:0.05em;">Browse the Catalogue →</a>
+            </div>
+            <p style="margin:40px 0 0;font-size:12px;color:#c8bfb0;">Wood Interiors by John Flavin · Abbeyfeale, Co. Limerick</p>
+          </div>
+        `,
+      }),
+      // To John
+      resend.emails.send({
+        from: "Wood Interiors by John Flavin <info@johnflavin.ie>",
+        to: johnEmail,
+        replyTo: email,
+        subject: `New registration — ${displayName}`,
+        html: `
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:560px;margin:0 auto;padding:40px 24px;color:#0f0d0b;">
+            <div style="border-bottom:2px solid #702f18;padding-bottom:20px;margin-bottom:32px;">
+              <p style="margin:0 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:0.15em;color:#9a8878;">Wood Interiors by John Flavin</p>
+              <h1 style="margin:0;font-size:26px;font-weight:400;color:#0f0d0b;">New Registration</h1>
+            </div>
+            <table style="width:100%;border-collapse:collapse;">
+              <tr><td style="padding:6px 0;font-size:13px;color:#9a8878;width:80px;">Name</td><td style="padding:6px 0;font-size:15px;color:#0f0d0b;">${displayName}</td></tr>
+              <tr><td style="padding:6px 0;font-size:13px;color:#9a8878;">Email</td><td style="padding:6px 0;font-size:15px;"><a href="mailto:${email}" style="color:#702f18;">${email}</a></td></tr>
+            </table>
+            <p style="margin:40px 0 0;font-size:12px;color:#c8bfb0;">Sent via johnflavin.ie</p>
+          </div>
+        `,
+      }),
+    ]);
+  } catch {
+    // Email failure is non-fatal — account is still created
+  }
+
   if (data.session) redirect("/showcase");
   return { success: "Account created! Check your email for a confirmation link, then sign in." };
 }
