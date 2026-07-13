@@ -37,7 +37,7 @@ export async function sendSelection(state: SelectionState, formData: FormData): 
     return { error: "Your selection is empty. Add some items before sending." };
   }
 
-  const johnEmail = process.env.JOHN_EMAIL || "info@johnflavin.ie";
+  const johnEmail = process.env.JOHN_EMAIL || "jfwoodinteriors@outlook.com";
 
   const grouped = items.reduce<Record<string, SelectionItem[]>>((acc, item) => {
     (acc[item.category] ||= []).push(item);
@@ -111,12 +111,12 @@ export async function sendSelection(state: SelectionState, formData: FormData): 
     });
     if (resendError) {
       console.error("Resend error:", resendError);
-      return { error: "Sorry, we couldn't send your selection right now. Please try again or contact John directly at info@johnflavin.ie." };
+      return { error: "Sorry, we couldn't send your selection right now. Please try again or contact John directly at jfwoodinteriors@outlook.com." };
     }
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
     console.error("Resend error:", msg);
-    return { error: "Sorry, we couldn't send your selection right now. Please try again or contact John directly at info@johnflavin.ie." };
+    return { error: "Sorry, we couldn't send your selection right now. Please try again or contact John directly at jfwoodinteriors@outlook.com." };
   }
 
   redirect("/selection/sent");

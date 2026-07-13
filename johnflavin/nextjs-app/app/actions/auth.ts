@@ -44,7 +44,7 @@ export async function signUp(state: AuthState, formData: FormData): Promise<Auth
   // Send confirmation email to user + notification to John
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
-    const johnEmail = process.env.JOHN_EMAIL || "info@johnflavin.ie";
+    const johnEmail = process.env.JOHN_EMAIL || "jfwoodinteriors@outlook.com";
     const displayName = name || email;
 
     await Promise.all([
