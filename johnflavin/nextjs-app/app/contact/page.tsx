@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Get in touch with John Flavin to arrange a free home consultation. Based in Duagh, Co. Kerry — covering Kerry and Munster.",
+  alternates: { canonical: "/contact" },
+};
+
 export default function ContactPage() {
   return (
     <div className="main--inner">

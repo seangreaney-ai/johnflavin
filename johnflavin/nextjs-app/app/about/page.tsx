@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "John Flavin is a custom fitted furniture maker based in Duagh, Co. Kerry, serving homes across Kerry and Munster for over 10 years.",
+  alternates: { canonical: "/about" },
+};
+
 export default function AboutPage() {
   return (
     <div className="main--inner">
