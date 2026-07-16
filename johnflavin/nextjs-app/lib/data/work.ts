@@ -201,6 +201,14 @@ export const WORK: WorkItem[] = [
     specs: { door_style:"Step Shaker", finish:"Smooth", colour_units:"Hidden Cove (Colortrend)", colour_island:"Pine Martin (Colortrend)", interior:"Natural Halifax Oak (Tailored Collection)", handles:"System Knurled Gold", worktop:"Quartz" },
   },
   {
+    room: "kitchen",
+    roomLabel: "Kitchen",
+    title: "McEnery Kitchen — Pitch Black & Natural Halifax Oak",
+    description: "A bold kitchen built around the Calaway Ash door from the Makers Collection — a grained ash profile that adds real texture and depth when sprayed in Colortrend's Pitch Black. The strong, dark exterior is balanced by Natural Halifax Oak interiors from the Tailored Collection, which carry through to the laths around the island. System Linear handles and knobs in bronze bring a warm metallic finish that sits perfectly against the black cabinetry. Quartz worktops on the main kitchen run, with Dekton on the island for extra durability.",
+    images: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].map(n => `/images/work22/mcenery-kitchen-${String(n).padStart(2,"0")}.jpg`),
+    specs: { door_style:"Calaway Ash", finish:"Grained", colour:"Pitch Black (Colortrend)", interior:"Natural Halifax Oak (Tailored Collection)", handles:"System Linear Bronze", worktop_kitchen:"Quartz", worktop_island:"Dekton" },
+  },
+  {
     room: "living",
     roomLabel: "Living Room",
     title: "Telford TV Unit — Graphite",
