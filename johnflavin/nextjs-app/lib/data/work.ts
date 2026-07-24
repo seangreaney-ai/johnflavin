@@ -145,6 +145,14 @@ export const WORK: WorkItem[] = [
   {
     room: "bespoke",
     roomLabel: "Bespoke & Specialist",
+    title: "Bootroom — Inchyra & Natural Halifax Oak",
+    description: "A bespoke bootroom built around the Calaway Ash Grained door from the Makers Collection — the natural texture of the ash grain gives the piece real character and warmth. Sprayed in Farrow & Ball's Inchyra, a deep dusty blue-green that works beautifully in utility and hallway spaces. Natural Halifax Oak interiors from the Tailored Collection line the inside of the units. System Linear handles and knobs in bronze complete the look — a considered, material-led design that's as hardworking as it is good-looking.",
+    images: [1,2,3,4,5].map(n => `/images/work24/bootroom-inchyra-${String(n).padStart(2,"0")}.jpg`),
+    specs: { type: "Bespoke Bootroom", door_style: "Calaway Ash Grained (Makers Collection)", colour: "Inchyra (Farrow & Ball)", interior: "Natural Halifax Oak (Tailored Collection)", handles: "System Linear Bronze" },
+  },
+  {
+    room: "bespoke",
+    roomLabel: "Bespoke & Specialist",
     title: "Lyons Motorgroup — BYD Boardroom",
     description: "A bespoke commercial boardroom fitout for Lyons Motorgroup in Limerick — one of Ireland's leading motor dealerships. Commissioned as part of their BYD showroom expansion, the brief called for a high-spec contemporary boardroom with custom lath wall units, a full-width fitted unit run, and a large central board table. The lath panels and storage units are finished in Dark Grey Ash from the Tailored Collection; the board table top is Tobacco Gladstone Oak — a rich, warm contrast against the dark cabinetry. Cirrus Cloud Formica surface on the fitted units. Lit with a circular suspended ring and integrated strip lighting.",
     images: [1,2,3,4,5,6,7,8,9,10,11].map(n => `/images/bespoke-lyons/lyons-${String(n).padStart(2,"0")}.jpg`),
