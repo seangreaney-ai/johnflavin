@@ -203,6 +203,14 @@ export const WORK: WorkItem[] = [
   {
     room: "kitchen",
     roomLabel: "Kitchen",
+    title: "J-Profile Kitchen — Off White & Mussell",
+    description: "A handleless kitchen built around the J-Profile door from the Makers Collection, finished in a classic two-tone pairing: Off White from Colortrend on the main run and Mussell on the island — a warm, creamy combination with real depth. Bordilino Oak from the Tailored Collection lines the interiors and carries through to the wall units, adding a natural warmth to the overall scheme. System Linear Bronze handles and knobs bring a refined finish to the cabinetry. The worktop is Calacata Gold by D-Tops, Newcastle West — a striking natural stone effect that anchors the whole kitchen.",
+    images: [1,2,3,4,5,6,7,8,9,10,11,12].map(n => `/images/work23/j-profile-2-kitchen-${String(n).padStart(2,"0")}.jpg`),
+    specs: { door_style:"J-Profile", finish:"Smooth", colour_units:"Off White (Colortrend)", colour_island:"Mussell (Colortrend)", interior:"Bordilino Oak (Tailored Collection)", handles:"System Linear Bronze", worktop:"Calacata Gold (D-Tops, Newcastle West)" },
+  },
+  {
+    room: "kitchen",
+    roomLabel: "Kitchen",
     title: "McEnery Kitchen — Pitch Black & Natural Halifax Oak",
     description: "A bold kitchen built around the Calaway Ash door from the Makers Collection — a grained ash profile that adds real texture and depth when sprayed in Colortrend's Pitch Black. The strong, dark exterior is balanced by Natural Halifax Oak interiors from the Tailored Collection, which carry through to the laths around the island. System Linear handles and knobs in bronze bring a warm metallic finish that sits perfectly against the black cabinetry. Quartz worktops on the main kitchen run, with Dekton on the island for extra durability.",
     images: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].map(n => `/images/work22/mcenery-kitchen-${String(n).padStart(2,"0")}.jpg`),
