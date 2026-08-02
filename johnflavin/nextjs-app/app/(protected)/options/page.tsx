@@ -169,7 +169,7 @@ const REFINED_CARDS = [
 ];
 
 const MFC_SWATCHES = [
-  "beige-textile","black","bordilino-oak","cashmere","cashmere-ash","cassella-oak","dakar","dakar-ash","dust-grey","dust-grey-woodgrain","graphite","grey-textile","hamilton-oak","indigo-blue","ivory","lancaster-oak","light-grey","light-grey-woodgrain","magnolia","mussell","mussell-woodgrain","natural-halifax-oak","pippy-oak","reed-green","sand-gladstone-oak","sand-lyon-ash","stone-grey","stone-grey-ash","tobaco-gladstone-oak","tobaco-halifax-oak","white","white-gladstone-oak"
+  "beige-textile","black","bordilino-oak","cashmere","cashmere-ash","cassella-oak","dakar","dakar-ash","dijon-walnut","driftwood","dust-grey","dust-grey-woodgrain","estate-green","graphite","grey-textile","hamilton-oak","indigo-blue","ivory","ivory-woodgrain","lancaster-oak","light-grey","light-grey-woodgrain","magnolia","marone-cassela-walnut","mussell","mussell-woodgrain","natural-halifax-oak","pippy-oak","reed-green","sand-gladstone-oak","sand-lyon-ash","stone-grey","stone-grey-ash","tobaco-gladstone-oak","tobaco-halifax-oak","white","white-gladstone-oak","white-woodgrain"
 ].map(s => ({
   slug: s,
   name: s.replace(/-2$/, " (Textured)").replace(/-a$/, "").replace(/-b$/, " (Dark)").replace(/-/g, " ").replace(/\b\w/g, (c: string) => c.toUpperCase()),
