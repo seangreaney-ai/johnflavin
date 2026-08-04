@@ -211,6 +211,14 @@ export const WORK: WorkItem[] = [
   {
     room: "kitchen",
     roomLabel: "Kitchen",
+    title: "Calaway Ash Kitchen — Pointing & Clear Lacquer",
+    description: "A two-tone kitchen built around the Calaway Ash door from the Makers Collection — a grained ash profile that takes paint and lacquer beautifully. The main units are sprayed in Farrow & Ball's Pointing, a warm off-white with a creamy undertone that works effortlessly in natural light. The island takes Calaway Oak doors finished in clear lacquer, letting the natural grain character of the oak come through — a considered contrast that grounds the kitchen without competing with the painted run. Lancaster Oak from the Tailored Collection lines the interiors throughout. Bari handles and Cambridge Knobs from MVI in Brushed Bronze add a warm metallic finish that ties the two tones together. Finished with a quartz worktop.",
+    images: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21].map(n => `/images/work25/calaway-ash-kitchen-${String(n).padStart(2,"00")}.jpg`),
+    specs: { door_style:"Calaway Ash", colour_units:"Pointing (Farrow & Ball)", colour_island:"Clear Lacquer (Natural Oak)", interior:"Lancaster Oak (Tailored Collection)", handles:"MVI Bari & Cambridge Knobs — Brushed Bronze", worktop:"Quartz" },
+  },
+  {
+    room: "kitchen",
+    roomLabel: "Kitchen",
     title: "J-Profile Kitchen — Off White & Mussell",
     description: "A handleless kitchen built around the J-Profile door from the Makers Collection, finished in a classic two-tone pairing: Off White from Colortrend on the main run and Mussell on the island — a warm, creamy combination with real depth. Bordilino Oak from the Tailored Collection lines the interiors and carries through to the wall units, adding a natural warmth to the overall scheme. System Linear Bronze handles and knobs bring a refined finish to the cabinetry. The worktop is Calacata Gold by D-Tops, Newcastle West — a striking natural stone effect that anchors the whole kitchen.",
     images: [1,2,3,4,5,6,7,8,9,10,11,12].map(n => `/images/work23/j-profile-2-kitchen-${String(n).padStart(2,"0")}.jpg`),
