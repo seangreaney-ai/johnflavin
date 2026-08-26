@@ -241,6 +241,14 @@ export const WORK: WorkItem[] = [
     specs: { door_style:"Telford", finish:"Smooth", colour:"Graphite", shelves:"Raw Endgrain Oak", handles:"System Knurled Gold Knobs" },
   },
   {
+    room: "utility",
+    roomLabel: "Utility Room",
+    title: "Lancaster Oak Utility — Cashmere",
+    description: "A utility room that leads with material rather than paint — Lancaster Oak doors and panels from the Tailored Collection give the space a natural warmth that painted cabinetry rarely achieves. The Cashmere MFC interior from the same collection keeps the inside soft and light. MVI Bari handles and Cambridge Knobs in matte black bring a clean, contemporary contrast to the warm oak tone. Finished with a quartz worktop.",
+    images: [1,2,3,4,5,6,7].map(n => `/images/work26/lancaster-utility-${String(n).padStart(2,"0")}.jpg`),
+    specs: { door_style:"Lancaster Oak (Tailored Collection)", panels:"Lancaster Oak (Tailored Collection)", interior:"Cashmere (Tailored Collection)", handles:"MVI Bari Black & Cambridge Knobs — Black", worktop:"Quartz" },
+  },
+  {
     room: "kitchen",
     roomLabel: "Kitchen",
     title: "Clancy Kitchen — Ammonite",
